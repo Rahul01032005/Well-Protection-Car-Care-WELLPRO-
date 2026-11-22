@@ -1,0 +1,3165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  
+  <!-- Primary SEO Meta Tags -->
+  <title>WELLPRO | Well Protection Car Care — We Protect • We Care</title>
+  <meta name="title" content="WELLPRO | Well Protection Car Care — We Protect • We Care">
+  <meta name="description" content="Official website of WELLPRO (Well Protection Car Care). Protect, Detail, Maintain, Repair. Specializing in 10H Graphene Coating, 9H Ceramic Coating, Self-Healing PPF, Interior Sanitization, Engine Beautification, and Rodent Repellent for Indian vehicles like Hyundai Creta, Maruti Grand Vitara, Mahindra Thar, and Tata Safari.">
+  <meta name="keywords" content="WELLPRO, Well Protection Car Care, Hyundai Creta PPF, Maruti Grand Vitara Ceramic, Graphene Coating, Ceramic Coating, PPF, Interior Sanitization, Engine Beautification, Rodent Repellent, Car Detailing India, Kochi Detailing Studio">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="WELLPRO — We Protect • We Care">
+  <meta property="og:description" content="Master Automotive Protection & Detailing Studio for Flagship Indian Vehicles (Hyundai, Maruti, Mahindra, Tata, Toyota).">
+  <meta property="og:image" content="./assets/images/logo.jpg">
+
+  <!-- Favicon using official brand logo -->
+  <link rel="icon" type="image/jpeg" href="./assets/images/logo.jpg">
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            obsidian: {
+              950: '#03050a',
+              900: '#060a14',
+              850: '#0a1020',
+              800: '#0e162c',
+              700: '#14203d',
+              600: '#1c2d54',
+            },
+            navy: {
+              950: '#030814',
+              900: '#071228',
+              800: '#0c1f42',
+              700: '#102d60',
+              600: '#153e82',
+              500: '#154c8a',
+              400: '#1b52a8',
+              300: '#38bdf8',
+            },
+            ice: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              200: '#bae6fd',
+              300: '#7dd3fc',
+              400: '#38bdf8',
+              500: '#00b4d8',
+              600: '#0284c7',
+            }
+          },
+          fontFamily: {
+            heading: ['Cinzel', 'Playfair Display', 'Georgia', 'serif'],
+            subheading: ['Montserrat', 'sans-serif'],
+            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- React 18 & Babel for instant browser execution -->
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- Three.js CDN for 3D Visual Effects -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- Custom CSS Animations -->
+  <style>
+    @keyframes carScan {
+      0% { transform: translateX(-150%) skewX(-15deg); opacity: 0; }
+      20% { opacity: 0.95; }
+      80% { opacity: 0.95; }
+      100% { transform: translateX(350%) skewX(-15deg); opacity: 0; }
+    }
+    @keyframes pulseRing {
+      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 180, 216, 0.7); }
+      70% { transform: scale(1); box-shadow: 0 0 0 15px rgba(0, 180, 216, 0); }
+      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 180, 216, 0); }
+    }
+    .pulse-ring {
+      animation: pulseRing 2.5s infinite;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #03050a;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #102d60;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #38bdf8;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-[#03050a] text-[#f8fafc] antialiased overflow-x-hidden selection:bg-[#00b4d8] selection:text-[#03050a]">
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState, useEffect, useRef, useCallback } = React;
+
+    // ==========================================
+    // Centralized Business Information
+    // ==========================================
+    const businessInfo = {
+      name: "Well Protection Car Care",
+      brandName: "WELLPRO",
+      tagline: "We Protect • We Care",
+      subtitle: "Master Automotive Protection & Detailing Studio",
+      logoUrl: "./assets/images/logo.jpg",
+      pillars: [
+        {
+          id: "protect",
+          title: "PROTECT",
+          tagline: "Self-Healing PPF & 10H Graphene Armor",
+          desc: "Aerospace-grade TPU films and silica nano-matrix liquid armor creating an impervious barrier against highway stone chips and harsh UV.",
+          icon: "Shield"
+        },
+        {
+          id: "detail",
+          title: "DETAIL",
+          tagline: "Multi-Stage Paint Correction & Concours Finish",
+          desc: "Microscopic clear-coat leveling eliminating up to 95% of wash swirls, hazing, and water spots under high-CRI detailing inspection lights.",
+          icon: "Sparkles"
+        },
+        {
+          id: "maintain",
+          title: "MAINTAIN",
+          tagline: "Scheduled Maintenance & Hydrophobic Top-Up",
+          desc: "Bi-annual inspections, pH-neutral decontamination baths, and hydrophobic surface rejuvenation to maintain showroom gloss.",
+          icon: "Wrench"
+        },
+        {
+          id: "repair",
+          title: "REPAIR",
+          tagline: "Precision Touch-Up & Scratch Restoration",
+          desc: "Micron-calibrated localized defect correction, chip filling, and headlight clarity restoration with zero paint thickness compromise.",
+          icon: "SprayCan"
+        }
+      ],
+      contact: {
+        phone: "+91 98765 43210",
+        phoneRaw: "+919876543210",
+        whatsapp: "+91 98765 43210",
+        whatsappRaw: "919876543210",
+        email: "contact@wellprotectioncarcare.com",
+        address: {
+          full: "Well Protection Car Care Studio, Automotive Luxury Hub, Premium Car Boulevard, Kochi, Kerala"
+        },
+        googleMapsEmbed: "https://maps.google.com/maps?q=Automotive%20Detailing%20Studio&t=&z=13&ie=UTF8&iwloc=&output=embed",
+        workingHours: {
+          weekday: "Monday - Saturday: 9:00 AM - 7:30 PM",
+          weekend: "Sunday: By Exclusive Appointment Only"
+        }
+      },
+      social: {
+        instagram: "https://instagram.com/wellprotectioncarcare",
+        facebook: "https://facebook.com/wellprotectioncarcare",
+        youtube: "https://youtube.com/@wellprotectioncarcare",
+        whatsapp: "https://wa.me/919876543210"
+      },
+      stats: [
+        { value: "500+", num: 500, suffix: "+", label: "Indian Vehicles Protected" },
+        { value: "10-Yr", num: 10, suffix: "-Yr", label: "Written Studio Warranty" },
+        { value: "100%", num: 100, suffix: "%", label: "Cleanroom Dust-Free Bays" },
+        { value: "99.8%", num: 99.8, suffix: "%", label: "5-Star Client Satisfaction" }
+      ]
+    };
+
+    // ==========================================
+    // Indian Cars Fleet Data
+    // ==========================================
+    const indianCars = [
+      {
+        id: "hyundai-creta",
+        name: "Hyundai Creta (Titan Grey / Abyss Black)",
+        brand: "Hyundai",
+        category: "King of Indian Compact Luxury",
+        image: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1600&q=85",
+        recommendedProgram: "10H Graphene Coating + Engine Beautification + Glass Armor",
+        cureTime: "2 Days Studio Bay",
+        warranty: "5-Year Studio Warranty",
+        priceRange: "₹22,000 - ₹42,000",
+        specHighlights: [
+          "10H Graphene reduced heat absorption preventing Indian monsoon hard water etching",
+          "Full front bumper, piano black parametric grille & LED headlamp protective shield",
+          "Engine bay steam beautification with satin anti-static rubber hose dressing",
+          "Interior sanitization on panoramic sunroof rails & ventilated leatherette seats"
+        ]
+      },
+      {
+        id: "maruti-grand-vitara",
+        name: "Maruti Suzuki Grand Vitara / Brezza",
+        brand: "Maruti Suzuki",
+        category: "Flagship Hybrid SUV",
+        image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=1600&q=85",
+        recommendedProgram: "9H Ceramic Armor + Interior Deep Sanitization + Rodent Repellent",
+        cureTime: "2 Days Studio Bay",
+        warranty: "5-Year Comprehensive",
+        priceRange: "₹18,000 - ₹38,000",
+        specHighlights: [
+          "Dual-layer 9H quartz ceramic nano-matrix for deep Nexa Blue candy reflections",
+          "Engine bay rodent repellent anti-chew bitter coating on wire harness & hybrid cables",
+          "140°C thermal steam sanitization killing 99.9% of bacteria and allergens",
+          "Alloy wheel 850°C ceramic barrier preventing corrosive brake dust adhesion"
+        ]
+      },
+      {
+        id: "maruti-swift",
+        name: "Maruti Suzuki Swift / Fronx Turbo",
+        brand: "Maruti Suzuki",
+        category: "Sporty Performance Hot Hatch",
+        image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=85",
+        recommendedProgram: "Showroom Mirror Paint Correction + 9H Ceramic Shield",
+        cureTime: "1 - 2 Days Studio Bay",
+        warranty: "3-Year Gloss Warranty",
+        priceRange: "₹14,999 - ₹28,000",
+        specHighlights: [
+          "2-stage machine compounding removing wash swirls from thin factory clear coat",
+          "Ultra-slick hydrophobic contact angle (115°) for easy pressure-washer maintenance",
+          "Complete engine bay steam wash and degreasing with non-greasy dressing",
+          "Headlight UV protective sealant preventing lens yellowing or fading"
+        ]
+      },
+      {
+        id: "hyundai-verna",
+        name: "Hyundai Verna (Turbo Starry Night)",
+        brand: "Hyundai",
+        category: "Fastback Executive Luxury Sedan",
+        image: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=1600&q=85",
+        recommendedProgram: "Full Front Track Pack PPF + 10H Graphene Body Shield",
+        cureTime: "3 Days Studio Bay",
+        warranty: "7-Year Warranty",
+        priceRange: "₹35,000 - ₹65,000",
+        specHighlights: [
+          "200-micron self-healing TPU on long bonnet, horizon light bar & front bumper",
+          "10H Graphene coating over fastback rear deck & black geometric sides",
+          "Ultrasonic rodent repellent treatment protecting turbocharger sensors",
+          "Cabin antibacterial ozone fogging and leather steering wheel conditioning"
+        ]
+      },
+      {
+        id: "thar-roxx",
+        name: "Mahindra Thar / Thar Roxx 4x4",
+        brand: "Mahindra",
+        category: "Iconic Indian 4x4 Offroader",
+        image: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1600&q=85",
+        recommendedProgram: "Offroad Rugged TPU PPF + Underbody Anti-Rust + Rodent Defense",
+        cureTime: "3 Days Studio Bay",
+        warranty: "7-Year Comprehensive",
+        priceRange: "₹45,000 - ₹85,000",
+        specHighlights: [
+          "High-impact 200-micron TPU armor on wide fender flares, hood & rocker panels",
+          "Full undercarriage anti-corrosion bitumous rubber coating & silencer shield",
+          "Engine bay steam beautification with heavy-duty rodent repellent spray",
+          "10H Graphene mud & slush repellent body coating for easy trail cleanup"
+        ]
+      },
+      {
+        id: "fortuner-legender",
+        name: "Toyota Fortuner Legender",
+        brand: "Toyota",
+        category: "Flagship Luxury SUV",
+        image: "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=1600&q=85",
+        recommendedProgram: "Full Body Self-Healing TPU PPF + 10H Graphene Topcoat",
+        cureTime: "4 Days Studio Bay",
+        warranty: "10-Year Comprehensive",
+        priceRange: "₹75,000 - ₹1,40,000",
+        specHighlights: [
+          "Full exterior 200-micron self-healing TPU PPF wrap with tucked seamless edges",
+          "10H Graphene heat-reducing topcoat engineered for harsh Indian highway heat",
+          "Alloy wheel 850°C ceramic barrier & hydrophobic monsoon windshield repellent",
+          "Executive leather enrichment, cabin steam sterilization & ozone sanitization"
+        ]
+      },
+      {
+        id: "safari-dark",
+        name: "Tata Safari / Harrier #DARK Edition",
+        brand: "Tata",
+        category: "Flagship Black Edition SUV",
+        image: "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=1600&q=85",
+        recommendedProgram: "Oberon Black 3-Stage Paint Correction + 9H Ceramic Matrix",
+        cureTime: "2 Days Studio Bay",
+        warranty: "5-Year Surface Protection",
+        priceRange: "₹28,000 - ₹55,000",
+        specHighlights: [
+          "95% swirl & hologram elimination on delicate Oberon Black clear coat",
+          "Dual-layer 9H quartz liquid glass producing mirror wet candy reflections",
+          "Engine beautification with anti-static satin rubber & plastic dressing",
+          "High-temperature 140°C dry-vapor interior sanitization & leather feeding"
+        ]
+      },
+      {
+        id: "xuv700",
+        name: "Mahindra XUV700 AdrenoX",
+        brand: "Mahindra",
+        category: "High-Tech Luxury SUV",
+        image: "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1600&q=85",
+        recommendedProgram: "Nano-Ceramic Shield + Interior Sanitization + Rodent Repellent",
+        cureTime: "2 Days Studio Bay",
+        warranty: "5-Year Protection",
+        priceRange: "₹24,000 - ₹48,000",
+        specHighlights: [
+          "Deep gloss 9H ceramic infusion over exterior panels and piano black trim",
+          "Comprehensive interior steam sanitization on panoramic skyroof & 7 seats",
+          "Dual-barrier engine bay rodent repellent treatment on wire harnesses and hoses",
+          "Hydrophobic rain repellent shield on all glass panels for monsoon clarity"
+        ]
+      }
+    ];
+
+    // ==========================================
+    // Services Data (Including Screenshot Services)
+    // ==========================================
+    const servicesData = [
+      {
+        id: "graphene",
+        title: "10H Graphene Coating",
+        featuredCar: "Hyundai Creta / Verna & Alcazar",
+        badge: "10H Thermal Armor",
+        category: "coating",
+        image: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80",
+        description: "Reduced Graphene Oxide (RGO) nano-matrix formulated for Indian climate. Exceptional heat dissipation prevents hard water spots and bird droppings from burning into soft clear coats, delivering unmatched liquid depth on Hyundai Creta and executive cars.",
+        features: [
+          "Thermal dispersion preventing water etching under harsh sun",
+          "Extreme slickness repelling highway dust, grime & mud",
+          "Superhydrophobic 118° contact angle for effortless wash maintenance",
+          "Official 5 to 7 Years Warranty with scheduled bi-annual studio top-ups"
+        ],
+        warranty: "5 - 7 Years",
+        duration: "2 - 3 Days",
+        startingPrice: "From ₹18,999"
+      },
+      {
+        id: "ceramic",
+        title: "9H Ceramic Coating",
+        featuredCar: "Maruti Suzuki Grand Vitara & Brezza",
+        badge: "Liquid Quartz Crystal",
+        category: "coating",
+        image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=800&q=80",
+        description: "Permanent molecular SiO2 quartz crystallizing barrier that bonds chemically to factory paint. Produces mesmerizing 3D candy reflections and scratch reduction on Nexa Blue Grand Vitara, Brezza, and Maruti Swift paints.",
+        features: [
+          "Deep 3D wet candy gloss on metallic and pearl paint finishes",
+          "Chemical immunity against acid rain, tree sap and road tar",
+          "High scratch resistance against routine microfiber washing marring",
+          "Multi-layer base coat + ultra-slick hydrophobic crystallizing top-coat"
+        ],
+        warranty: "3 - 5 Years",
+        duration: "2 Days",
+        startingPrice: "From ₹14,999"
+      },
+      {
+        id: "ppf",
+        title: "Self-Healing Paint Protection Film (PPF)",
+        featuredCar: "Toyota Fortuner Legender & Thar Roxx",
+        badge: "Ultimate Physical Armor",
+        category: "ppf",
+        image: "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80",
+        description: "Aerospace-grade 200-micron high-tensile Thermoplastic Polyurethane (TPU) film engineered to protect exterior panels against flying highway gravel, stone chips, scratches, and bumper scrapes without altering original color depth.",
+        features: [
+          "Instant micro-scratch self-healing under natural sunlight or warm water",
+          "Hydrophobic top-coat & anti-yellowing optical UV barrier",
+          "Available in Ultra-High Gloss or Stealth Satin Matte wrap finish",
+          "Computer-aided precision pre-cut templates with tucked wrapped edges"
+        ],
+        warranty: "Up to 10 Years",
+        duration: "3 - 5 Days",
+        startingPrice: "From ₹45,000"
+      },
+      {
+        id: "interior-sanitization",
+        title: "Interior Sanitization & Deep Spa",
+        featuredCar: "Hyundai Creta / Tucson & Toyota Innova Hycross",
+        badge: "Hospital-Grade Hygiene",
+        category: "interior",
+        image: "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=800&q=80",
+        description: "Therapeutic cabin deep cleaning and sterilization for family cars. Utilizes 140°C dry-vapor thermal steam extraction to sanitize ventilated leather seats, AC duct disinfection, and OEM non-greasy matte leather feeding.",
+        features: [
+          "140°C dry-vapor thermal steam killing 99.9% of bacteria & allergens",
+          "Ozone biological gas generator eliminating lingering food, smoke & pet odors",
+          "pH-neutral delicate leather cleaning and UV anti-aging conditioning",
+          "Fabric nano-shield creating a hydrophobic spill-guard against liquid staining"
+        ],
+        warranty: "Factory-Fresh Matte OEM Touch",
+        duration: "4 - 6 Hours",
+        startingPrice: "From ₹4,999"
+      },
+      {
+        id: "engine-beautification",
+        title: "Engine Beautification & Dressing",
+        featuredCar: "Maruti Suzuki Swift, Baleno & Fronx Turbo",
+        badge: "Showroom Precision Bay",
+        category: "engine",
+        image: "https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=800&q=80",
+        description: "Safe, moisture-isolated vapor steam degreasing of the engine bay. Intricate hand-brush cleaning of all engine plastics, manifolds, and rubber hoses, followed by heat-resistant satin anti-static dressing.",
+        features: [
+          "Moisture-sensitive electronics, ECM units, and alternators safely masked",
+          "Biodegradable citrus degreaser removing baked-on engine grime & oil fallout",
+          "Heat-resistant satin plastic, conduit and hose anti-aging dressing",
+          "Anti-static formulation repels dust accumulation for easy routine maintenance"
+        ],
+        warranty: "Long-Lasting Non-Greasy Satin Luster",
+        duration: "2 - 3 Hours",
+        startingPrice: "From ₹2,499"
+      },
+      {
+        id: "rodent-repellent",
+        title: "Rodent Repellent Treatment",
+        featuredCar: "All Maruti Suzuki, Hyundai & Mahindra Engine Bays",
+        badge: "Wire Harness Protection",
+        category: "specialized",
+        image: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80",
+        description: "Essential preventative protection against rodent infestation, wire gnawing, and firewall nesting. Combines an intensive engine bay sanitation with a non-toxic, bitter chemical repellent spray bonded directly to wire harnesses and rubber conduits.",
+        features: [
+          "Engine compartment thoroughly decontaminated of food and rodent scent markers",
+          "Non-toxic, highly bitter botanical & chemical barrier spray coating",
+          "Coatings bonded to wire harnesses, rubber hoses, sensors & firewall damping",
+          "Guards against expensive electrical harness replacement & breakdown hazards"
+        ],
+        warranty: "6-Month Protective Shield",
+        duration: "2 Hours",
+        startingPrice: "From ₹2,499"
+      },
+      {
+        id: "paint-correction",
+        title: "Multi-Stage Paint Correction",
+        featuredCar: "Tata Safari #DARK & Black Hyundai Creta",
+        badge: "Mirror Depth Revival",
+        category: "correction",
+        image: "https://images.unsplash.com/photo-1601362840469-51e4d8d58785?auto=format&fit=crop&w=800&q=80",
+        description: "Precision machine compounding and jewel-finishing with micro-abrasives to permanently remove 85% to 95% of wash swirls, buffer trails, acid etching, and oxidation, revealing true showroom depth without unnecessary clear coat reduction.",
+        features: [
+          "Permanent defect elimination without unnecessary clear coat loss",
+          "Continuous inspection using 5000K high-CRI detailing lights",
+          "Essential foundation prior to Graphene, Ceramic or PPF installation",
+          "100% hologram-free optical mirror depth refinement"
+        ],
+        warranty: "Permanent Defect Removal",
+        duration: "1 - 2 Days",
+        startingPrice: "From ₹9,999"
+      },
+      {
+        id: "retail-products",
+        title: "Retail Car Care Products",
+        featuredCar: "WELLPRO DIY Studio Formulations",
+        badge: "Professional Detailing Store",
+        category: "retail",
+        image: "https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=800&q=80",
+        description: "Take home the exact professional formulations used by WELLPRO master detailers. High-concentration pH-neutral snow foams, SiO2 ceramic booster sprays, tire satin dressings, and 500 GSM edgeless microfiber drying towels.",
+        features: [
+          "Concentrated pH-neutral snow foams & contact wash shampoos",
+          "Graphene & SiO2 quick detailers for effortless maintenance washes",
+          "500 GSM edgeless ultra-soft microfiber drying & buffing towels",
+          "Available for walk-in purchase directly at studio or doorstep courier"
+        ],
+        warranty: "100% Studio-Tested Formulas",
+        duration: "Instant Walk-In / Dispatch",
+        startingPrice: "From ₹499"
+      },
+      {
+        id: "sale-materials",
+        title: "Sale Car Care Local Materials",
+        featuredCar: "Trade Supplies for Workshops & Enthusiasts",
+        badge: "Studio & Trade Supply",
+        category: "wholesale",
+        image: "https://images.unsplash.com/photo-1507136566006-cfc505b114fc?auto=format&fit=crop&w=800&q=80",
+        description: "Direct trade distribution of specialized detailing materials for professional studios, local garages, and passionate hobbyists across Kerala and India. Bulk compounds, German foam pads, rotary backplates, and applicators.",
+        features: [
+          "Heavy-cut, medium-polish & ultra-finish compounding pastes",
+          "German foam pads, microfiber cutting discs & wool pads",
+          "Rotary & dual-action backing plates, masking tapes, and detailing brushes",
+          "Wholesale and retail bulk pricing with fast local dispatch"
+        ],
+        warranty: "Professional Trade Grade",
+        duration: "In-Stock / Immediate Dispatch",
+        startingPrice: "Trade Inquiries Welcome"
+      }
+    ];
+
+    // SVG Icons
+    const Icons = {
+      Phone: () => <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>,
+      Calendar: () => <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>,
+      ArrowRight: () => <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>,
+      ArrowUpRight: () => <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>,
+      MessageSquare: () => <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>,
+      Check: () => <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg>,
+      Shield: () => <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>,
+      Star: () => <svg width="18" height="18" viewBox="0 0 24 24" fill="#38bdf8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>,
+      ChevronLeft: () => <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="15 18 9 12 15 6"/></svg>,
+      ChevronRight: () => <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="9 18 15 12 9 6"/></svg>,
+      ChevronsLeftRight: () => <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="15 18 9 12 15 6"/><polyline points="9 18 3 12 9 6"/></svg>,
+      X: () => <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>,
+      Menu: () => <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>,
+      Sparkles: () => <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>,
+      Wrench: () => <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>,
+      SprayCan: () => <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="m20 15-5-5"/><path d="m4 4 2.5 2.5"/><path d="m9 2 2.5 2.5"/><path d="m12 12-2 2v6a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-6l-2-2z"/><path d="M14 6h2"/><path d="M15 4v2"/></svg>,
+      Car: () => <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>,
+      Activity: () => <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>,
+      Eye: () => <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>,
+      Flame: () => <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>,
+      Award: () => <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>,
+      RotateCw: () => <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/></svg>,
+      Wind: () => <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17.7 7.7A2.5 2.5 0 1 1 19 12H2"/><path d="M12.6 19.4A2 2 0 1 0 14 16H2"/></svg>,
+      Zap: () => <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>,
+      Palette: () => <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.563-2.512 5.563-5.563C22 6.47 17.53 2 12 2z"/></svg>
+    };
+
+    // ==========================================
+    // 0. LIVE STUDIO TELEMETRY TICKER
+    // ==========================================
+    function StudioLiveTicker() {
+      const bayStatus = [
+        { bay: "Bay 1", car: "Hyundai Creta", service: "10H Graphene Thermal Curing", status: "Active Curing" },
+        { bay: "Bay 2", car: "Maruti Grand Vitara", service: "Interior Steam Sanitization & Ozone", status: "In Progress" },
+        { bay: "Bay 3", car: "Mahindra Thar Roxx", service: "Self-Healing TPU PPF Edge Tuck", status: "Wrapping" },
+        { bay: "Bay 4", car: "Tata Safari #DARK", service: "3-Stage Optical Swirl Correction", status: "Polishing" },
+        { bay: "Bay 5", car: "Toyota Fortuner Legender", service: "Full Body PPF + Rodent Defense", status: "Inspection" },
+      ];
+
+      return (
+        <div className="bg-[#071228] border-b border-[#102d60]/80 py-2.5 overflow-hidden relative z-40">
+          <div className="max-w-7xl mx-auto px-4 flex items-center justify-between gap-4">
+            <div className="flex items-center gap-2 flex-shrink-0">
+              <span className="w-2.5 h-2.5 rounded-full bg-[#10b981] animate-ping" />
+              <span className="text-[11px] font-subheading uppercase font-bold tracking-wider text-[#38bdf8] flex items-center gap-1.5">
+                <Icons.Activity />
+                <span>Live Studio Telemetry</span>
+              </span>
+            </div>
+
+            <div className="overflow-x-auto no-scrollbar flex items-center gap-6 text-xs text-gray-300">
+              {bayStatus.map((b, idx) => (
+                <div key={idx} className="flex items-center gap-2 flex-shrink-0 bg-[#03050a]/60 px-3 py-1 rounded-full border border-white/5">
+                  <span className="font-mono text-[#38bdf8] font-bold text-[10px]">{b.bay}:</span>
+                  <span className="font-semibold text-white">{b.car}</span>
+                  <span className="text-gray-400">({b.service})</span>
+                  <span className="text-[10px] uppercase font-bold px-1.5 py-0.5 rounded bg-[#102d60] text-[#bae6fd]">
+                    {b.status}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            <div className="hidden xl:flex items-center gap-2 text-xs text-gray-400 flex-shrink-0">
+              <Icons.Shield />
+              <span>Cleanroom Bays Active</span>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    // ==========================================
+    // 1. THREE.JS 3D AERODYNAMIC CAR STUDIO & TURNTABLE
+    // ==========================================
+    function ThreeScene() {
+      const containerRef = useRef(null);
+      const [activeMode, setActiveMode] = useState('turntable'); // 'turntable' | 'windtunnel' | 'laserscan'
+      const [activeColor, setActiveColor] = useState('obsidian');
+
+      const paintColorMap = {
+        obsidian: { hex: 0x09162e, name: 'Obsidian Navy', css: 'bg-[#09162e] border-[#38bdf8]' },
+        silver: { hex: 0x94a3b8, name: 'Liquid Silver', css: 'bg-[#94a3b8] border-white' },
+        white: { hex: 0xf1f5f9, name: 'Pearl Ceramic', css: 'bg-[#f1f5f9] border-[#38bdf8]' },
+        emerald: { hex: 0x064e3b, name: 'Emerald Knight', css: 'bg-[#064e3b] border-emerald-400' },
+        cyan: { hex: 0x0284c7, name: 'Electric Cyan', css: 'bg-[#0284c7] border-cyan-300' },
+      };
+
+      const modeRef = useRef('turntable');
+      const carPaintMatRef = useRef(null);
+      const underglowRef = useRef(null);
+
+      const handleModeChange = (mode) => {
+        setActiveMode(mode);
+        modeRef.current = mode;
+      };
+
+      const handleColorChange = (colorKey) => {
+        setActiveColor(colorKey);
+        if (carPaintMatRef.current && paintColorMap[colorKey]) {
+          carPaintMatRef.current.color.setHex(paintColorMap[colorKey].hex);
+        }
+      };
+
+      useEffect(() => {
+        const container = containerRef.current;
+        if (!container || typeof THREE === 'undefined') return;
+
+        let width = container.clientWidth;
+        let height = container.clientHeight;
+
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(40, width / height, 0.1, 1000);
+        
+        const isWide = window.innerWidth >= 1024;
+        camera.position.set(16, 8, 18);
+        camera.lookAt(isWide ? 2.5 : 0, 0.5, 0);
+
+        const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true, powerPreference: 'high-performance' });
+        renderer.setSize(width, height);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        renderer.toneMapping = THREE.ACESFilmicToneMapping;
+        renderer.toneMappingExposure = 1.25;
+        container.appendChild(renderer.domElement);
+
+        // Studio Lighting Rig
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.95);
+        scene.add(ambientLight);
+
+        const mainStudioLight = new THREE.DirectionalLight(0xffffff, 2.5);
+        mainStudioLight.position.set(12, 22, 16);
+        scene.add(mainStudioLight);
+
+        const rimLight = new THREE.DirectionalLight(0x38bdf8, 3.2);
+        rimLight.position.set(-16, 14, -16);
+        scene.add(rimLight);
+
+        const cyanUnderglow = new THREE.PointLight(0x00b4d8, 4.5, 18);
+        cyanUnderglow.position.set(0, -0.6, 0);
+        scene.add(cyanUnderglow);
+        underglowRef.current = cyanUnderglow;
+
+        // Turntable Root Group
+        const turntableGroup = new THREE.Group();
+        if (isWide) {
+          turntableGroup.position.x = 2.8;
+        }
+        scene.add(turntableGroup);
+
+        // Motorized Turntable Stage Base
+        const turntableGeom = new THREE.CylinderGeometry(11.5, 12, 0.5, 64);
+        const turntableMat = new THREE.MeshStandardMaterial({
+          color: 0x050a14,
+          metalness: 0.85,
+          roughness: 0.25
+        });
+        const turntable = new THREE.Mesh(turntableGeom, turntableMat);
+        turntable.position.y = -1.9;
+        turntableGroup.add(turntable);
+
+        // Concentric Neon Studio Rings
+        const ringGeom = new THREE.TorusGeometry(11.4, 0.06, 16, 80);
+        const ringMat = new THREE.MeshBasicMaterial({ color: 0x00b4d8 });
+        const ringMesh = new THREE.Mesh(ringGeom, ringMat);
+        ringMesh.rotation.x = Math.PI / 2;
+        ringMesh.position.y = -1.64;
+        turntableGroup.add(ringMesh);
+
+        const innerRingGeom = new THREE.TorusGeometry(8.5, 0.04, 16, 80);
+        const innerRingMesh = new THREE.Mesh(innerRingGeom, ringMat);
+        innerRingMesh.rotation.x = Math.PI / 2;
+        innerRingMesh.position.y = -1.64;
+        turntableGroup.add(innerRingMesh);
+
+        // Perspective Floor Grid
+        const gridHelper = new THREE.GridHelper(50, 30, 0x00b4d8, 0x0b1e3d);
+        gridHelper.position.y = -2.1;
+        gridHelper.material.transparent = true;
+        gridHelper.material.opacity = 0.38;
+        scene.add(gridHelper);
+
+        // 3D Sculpted Supercar Group
+        const carRoot = new THREE.Group();
+        turntableGroup.add(carRoot);
+
+        // Automotive Metallic Clearcoat Paint Material
+        const initialHex = paintColorMap[activeColor]?.hex || 0x09162e;
+        const carPaintMat = new THREE.MeshStandardMaterial({
+          color: initialHex,
+          metalness: 0.92,
+          roughness: 0.15,
+          envMapIntensity: 1.5
+        });
+        carPaintMatRef.current = carPaintMat;
+
+        // Cyber Wireframe Glow Overlay
+        const wireframeMat = new THREE.MeshBasicMaterial({
+          color: 0x38bdf8,
+          wireframe: true,
+          transparent: true,
+          opacity: 0.22
+        });
+
+        // Deep Tinted Glass Material
+        const glassMat = new THREE.MeshStandardMaterial({
+          color: 0x011a33,
+          metalness: 0.95,
+          roughness: 0.08,
+          transparent: true,
+          opacity: 0.8
+        });
+
+        // Carbon Fiber Trim Material
+        const carbonMat = new THREE.MeshStandardMaterial({
+          color: 0x05070a,
+          metalness: 0.4,
+          roughness: 0.7
+        });
+
+        // 1. Main Fuselage
+        const mainBodyGeom = new THREE.BoxGeometry(13.2, 1.25, 5.6);
+        const mainBody = new THREE.Mesh(mainBodyGeom, carPaintMat);
+        mainBody.position.set(0, 0, 0);
+        carRoot.add(mainBody);
+
+        const mainBodyWire = new THREE.Mesh(mainBodyGeom, wireframeMat);
+        mainBodyWire.position.set(0, 0, 0);
+        carRoot.add(mainBodyWire);
+
+        // 2. Sloping Hood / Front Nose Wedge
+        const hoodGeom = new THREE.BoxGeometry(4.4, 0.82, 5.2);
+        const hood = new THREE.Mesh(hoodGeom, carPaintMat);
+        hood.position.set(4.5, 0.25, 0);
+        hood.rotation.z = -0.12;
+        carRoot.add(hood);
+
+        // Front Splitter
+        const splitterGeom = new THREE.BoxGeometry(2.0, 0.18, 6.2);
+        const splitter = new THREE.Mesh(splitterGeom, carbonMat);
+        splitter.position.set(6.8, -0.55, 0);
+        carRoot.add(splitter);
+
+        // Front Grille Recess
+        const grilleGeom = new THREE.BoxGeometry(0.3, 0.78, 4.4);
+        const grille = new THREE.Mesh(grilleGeom, carbonMat);
+        grille.position.set(6.75, -0.15, 0);
+        carRoot.add(grille);
+
+        // 3. Cabin Greenhouse (Cockpit)
+        const cabinGeom = new THREE.BoxGeometry(6.2, 1.55, 4.4);
+        const cabin = new THREE.Mesh(cabinGeom, carPaintMat);
+        cabin.position.set(-0.6, 1.22, 0);
+        carRoot.add(cabin);
+
+        // Windshield (Front glass)
+        const windshieldGeom = new THREE.BoxGeometry(2.3, 1.48, 4.2);
+        const windshield = new THREE.Mesh(windshieldGeom, glassMat);
+        windshield.position.set(2.0, 1.05, 0);
+        windshield.rotation.z = -0.66;
+        carRoot.add(windshield);
+
+        // Rear Fastback Window
+        const rearGlassGeom = new THREE.BoxGeometry(2.5, 1.38, 4.2);
+        const rearGlass = new THREE.Mesh(rearGlassGeom, glassMat);
+        rearGlass.position.set(-3.2, 1.0, 0);
+        rearGlass.rotation.z = 0.56;
+        carRoot.add(rearGlass);
+
+        // Side Windows
+        const sideGlassGeom = new THREE.BoxGeometry(4.2, 1.05, 0.08);
+        const sideGlassLeft = new THREE.Mesh(sideGlassGeom, glassMat);
+        sideGlassLeft.position.set(-0.6, 1.22, 2.22);
+        carRoot.add(sideGlassLeft);
+
+        const sideGlassRight = new THREE.Mesh(sideGlassGeom, glassMat);
+        sideGlassRight.position.set(-0.6, 1.22, -2.22);
+        carRoot.add(sideGlassRight);
+
+        // Side Wing Mirrors
+        const mirrorGeom = new THREE.BoxGeometry(0.5, 0.25, 0.4);
+        const mirrorLeft = new THREE.Mesh(mirrorGeom, carbonMat);
+        mirrorLeft.position.set(1.2, 0.95, 2.45);
+        carRoot.add(mirrorLeft);
+
+        const mirrorRight = new THREE.Mesh(mirrorGeom, carbonMat);
+        mirrorRight.position.set(1.2, 0.95, -2.45);
+        carRoot.add(mirrorRight);
+
+        // 4. Rear Deck & Integrated Ducktail Spoiler
+        const rearDeckGeom = new THREE.BoxGeometry(3.2, 0.78, 5.2);
+        const rearDeck = new THREE.Mesh(rearDeckGeom, carPaintMat);
+        rearDeck.position.set(-5.0, 0.35, 0);
+        carRoot.add(rearDeck);
+
+        const spoilerGeom = new THREE.BoxGeometry(0.9, 0.22, 5.6);
+        const spoiler = new THREE.Mesh(spoilerGeom, carbonMat);
+        spoiler.position.set(-6.5, 0.9, 0);
+        spoiler.rotation.z = 0.22;
+        carRoot.add(spoiler);
+
+        const diffuserGeom = new THREE.BoxGeometry(2.0, 0.45, 5.6);
+        const diffuser = new THREE.Mesh(diffuserGeom, carbonMat);
+        diffuser.position.set(-6.0, -0.45, 0);
+        carRoot.add(diffuser);
+
+        // Dual Twin Exhaust Tips
+        const exhaustMat = new THREE.MeshStandardMaterial({ color: 0x64748b, metalness: 0.95, roughness: 0.2 });
+        [-1.6, 1.6].forEach((zPos) => {
+          const exGeom = new THREE.CylinderGeometry(0.18, 0.18, 0.5, 12);
+          const ex = new THREE.Mesh(exGeom, exhaustMat);
+          ex.rotation.z = Math.PI / 2;
+          ex.position.set(-6.8, -0.45, zPos);
+          carRoot.add(ex);
+        });
+
+        // 5. Four 3D Alloy Wheels with Tires & Cyan Brake Calipers
+        const wheelPositions = [
+          { x: 4.2, y: -0.6, z: 2.85 },
+          { x: 4.2, y: -0.6, z: -2.85 },
+          { x: -4.2, y: -0.6, z: 2.85 },
+          { x: -4.2, y: -0.6, z: -2.85 },
+        ];
+
+        const wheelMeshes = [];
+        const tireMat = new THREE.MeshStandardMaterial({ color: 0x111317, roughness: 0.85 });
+        const rimMat = new THREE.MeshStandardMaterial({ color: 0xd1d5db, metalness: 0.95, roughness: 0.15 });
+        const caliperMat = new THREE.MeshBasicMaterial({ color: 0x00b4d8 });
+
+        wheelPositions.forEach((pos) => {
+          const wheelGroup = new THREE.Group();
+          wheelGroup.position.set(pos.x, pos.y, pos.z);
+
+          // Rubber Tire
+          const tireGeom = new THREE.CylinderGeometry(1.3, 1.3, 0.75, 24);
+          const tire = new THREE.Mesh(tireGeom, tireMat);
+          tire.rotation.x = Math.PI / 2;
+          wheelGroup.add(tire);
+
+          // Chrome Rim Core
+          const rimGeom = new THREE.CylinderGeometry(0.95, 0.95, 0.78, 16);
+          const rim = new THREE.Mesh(rimGeom, rimMat);
+          rim.rotation.x = Math.PI / 2;
+          wheelGroup.add(rim);
+
+          // 5-Spoke Turbine Alloy Pattern
+          for (let s = 0; s < 5; s++) {
+            const spokeGeom = new THREE.BoxGeometry(0.18, 1.5, 0.8);
+            const spoke = new THREE.Mesh(spokeGeom, rimMat);
+            spoke.rotation.z = (s * Math.PI * 2) / 5;
+            wheelGroup.add(spoke);
+          }
+
+          // Cyan Brake Caliper
+          const caliperGeom = new THREE.BoxGeometry(0.35, 0.7, 0.35);
+          const caliper = new THREE.Mesh(caliperGeom, caliperMat);
+          caliper.position.set(0.45, 0.3, 0);
+          wheelGroup.add(caliper);
+
+          carRoot.add(wheelGroup);
+          wheelMeshes.push(wheelGroup);
+        });
+
+        // 6. Headlights & Volumetric Forward Light Cones
+        const headlightMat = new THREE.MeshBasicMaterial({ color: 0xe0f2fe });
+        const hlLeft = new THREE.Mesh(new THREE.BoxGeometry(0.2, 0.3, 1.1), headlightMat);
+        hlLeft.position.set(6.7, 0.15, 1.8);
+        carRoot.add(hlLeft);
+
+        const hlRight = new THREE.Mesh(new THREE.BoxGeometry(0.2, 0.3, 1.1), headlightMat);
+        hlRight.position.set(6.7, 0.15, -1.8);
+        carRoot.add(hlRight);
+
+        const beamGeom = new THREE.ConeGeometry(3.0, 15, 16, 1, true);
+        const beamMat = new THREE.MeshBasicMaterial({
+          color: 0x38bdf8,
+          transparent: true,
+          opacity: 0.15,
+          side: THREE.DoubleSide,
+          blending: THREE.AdditiveBlending
+        });
+
+        const beamL = new THREE.Mesh(beamGeom, beamMat);
+        beamL.position.set(14.5, 0.15, 1.8);
+        beamL.rotation.z = -Math.PI / 2;
+        carRoot.add(beamL);
+
+        const beamR = new THREE.Mesh(beamGeom, beamMat);
+        beamR.position.set(14.5, 0.15, -1.8);
+        beamR.rotation.z = -Math.PI / 2;
+        carRoot.add(beamR);
+
+        // 7. Full-Width Horizon Neon Taillight Bar
+        const taillightMat = new THREE.MeshBasicMaterial({ color: 0x38bdf8 });
+        const taillight = new THREE.Mesh(new THREE.BoxGeometry(0.2, 0.22, 5.2), taillightMat);
+        taillight.position.set(-6.75, 0.35, 0);
+        carRoot.add(taillight);
+
+        // 8. Holographic Laser Inspection Scanner Plane
+        const scanPlaneGeom = new THREE.PlaneGeometry(0.15, 8.5);
+        const scanPlaneMat = new THREE.MeshBasicMaterial({
+          color: 0x38bdf8,
+          transparent: true,
+          opacity: 0.65,
+          side: THREE.DoubleSide,
+          blending: THREE.AdditiveBlending
+        });
+        const laserScanner = new THREE.Mesh(scanPlaneGeom, scanPlaneMat);
+        laserScanner.rotation.y = Math.PI / 2;
+        laserScanner.position.set(0, 0.8, 0);
+        carRoot.add(laserScanner);
+
+        // Shimmering Coating Sparkles along laser scan
+        const sparkCount = 85;
+        const sparkGeom = new THREE.BufferGeometry();
+        const sparkPos = new Float32Array(sparkCount * 3);
+        for (let i = 0; i < sparkCount; i++) {
+          sparkPos[i * 3] = (Math.random() - 0.5) * 1.5;
+          sparkPos[i * 3 + 1] = Math.random() * 2.5;
+          sparkPos[i * 3 + 2] = (Math.random() - 0.5) * 5.0;
+        }
+        sparkGeom.setAttribute('position', new THREE.BufferAttribute(sparkPos, 3));
+        const sparkMat = new THREE.PointsMaterial({
+          color: 0x7dd3fc,
+          size: 0.25,
+          transparent: true,
+          opacity: 0.9,
+          blending: THREE.AdditiveBlending
+        });
+        const sparkParticles = new THREE.Points(sparkGeom, sparkMat);
+        laserScanner.add(sparkParticles);
+
+        // 9. Aerodynamic Wind-Tunnel Stream Particles
+        const streamCount = 260;
+        const streamGeom = new THREE.BufferGeometry();
+        const streamPos = new Float32Array(streamCount * 3);
+        const streamSpeeds = new Float32Array(streamCount);
+        for (let i = 0; i < streamCount; i++) {
+          streamPos[i * 3] = (Math.random() - 0.5) * 36;
+          streamPos[i * 3 + 1] = Math.random() * 4.5 - 0.5;
+          streamPos[i * 3 + 2] = (Math.random() - 0.5) * 12;
+          streamSpeeds[i] = 0.45 + Math.random() * 0.55;
+        }
+        streamGeom.setAttribute('position', new THREE.BufferAttribute(streamPos, 3));
+        const streamMat = new THREE.PointsMaterial({
+          color: 0x00b4d8,
+          size: 0.25,
+          transparent: true,
+          opacity: 0.75,
+          blending: THREE.AdditiveBlending
+        });
+        const streamParticles = new THREE.Points(streamGeom, streamMat);
+        carRoot.add(streamParticles);
+
+        // 10. Interactive 360° Drag & Parallax Handling
+        let isDragging = false;
+        let previousMouseX = 0;
+        let userRotationOffset = 0.45;
+        let targetTilt = 0;
+        let currentTilt = 0;
+        let lastUserInteraction = 0;
+
+        const onMouseDown = (e) => {
+          if (e.target.closest && e.target.closest('.hud-control')) return;
+          isDragging = true;
+          previousMouseX = e.clientX;
+          lastUserInteraction = Date.now();
+        };
+
+        const onMouseMove = (e) => {
+          if (isDragging) {
+            const deltaX = e.clientX - previousMouseX;
+            userRotationOffset += deltaX * 0.008;
+            previousMouseX = e.clientX;
+            lastUserInteraction = Date.now();
+          }
+          const normY = (e.clientY / window.innerHeight - 0.5) * 2;
+          targetTilt = normY * 0.2;
+        };
+
+        const onMouseUp = () => {
+          isDragging = false;
+        };
+
+        const onTouchStart = (e) => {
+          if (e.target.closest && e.target.closest('.hud-control')) return;
+          if (e.touches[0]) {
+            isDragging = true;
+            previousMouseX = e.touches[0].clientX;
+            lastUserInteraction = Date.now();
+          }
+        };
+
+        const onTouchMove = (e) => {
+          if (isDragging && e.touches[0]) {
+            const deltaX = e.touches[0].clientX - previousMouseX;
+            userRotationOffset += deltaX * 0.01;
+            previousMouseX = e.touches[0].clientX;
+            lastUserInteraction = Date.now();
+          }
+        };
+
+        const onTouchEnd = () => {
+          isDragging = false;
+        };
+
+        window.addEventListener('mousedown', onMouseDown);
+        window.addEventListener('mousemove', onMouseMove, { passive: true });
+        window.addEventListener('mouseup', onMouseUp);
+        window.addEventListener('touchstart', onTouchStart, { passive: true });
+        window.addEventListener('touchmove', onTouchMove, { passive: true });
+        window.addEventListener('touchend', onTouchEnd);
+
+        const onResize = () => {
+          if (!container) return;
+          width = container.clientWidth;
+          height = container.clientHeight;
+          const wide = window.innerWidth >= 1024;
+          camera.aspect = width / height;
+          camera.updateProjectionMatrix();
+          renderer.setSize(width, height);
+          turntableGroup.position.x = wide ? 2.8 : 0;
+          camera.lookAt(wide ? 2.5 : 0, 0.5, 0);
+        };
+        window.addEventListener('resize', onResize);
+
+        // 11. Animation Loop
+        let animId;
+        const clock = new THREE.Clock();
+
+        const animate = () => {
+          animId = requestAnimationFrame(animate);
+          const time = clock.getElapsedTime();
+          const currentMode = modeRef.current;
+          const idleTime = Date.now() - lastUserInteraction;
+
+          // Mode-Specific Behaviors
+          if (currentMode === 'turntable') {
+            if (!isDragging && idleTime > 2500) {
+              userRotationOffset += 0.006;
+            }
+            turntableGroup.rotation.y = userRotationOffset;
+            streamParticles.visible = false;
+            laserScanner.visible = true;
+            laserScanner.position.x = Math.sin(time * 1.5) * 6.2;
+            sparkParticles.rotation.y = time * 2;
+            beamMat.opacity = 0.12;
+
+            carRoot.position.y = Math.sin(time * 1.5) * 0.04;
+            wheelMeshes.forEach((w) => { w.rotation.x -= 0.035; });
+
+          } else if (currentMode === 'windtunnel') {
+            const windTarget = 0.35;
+            userRotationOffset += (windTarget - (userRotationOffset % (Math.PI * 2))) * 0.05;
+            turntableGroup.rotation.y = userRotationOffset;
+
+            streamParticles.visible = true;
+            laserScanner.visible = false;
+            const positions = streamParticles.geometry.attributes.position.array;
+            for (let i = 0; i < streamCount; i++) {
+              positions[i * 3] -= streamSpeeds[i] * 1.8;
+              if (positions[i * 3] < -18) {
+                positions[i * 3] = 18;
+                positions[i * 3 + 1] = Math.random() * 4.5 - 0.5;
+                positions[i * 3 + 2] = (Math.random() - 0.5) * 11;
+              }
+            }
+            streamParticles.geometry.attributes.position.needsUpdate = true;
+
+            wheelMeshes.forEach((w) => { w.rotation.x -= 0.15; });
+            gridHelper.position.x = (time * 12) % 4;
+
+            beamMat.opacity = 0.28;
+            carRoot.position.y = Math.sin(time * 8.0) * 0.02;
+
+          } else if (currentMode === 'laserscan') {
+            const scanTarget = 0.65;
+            userRotationOffset += (scanTarget - (userRotationOffset % (Math.PI * 2))) * 0.05;
+            turntableGroup.rotation.y = userRotationOffset;
+
+            streamParticles.visible = false;
+            laserScanner.visible = true;
+            laserScanner.position.x = Math.sin(time * 1.8) * 6.8;
+            sparkParticles.rotation.y = time * 3.5;
+            beamMat.opacity = 0.15;
+            carRoot.position.y = 0.08 + Math.sin(time * 1.2) * 0.03;
+          }
+
+          // Camera parallax tilt
+          currentTilt += (targetTilt - currentTilt) * 0.05;
+          camera.position.y = 8 + currentTilt * 4;
+
+          // Pulse underglow
+          cyanUnderglow.intensity = 3.8 + Math.sin(time * 3) * 1.2;
+
+          renderer.render(scene, camera);
+        };
+        animate();
+
+        return () => {
+          cancelAnimationFrame(animId);
+          window.removeEventListener('mousedown', onMouseDown);
+          window.removeEventListener('mousemove', onMouseMove);
+          window.removeEventListener('mouseup', onMouseUp);
+          window.removeEventListener('touchstart', onTouchStart);
+          window.removeEventListener('touchmove', onTouchMove);
+          window.removeEventListener('touchend', onTouchEnd);
+          window.removeEventListener('resize', onResize);
+          if (container && renderer.domElement) {
+            container.removeChild(renderer.domElement);
+          }
+        };
+      }, []);
+
+      return (
+        <div className="absolute inset-0 z-10 overflow-hidden pointer-events-auto">
+          {/* 3D Canvas Viewport */}
+          <div
+            ref={containerRef}
+            className="w-full h-full cursor-grab active:cursor-grabbing"
+            title="Click and drag to rotate the 3D vehicle 360°"
+          />
+
+          {/* Interactive 3D Studio HUD Controls (Top-Right) */}
+          <div className="hud-control absolute top-4 sm:top-6 right-4 sm:right-8 z-30 flex flex-col items-end gap-2.5 pointer-events-auto max-w-[280px] sm:max-w-none">
+            {/* Mode Switcher Tabs */}
+            <div className="flex items-center gap-1 p-1 sm:p-1.5 rounded-2xl bg-[#071228]/85 backdrop-blur-md border border-[#38bdf8]/40 shadow-2xl">
+              <button
+                onClick={() => handleModeChange('turntable')}
+                className={`flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-xl text-[10px] sm:text-[11px] font-subheading font-bold uppercase tracking-wider transition-all cursor-pointer ${
+                  activeMode === 'turntable'
+                    ? 'bg-gradient-to-r from-[#38bdf8] to-[#154c8a] text-white shadow-md'
+                    : 'text-gray-300 hover:text-white hover:bg-white/5'
+                }`}
+                title="Studio 360° Turntable Mode"
+              >
+                <Icons.RotateCw />
+                <span className="hidden sm:inline">360° Studio</span>
+              </button>
+
+              <button
+                onClick={() => handleModeChange('windtunnel')}
+                className={`flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-xl text-[10px] sm:text-[11px] font-subheading font-bold uppercase tracking-wider transition-all cursor-pointer ${
+                  activeMode === 'windtunnel'
+                    ? 'bg-gradient-to-r from-[#38bdf8] to-[#154c8a] text-white shadow-md'
+                    : 'text-gray-300 hover:text-white hover:bg-white/5'
+                }`}
+                title="Aerodynamic Wind Tunnel Mode"
+              >
+                <Icons.Wind />
+                <span className="hidden sm:inline">Wind Tunnel</span>
+              </button>
+
+              <button
+                onClick={() => handleModeChange('laserscan')}
+                className={`flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-xl text-[10px] sm:text-[11px] font-subheading font-bold uppercase tracking-wider transition-all cursor-pointer ${
+                  activeMode === 'laserscan'
+                    ? 'bg-gradient-to-r from-[#38bdf8] to-[#154c8a] text-white shadow-md'
+                    : 'text-gray-300 hover:text-white hover:bg-white/5'
+                }`}
+                title="Ceramic Laser Inspection Mode"
+              >
+                <Icons.Zap />
+                <span className="hidden sm:inline">Laser Scan</span>
+              </button>
+            </div>
+
+            {/* Paint Finish Swatches & Hint */}
+            <div className="flex items-center gap-2.5 sm:gap-3 px-3 py-1.5 sm:py-2 rounded-xl bg-[#071228]/80 backdrop-blur-md border border-white/10 shadow-lg">
+              <span className="text-[10px] font-subheading uppercase font-bold text-gray-400 flex items-center gap-1">
+                <Icons.Palette />
+                <span className="hidden md:inline">Paint:</span>
+              </span>
+
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                {Object.entries(paintColorMap).map(([key, col]) => (
+                  <button
+                    key={key}
+                    onClick={() => handleColorChange(key)}
+                    className={`w-4 h-4 sm:w-5 sm:h-5 rounded-full transition-transform hover:scale-125 cursor-pointer ${col.css} ${
+                      activeColor === key ? 'ring-2 ring-[#38bdf8] scale-110' : 'opacity-70 hover:opacity-100'
+                    }`}
+                    title={`Switch paint finish to ${col.name}`}
+                  />
+                ))}
+              </div>
+            </div>
+
+            {/* Drag 360° Hint Badge */}
+            <div className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#03050a]/70 border border-white/10 text-[10px] font-mono text-gray-400 backdrop-blur-md">
+              <Icons.RotateCw />
+              <span>Drag to rotate 360° in 3D</span>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    // ==========================================
+    // 2. 2D CANVAS VELOCITY STREAMS & PARTICLES
+    // ==========================================
+    function ParticleCanvas() {
+      const canvasRef = useRef(null);
+
+      useEffect(() => {
+        const canvas = canvasRef.current;
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        let width = canvas.width = window.innerWidth;
+        let height = canvas.height = window.innerHeight;
+
+        const count = width < 768 ? 45 : 90;
+        const particles = [];
+        for (let i = 0; i < count; i++) {
+          particles.push({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            vx: (Math.random() - 0.5) * 0.7 - 0.4,
+            vy: (Math.random() - 0.5) * 0.5,
+            radius: Math.random() * 2 + 0.8,
+            alpha: Math.random() * 0.6 + 0.25
+          });
+        }
+
+        const streakCount = 14;
+        const streaks = [];
+        for (let i = 0; i < streakCount; i++) {
+          streaks.push({
+            x: Math.random() * width,
+            y: Math.random() * height * 0.75 + height * 0.1,
+            length: Math.random() * 140 + 60,
+            speed: Math.random() * 4 + 3,
+            alpha: Math.random() * 0.4 + 0.15,
+            thickness: Math.random() * 1.5 + 0.5
+          });
+        }
+
+        let animId;
+        const render = () => {
+          animId = requestAnimationFrame(render);
+          ctx.clearRect(0, 0, width, height);
+
+          // Speed Streaks
+          for (let s of streaks) {
+            s.x -= s.speed;
+            if (s.x + s.length < 0) {
+              s.x = width + Math.random() * 100;
+              s.y = Math.random() * height * 0.75 + height * 0.1;
+            }
+            const grad = ctx.createLinearGradient(s.x, s.y, s.x + s.length, s.y);
+            grad.addColorStop(0, 'rgba(56, 189, 248, 0)');
+            grad.addColorStop(0.5, `rgba(0, 180, 216, ${s.alpha})`);
+            grad.addColorStop(1, 'rgba(56, 189, 248, 0)');
+            ctx.beginPath();
+            ctx.moveTo(s.x, s.y);
+            ctx.lineTo(s.x + s.length, s.y);
+            ctx.strokeStyle = grad;
+            ctx.lineWidth = s.thickness;
+            ctx.stroke();
+          }
+
+          // Particles
+          for (let i = 0; i < particles.length; i++) {
+            const p = particles[i];
+            p.x += p.vx;
+            p.y += p.vy;
+
+            if (p.x < 0) p.x = width;
+            if (p.x > width) p.x = 0;
+            if (p.y < 0) p.y = height;
+            if (p.y > height) p.y = 0;
+
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(56, 189, 248, ${p.alpha})`;
+            ctx.fill();
+
+            for (let j = i + 1; j < particles.length; j++) {
+              const p2 = particles[j];
+              const dx = p.x - p2.x;
+              const dy = p.y - p2.y;
+              const dist = Math.sqrt(dx * dx + dy * dy);
+              if (dist < 100) {
+                ctx.beginPath();
+                ctx.moveTo(p.x, p.y);
+                ctx.lineTo(p2.x, p2.y);
+                ctx.strokeStyle = `rgba(0, 180, 216, ${0.15 * (1 - dist / 100)})`;
+                ctx.stroke();
+              }
+            }
+          }
+        };
+        render();
+
+        const handleResize = () => {
+          width = canvas.width = window.innerWidth;
+          height = canvas.height = window.innerHeight;
+        };
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+          cancelAnimationFrame(animId);
+          window.removeEventListener('resize', handleResize);
+        };
+      }, []);
+
+      return (
+        <canvas
+          ref={canvasRef}
+          className="absolute inset-0 z-0 pointer-events-none opacity-60"
+        />
+      );
+    }
+
+    // ==========================================
+    // 3. NAVBAR (Properly Aligned & WELLPRO Only Name)
+    // ==========================================
+    function Navbar({ onOpenBooking }) {
+      const [scrolled, setScrolled] = useState(false);
+      const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+      useEffect(() => {
+        const handleScroll = () => {
+          setScrolled(window.scrollY > 30);
+        };
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        return () => window.removeEventListener('scroll', handleScroll);
+      }, []);
+
+      const navLinks = [
+        { name: 'Home', href: '#home' },
+        { name: 'Services', href: '#services' },
+        { name: 'Indian Cars', href: '#car-stage' },
+        { name: 'Process', href: '#process' },
+        { name: 'Store', href: '#store' },
+        { name: 'Estimator', href: '#estimator' },
+        { name: 'Our Work', href: '#gallery' },
+        { name: 'Reviews', href: '#testimonials' },
+        { name: 'Contact', href: '#contact' },
+      ];
+
+      return (
+        <header
+          className={`sticky top-0 left-0 w-full z-50 transition-all duration-300 ${
+            scrolled
+              ? 'bg-[#03050a]/95 backdrop-blur-md border-b border-[#102d60]/60 shadow-2xl py-3'
+              : 'bg-[#03050a]/80 backdrop-blur-sm border-b border-white/5 py-4'
+          }`}
+        >
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between gap-4">
+            
+            {/* Logo image + ONLY WELLPRO */}
+            <a href="#home" className="flex items-center gap-3 group cursor-pointer flex-shrink-0">
+              <div className="relative w-11 h-11 sm:w-12 sm:h-12 rounded-full overflow-hidden border-2 border-[#38bdf8] shadow-[0_0_15px_rgba(0,180,216,0.35)] group-hover:border-[#7dd3fc] transition-all duration-300 flex-shrink-0 bg-white">
+                <img
+                  src="./assets/images/logo.jpg"
+                  alt="WELLPRO Logo"
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+              <span className="font-heading font-black text-2xl sm:text-[26px] tracking-[2px] text-white leading-none">
+                WELL<span className="text-[#38bdf8]">PRO</span>
+              </span>
+            </a>
+
+            {/* Desktop Navigation Links */}
+            <nav className="hidden lg:flex items-center gap-4 xl:gap-6">
+              {navLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="text-xs uppercase font-subheading font-semibold tracking-[1.3px] text-gray-300 hover:text-[#38bdf8] transition-colors relative py-1 hover:after:w-full after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-gradient-to-r after:from-[#38bdf8] after:to-[#154c8a] after:transition-all after:duration-300"
+                >
+                  {link.name}
+                </a>
+              ))}
+            </nav>
+
+            {/* Action Elements */}
+            <div className="flex items-center gap-2.5 sm:gap-3 flex-shrink-0">
+              <a
+                href={`tel:${businessInfo.contact.phoneRaw}`}
+                className="hidden xl:inline-flex items-center gap-2 h-10 text-xs font-semibold text-[#bae6fd] bg-[#071228]/90 hover:bg-[#0c1f42] border border-[#00b4d8]/40 px-3.5 rounded-lg transition-colors shadow-sm"
+              >
+                <Icons.Phone />
+                <span>{businessInfo.contact.phone}</span>
+              </a>
+
+              <button
+                onClick={() => onOpenBooking()}
+                className="hidden sm:inline-flex items-center justify-center gap-2 h-10 bg-gradient-to-r from-[#38bdf8] via-[#154c8a] to-[#0c1f42] hover:from-[#7dd3fc] text-white font-subheading font-bold text-xs uppercase tracking-[1.3px] px-4 sm:px-5 rounded-lg shadow-md hover:shadow-[0_0_20px_rgba(0,180,216,0.4)] hover:-translate-y-0.5 transition-all cursor-pointer"
+              >
+                <Icons.Calendar />
+                <span>Book Consultation</span>
+              </button>
+
+              <button
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="lg:hidden h-10 w-10 inline-flex items-center justify-center text-gray-300 hover:text-[#38bdf8] border border-white/10 rounded-lg bg-[#071228]/80 transition-colors"
+                aria-label="Toggle navigation menu"
+              >
+                {mobileMenuOpen ? <Icons.X /> : <Icons.Menu />}
+              </button>
+            </div>
+          </div>
+
+          {/* Mobile Drawer */}
+          {mobileMenuOpen && (
+            <div className="lg:hidden fixed inset-0 bg-black/95 backdrop-blur-md z-50 p-6 flex flex-col justify-between" onClick={() => setMobileMenuOpen(false)}>
+              <div onClick={(e) => e.stopPropagation()}>
+                <div className="flex items-center justify-between pb-5 border-b border-white/10 mb-6">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full overflow-hidden border border-[#38bdf8] bg-white flex-shrink-0">
+                      <img src="./assets/images/logo.jpg" alt="WELLPRO Logo" className="w-full h-full object-cover" />
+                    </div>
+                    <span className="font-heading font-black text-2xl tracking-[2px] text-white">
+                      WELL<span className="text-[#38bdf8]">PRO</span>
+                    </span>
+                  </div>
+                  <button onClick={() => setMobileMenuOpen(false)} className="h-10 w-10 inline-flex items-center justify-center text-gray-400 hover:text-white border border-white/10 rounded-lg">
+                    <Icons.X />
+                  </button>
+                </div>
+                <div className="flex flex-col gap-3">
+                  {navLinks.map((link) => (
+                    <a
+                      key={link.name}
+                      href={link.href}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="text-sm uppercase font-subheading font-medium tracking-[1.5px] text-gray-200 hover:text-[#38bdf8] py-2 border-b border-white/5"
+                    >
+                      {link.name}
+                    </a>
+                  ))}
+                </div>
+              </div>
+
+              <div className="flex flex-col gap-3 pt-6 border-t border-white/10" onClick={(e) => e.stopPropagation()}>
+                <a
+                  href={`tel:${businessInfo.contact.phoneRaw}`}
+                  className="flex items-center justify-center gap-2 text-xs font-semibold text-[#bae6fd] bg-[#071228] border border-[#00b4d8]/40 py-3 rounded-lg"
+                >
+                  <Icons.Phone />
+                  <span>{businessInfo.contact.phone}</span>
+                </a>
+                <button
+                  onClick={() => { setMobileMenuOpen(false); onOpenBooking(); }}
+                  className="w-full bg-gradient-to-r from-[#38bdf8] via-[#154c8a] to-[#0c1f42] text-white font-subheading font-bold text-xs uppercase tracking-[1.5px] py-3.5 rounded-lg shadow-lg"
+                >
+                  Book Private Consultation
+                </button>
+              </div>
+            </div>
+          )}
+        </header>
+      );
+    }
+
+    // ==========================================
+    // 4. HERO SECTION (With 3D Wind-Tunnel Car Mesh)
+    // ==========================================
+    function Hero({ onOpenBooking }) {
+      const [counts, setCounts] = useState({ cars: 0, warranty: 0, cleanroom: 0, score: 0 });
+
+      useEffect(() => {
+        let startTime;
+        const duration = 2000;
+        const animateCounters = (timestamp) => {
+          if (!startTime) startTime = timestamp;
+          const progress = Math.min((timestamp - startTime) / duration, 1);
+          const ease = 1 - Math.pow(1 - progress, 3);
+          setCounts({
+            cars: Math.floor(ease * 500),
+            warranty: Math.floor(ease * 10),
+            cleanroom: Math.floor(ease * 100),
+            score: +(ease * 99.8).toFixed(1),
+          });
+          if (progress < 1) requestAnimationFrame(animateCounters);
+        };
+        requestAnimationFrame(animateCounters);
+      }, []);
+
+      const waUrl = `https://wa.me/${businessInfo.contact.whatsappRaw}?text=${encodeURIComponent(
+        'Hello Well Protection Car Care (WELLPRO), I would like to inquire about vehicle protection packages for my vehicle.'
+      )}`;
+
+      return (
+        <section id="home" className="relative min-h-[95vh] flex items-center pt-16 sm:pt-24 pb-16 overflow-hidden bg-[#03050a]">
+          <div className="absolute inset-0 z-0">
+            <img
+              src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=2000&q=85"
+              alt="Luxury Detailing Bay"
+              className="w-full h-full object-cover object-center filter brightness-[0.38] contrast-[1.25]"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#03050a] via-[#03050a]/70 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#03050a] via-[#071228]/85 to-transparent" />
+          </div>
+
+          <ParticleCanvas />
+          <ThreeScene />
+
+          <div className="relative z-20 max-w-7xl mx-auto px-5 sm:px-6 w-full">
+            <div className="max-w-3xl">
+              
+              <div className="flex flex-wrap items-center gap-3 mb-6">
+                <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#00b4d8]/15 border border-[#00b4d8]/40 backdrop-blur-md shadow-lg">
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#38bdf8] shadow-[0_0_10px_#38bdf8] animate-ping" />
+                  <span className="font-subheading text-[11px] sm:text-xs uppercase tracking-[2px] font-bold text-[#bae6fd]">
+                    WE PROTECT • WE CARE — WELLPRO OFFICIAL
+                  </span>
+                </div>
+
+                <div className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#071228]/85 border border-[#38bdf8]/40 text-[11px] font-mono text-[#7dd3fc] backdrop-blur-md shadow-lg">
+                  <Icons.RotateCw />
+                  <span>3D Turntable: Drag 360° to inspect</span>
+                </div>
+              </div>
+
+              <h1 className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.1] mb-6 drop-shadow-2xl">
+                Preserving Perfection.<br />
+                <span className="bg-gradient-to-r from-[#e0f2fe] via-[#38bdf8] to-[#154c8a] bg-clip-text text-transparent">
+                  Elevating Luxury.
+                </span>
+              </h1>
+
+              <p className="text-gray-300 text-sm sm:text-base md:text-lg font-light leading-relaxed mb-8 sm:mb-10 max-w-2xl drop-shadow-md">
+                Welcome to <strong className="text-white font-semibold">WELLPRO</strong>. We engineer optical perfection and impenetrable surface armor for Indian roads. Specializing in 10H Graphene Coating, 9H Ceramic Shield, Self-Healing PPF, Interior Sanitization, Engine Beautification, and Rodent Defense for <strong>Hyundai, Maruti Suzuki, Mahindra, Tata & Toyota</strong>.
+              </p>
+
+              <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3.5 sm:gap-4 mb-12 sm:mb-16">
+                <button
+                  onClick={() => onOpenBooking()}
+                  className="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#38bdf8] via-[#154c8a] to-[#0c1f42] hover:from-[#7dd3fc] text-white font-subheading font-bold text-xs sm:text-sm uppercase tracking-[1.5px] px-8 py-4 rounded-xl shadow-xl hover:shadow-[0_0_30px_rgba(0,180,216,0.5)] hover:-translate-y-0.5 transition-all cursor-pointer"
+                >
+                  <Icons.Calendar />
+                  <span>Book Bay Consultation</span>
+                </button>
+
+                <a
+                  href="#car-stage"
+                  className="inline-flex items-center justify-center gap-3 bg-white/5 hover:bg-white/10 text-white font-subheading font-semibold text-xs sm:text-sm uppercase tracking-[1.5px] px-7 py-4 rounded-xl border border-white/20 hover:border-[#38bdf8]/60 backdrop-blur-md hover:-translate-y-0.5 transition-all"
+                >
+                  <span>Explore Indian Cars</span>
+                  <Icons.ArrowRight />
+                </a>
+
+                <a
+                  href={waUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#20bd5a] text-white font-subheading font-bold text-xs sm:text-sm uppercase tracking-[1.5px] px-7 py-4 rounded-xl shadow-[0_4px_20px_rgba(37,211,102,0.4)] hover:-translate-y-0.5 transition-all"
+                >
+                  <Icons.MessageSquare />
+                  <span>WhatsApp Direct</span>
+                </a>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 p-5 sm:p-7 rounded-2xl bg-[#071228]/85 backdrop-blur-xl border border-[#00b4d8]/30 shadow-2xl relative overflow-hidden">
+              <div className="flex flex-col">
+                <span className="font-heading font-black text-2xl sm:text-4xl text-white">{counts.cars}+</span>
+                <span className="font-subheading text-[10px] sm:text-xs uppercase tracking-wider text-gray-300 mt-1">Indian Vehicles Protected</span>
+              </div>
+              <div className="flex flex-col border-l border-white/10 pl-4 sm:pl-6">
+                <span className="font-heading font-black text-2xl sm:text-4xl text-[#38bdf8]">{counts.warranty}-Yr</span>
+                <span className="font-subheading text-[10px] sm:text-xs uppercase tracking-wider text-gray-300 mt-1">Written Studio Warranty</span>
+              </div>
+              <div className="flex flex-col border-l border-white/10 pl-4 sm:pl-6">
+                <span className="font-heading font-black text-2xl sm:text-4xl text-white">{counts.cleanroom}%</span>
+                <span className="font-subheading text-[10px] sm:text-xs uppercase tracking-wider text-gray-300 mt-1">Cleanroom Dust-Free Bays</span>
+              </div>
+              <div className="flex flex-col border-l border-white/10 pl-4 sm:pl-6">
+                <span className="font-heading font-black text-2xl sm:text-4xl text-[#38bdf8]">{counts.score}%</span>
+                <span className="font-subheading text-[10px] sm:text-xs uppercase tracking-wider text-gray-300 mt-1">5-Star Client Rating</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    // ==========================================
+    // 5. THE 4 PILLARS (Matching Logo Badges)
+    // ==========================================
+    function Pillars({ onOpenBooking }) {
+      const iconMap = {
+        Shield: Icons.Shield,
+        Sparkles: Icons.Sparkles,
+        Wrench: Icons.Wrench,
+        SprayCan: Icons.SprayCan,
+      };
+
+      return (
+        <section id="pillars" className="py-20 sm:py-28 bg-[#03050a] relative">
+          <div className="max-w-7xl mx-auto px-5 sm:px-6">
+            <div className="text-center max-w-3xl mx-auto mb-14">
+              <div className="inline-flex items-center gap-2 mb-3">
+                <span className="w-5 h-[2px] bg-[#38bdf8]" />
+                <span className="font-subheading text-xs uppercase tracking-[3px] font-bold text-[#38bdf8]">
+                  The 4 Pillars of WELLPRO
+                </span>
+                <span className="w-5 h-[2px] bg-[#38bdf8]" />
+              </div>
+
+              <h2 className="font-heading text-3xl sm:text-5xl font-bold text-white mb-4">
+                Engineered Around Our Logo Pillars
+              </h2>
+
+              <div className="w-16 h-[3px] bg-gradient-to-r from-[#38bdf8] to-[#154c8a] mx-auto mb-6" />
+
+              <p className="text-gray-300 text-sm sm:text-base font-light">
+                Every vehicle that enters our studio is treated with our 4-stage philosophy: Protect, Detail, Maintain, and Repair.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {businessInfo.pillars.map((pillar) => {
+                const IconComponent = iconMap[pillar.icon] || Icons.Shield;
+                return (
+                  <div
+                    key={pillar.id}
+                    className="group p-7 rounded-3xl bg-gradient-to-b from-[#0c1f42]/70 to-[#030814] border border-[#102d60]/40 hover:border-[#38bdf8]/60 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col justify-between"
+                  >
+                    <div>
+                      <div className="w-14 h-14 rounded-2xl bg-[#071228] border border-[#00b4d8]/40 flex items-center justify-center text-[#38bdf8] group-hover:bg-[#00b4d8] group-hover:text-[#03050a] transition-all duration-300 mb-6 shadow-md">
+                        <IconComponent />
+                      </div>
+
+                      <span className="text-[10px] uppercase font-subheading font-bold tracking-[2px] text-[#38bdf8] block mb-1">
+                        Pillar
+                      </span>
+                      <h3 className="font-heading font-black text-2xl text-white group-hover:text-[#bae6fd] transition-colors mb-2">
+                        {pillar.title}
+                      </h3>
+
+                      <p className="text-xs font-semibold text-[#bae6fd]/90 mb-3 leading-snug">
+                        {pillar.tagline}
+                      </p>
+
+                      <p className="text-xs text-gray-400 font-light leading-relaxed mb-6">
+                        {pillar.desc}
+                      </p>
+                    </div>
+
+                    <button
+                      onClick={() => onOpenBooking(`Pillar: ${pillar.title}`)}
+                      className="inline-flex items-center gap-1.5 text-xs font-subheading uppercase font-bold tracking-wider text-[#38bdf8] hover:text-white pt-4 border-t border-white/5 transition-colors cursor-pointer"
+                    >
+                      <span>Explore Program</span>
+                      <Icons.ArrowUpRight />
+                    </button>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    // ==========================================
+    // 6. COMPREHENSIVE SERVICES (Hyundai, Maruti, Tata, Mahindra)
+    // ==========================================
+    function Services({ onOpenBooking }) {
+      const [activeCategory, setActiveCategory] = useState('all');
+
+      const categories = [
+        { key: 'all', label: 'All Services' },
+        { key: 'coating', label: '10H Graphene & Ceramic' },
+        { key: 'ppf', label: 'Paint Protection Film (PPF)' },
+        { key: 'interior', label: 'Interior Sanitization' },
+        { key: 'engine', label: 'Engine Beautification' },
+        { key: 'specialized', label: 'Rodent Repellent' },
+        { key: 'correction', label: 'Paint Correction' },
+        { key: 'retail', label: 'Retail Products' },
+        { key: 'wholesale', label: 'Trade Materials' },
+      ];
+
+      const filtered = activeCategory === 'all'
+        ? servicesData
+        : servicesData.filter(s => s.category === activeCategory);
+
+      return (
+        <section id="services" className="py-24 sm:py-32 bg-[#03050a] relative overflow-hidden">
+          <div className="max-w-7xl mx-auto px-5 sm:px-6 relative z-10">
+            <div className="text-center max-w-3xl mx-auto mb-14">
+              <div className="inline-flex items-center gap-2 mb-3">
+                <span className="w-6 h-[2px] bg-[#38bdf8]" />
+                <span className="font-subheading text-xs uppercase tracking-[3px] font-bold text-[#38bdf8]">
+                  Verified Studio Services
+                </span>
+                <span className="w-6 h-[2px] bg-[#38bdf8]" />
+              </div>
+
+              <h2 className="font-heading text-3xl sm:text-5xl font-bold text-white mb-4">
+                Master Vehicle Care & Protection Suite
+              </h2>
+
+              <div className="w-20 h-[3px] bg-gradient-to-r from-[#38bdf8] to-[#154c8a] mx-auto mb-6" />
+
+              <p className="text-gray-300 text-sm sm:text-base font-light">
+                Tailored for popular Indian vehicles including <strong>Hyundai Creta, Maruti Suzuki Grand Vitara, Mahindra Thar, and Tata Safari</strong>.
+              </p>
+            </div>
+
+            {/* Category Filter Tabs */}
+            <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12 sm:mb-16">
+              {categories.map((cat) => (
+                <button
+                  key={cat.key}
+                  onClick={() => setActiveCategory(cat.key)}
+                  className={`font-subheading text-[11px] sm:text-xs uppercase tracking-wider font-semibold px-4 sm:px-5 py-2.5 rounded-full transition-all duration-300 cursor-pointer ${
+                    activeCategory === cat.key
+                      ? 'bg-gradient-to-r from-[#38bdf8] via-[#154c8a] to-[#0c1f42] text-white shadow-[0_0_20px_rgba(0,180,216,0.4)] scale-105 border border-[#38bdf8]/60'
+                      : 'bg-[#060a14]/90 border border-white/10 text-gray-400 hover:text-white'
+                  }`}
+                >
+                  {cat.label}
+                </button>
+              ))}
+            </div>
+
+            {/* Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+              {filtered.map((service) => {
+                const waServiceUrl = `https://wa.me/${businessInfo.contact.whatsappRaw}?text=${encodeURIComponent(
+                  `Hello Well Protection Car Care (WELLPRO)! I would like to inquire about "${service.title}" (${service.featuredCar}). Please share pricing and bay availability.`
+                )}`;
+
+                return (
+                  <div
+                    key={service.id}
+                    className="group relative rounded-2xl bg-gradient-to-b from-[#0a1020] to-[#030814] border border-[#102d60]/50 hover:border-[#38bdf8]/60 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_15px_40px_rgba(0,180,216,0.25)] flex flex-col justify-between overflow-hidden"
+                  >
+                    <div>
+                      <div className="relative h-56 sm:h-60 w-full overflow-hidden bg-black">
+                        <img
+                          src={service.image}
+                          alt={service.title}
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108 filter brightness-90 group-hover:brightness-100"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#0a1020] via-transparent to-transparent" />
+                        
+                        <span className="absolute top-4 right-4 bg-[#03050a]/85 backdrop-blur-md border border-[#38bdf8]/60 text-[#bae6fd] text-[10px] font-subheading font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-lg">
+                          {service.badge}
+                        </span>
+
+                        <div className="absolute bottom-3 left-4 right-4 bg-[#071228]/85 backdrop-blur-md border border-white/10 rounded-lg px-3 py-1.5 flex items-center justify-between text-[11px] text-[#bae6fd]">
+                          <span className="font-semibold truncate">🚗 {service.featuredCar}</span>
+                          <span className="text-[#38bdf8] font-bold flex-shrink-0 ml-2">{service.startingPrice}</span>
+                        </div>
+                      </div>
+
+                      <div className="p-6">
+                        <div className="flex items-center justify-between text-xs text-gray-400 mb-3 pb-3 border-b border-white/5">
+                          <span className="font-subheading text-[11px] text-[#38bdf8] font-bold uppercase tracking-wider">
+                            {service.warranty}
+                          </span>
+                          <span className="text-[11px] text-gray-300">⏱️ {service.duration}</span>
+                        </div>
+
+                        <h3 className="font-heading font-bold text-xl sm:text-2xl text-white group-hover:text-[#bae6fd] transition-colors mb-3">
+                          {service.title}
+                        </h3>
+
+                        <p className="text-gray-300 text-xs sm:text-sm font-light leading-relaxed mb-6">
+                          {service.description}
+                        </p>
+
+                        <ul className="space-y-2.5 mb-6">
+                          {service.features.map((feature, idx) => (
+                            <li key={idx} className="flex items-start gap-2.5 text-xs text-gray-300 font-light">
+                              <Icons.Check />
+                              <span>{feature}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div className="p-6 pt-0 flex items-center gap-3">
+                      <button
+                        onClick={() => onOpenBooking(`${service.title} (${service.featuredCar})`)}
+                        className="flex-1 bg-gradient-to-r from-[#38bdf8] via-[#154c8a] to-[#0c1f42] hover:from-[#7dd3fc] text-white font-subheading font-bold text-xs uppercase tracking-wider py-3.5 rounded-xl flex items-center justify-center gap-2 shadow-md hover:shadow-[0_0_15px_rgba(0,180,216,0.3)] transition-all cursor-pointer"
+                      >
+                        <Icons.Calendar />
+                        <span>Book Service</span>
+                      </button>
+
+                      <a
+                        href={waServiceUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-12 h-12 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white flex items-center justify-center transition-colors shadow-md hover:scale-105 flex-shrink-0"
+                        aria-label={`Enquire about ${service.title}`}
+                      >
+                        <Icons.MessageSquare />
+                      </a>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    // ==========================================
+    // 7. INDIAN VEHICLE TRANSFORMATION STAGE
+    // ==========================================
+    function CarShowcaseTransition({ onOpenBooking }) {
+      const [activeCarIndex, setActiveCarIndex] = useState(0);
+      const [isAnimating, setIsAnimating] = useState(false);
+      const [selectedBrand, setSelectedBrand] = useState('All');
+
+      const brands = ['All', 'Hyundai', 'Maruti Suzuki', 'Mahindra', 'Tata', 'Toyota'];
+
+      const filteredCars = selectedBrand === 'All'
+        ? indianCars
+        : indianCars.filter(c => c.brand === selectedBrand);
+
+      const currentCar = filteredCars[activeCarIndex] || filteredCars[0] || indianCars[0];
+
+      const handleCarSwitch = (index) => {
+        if (index === activeCarIndex || isAnimating) return;
+        setIsAnimating(true);
+        setActiveCarIndex(index);
+        setTimeout(() => setIsAnimating(false), 550);
+      };
+
+      const handleBrandChange = (brand) => {
+        setSelectedBrand(brand);
+        setActiveCarIndex(0);
+      };
+
+      const waCarMessage = `Hello Well Protection Car Care (WELLPRO)! I am interested in the ${currentCar.name} (${currentCar.category}). Recommended Program: ${currentCar.recommendedProgram}. Estimated: ${currentCar.priceRange}. Please share bay availability and consultation slot.`;
+
+      return (
+        <section id="car-stage" className="py-24 sm:py-32 bg-gradient-to-b from-[#03050a] via-[#071228] to-[#03050a] relative overflow-hidden">
+          <div className="max-w-7xl mx-auto px-5 sm:px-6 relative z-10">
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <div className="inline-flex items-center gap-2 mb-3">
+                <span className="w-6 h-[2px] bg-[#38bdf8]" />
+                <span className="font-subheading text-xs uppercase tracking-[3px] font-bold text-[#38bdf8]">
+                  Indian Vehicle Transformation Stage
+                </span>
+                <span className="w-6 h-[2px] bg-[#38bdf8]" />
+              </div>
+
+              <h2 className="font-heading text-3xl sm:text-5xl font-bold text-white mb-4">
+                Hyundai, Maruti & Indian Fleet Presets
+              </h2>
+
+              <div className="w-20 h-[3px] bg-gradient-to-r from-[#38bdf8] to-[#154c8a] mx-auto mb-6" />
+
+              <p className="text-gray-300 text-sm sm:text-base font-light">
+                Tailored for Indian driving terrains, high heat, monsoons, and highway stone chips. Select a vehicle to inspect its custom protection package and smooth laser scan transition.
+              </p>
+            </div>
+
+            {/* Brand Filter Pills */}
+            <div className="flex items-center justify-center gap-2 flex-wrap mb-6">
+              {brands.map((brand) => (
+                <button
+                  key={brand}
+                  onClick={() => handleBrandChange(brand)}
+                  className={`font-subheading text-[11px] sm:text-xs uppercase tracking-wider font-semibold px-4 py-1.5 rounded-full transition-all cursor-pointer ${
+                    selectedBrand === brand
+                      ? 'bg-[#38bdf8] text-[#03050a] font-bold shadow-[0_0_15px_rgba(56,189,248,0.5)]'
+                      : 'bg-[#071228] border border-white/10 text-gray-400 hover:text-white'
+                  }`}
+                >
+                  {brand}
+                </button>
+              ))}
+            </div>
+
+            {/* Vehicle Tabs */}
+            <div className="flex items-center justify-center gap-2 sm:gap-3 flex-wrap mb-10">
+              {filteredCars.map((car, idx) => (
+                <button
+                  key={car.id}
+                  onClick={() => handleCarSwitch(idx)}
+                  className={`font-subheading text-[11px] sm:text-xs uppercase tracking-wider font-semibold px-4 sm:px-5 py-2.5 rounded-full transition-all duration-300 cursor-pointer ${
+                    activeCarIndex === idx
+                      ? 'bg-gradient-to-r from-[#38bdf8] via-[#154c8a] to-[#0c1f42] text-white shadow-[0_0_20px_rgba(0,180,216,0.4)] scale-105 border border-[#38bdf8]/60'
+                      : 'bg-[#060a14]/80 border border-white/10 text-gray-400 hover:text-white'
+                  }`}
+                >
+                  {car.name}
+                </button>
+              ))}
+            </div>
+
+            {/* Stage Box */}
+            <div className="relative rounded-3xl bg-gradient-to-b from-[#0a1020] to-[#030814] border border-[#102d60]/60 shadow-[0_20px_60px_rgba(0,0,0,0.8)] overflow-hidden p-6 sm:p-10">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                
+                {/* Left: Image with Scan Sweep */}
+                <div className="lg:col-span-7 relative">
+                  <div className="relative h-[300px] sm:h-[440px] rounded-2xl overflow-hidden border border-white/10 bg-[#03050a] shadow-2xl">
+                    <img
+                      key={currentCar.id}
+                      src={currentCar.image}
+                      alt={currentCar.name}
+                      className={`w-full h-full object-cover transition-all duration-700 ${
+                        isAnimating ? 'opacity-0 scale-95 blur-sm' : 'opacity-100 scale-100 blur-0'
+                      }`}
+                    />
+
+                    <div
+                      key={`scan-${currentCar.id}`}
+                      className="absolute inset-y-0 w-28 bg-gradient-to-r from-transparent via-[#38bdf8]/45 to-transparent pointer-events-none transform -skew-x-12 animate-[carScan_1.8s_ease-out_forwards]"
+                    />
+
+                    <div className="absolute top-4 left-4 bg-[#03050a]/85 backdrop-blur-md border border-[#38bdf8]/60 rounded-full px-3.5 py-1.5 flex items-center gap-2">
+                      <span className="w-2 h-2 rounded-full bg-[#38bdf8] animate-ping" />
+                      <span className="font-subheading text-[10px] sm:text-xs uppercase tracking-wider font-bold text-[#bae6fd]">
+                        {currentCar.category}
+                      </span>
+                    </div>
+
+                    <button
+                      onClick={() => handleCarSwitch((activeCarIndex - 1 + filteredCars.length) % filteredCars.length)}
+                      className="absolute left-3.5 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-[#071228]/85 hover:bg-[#154c8a] border border-white/20 text-white flex items-center justify-center transition-all shadow-xl hover:scale-110 cursor-pointer"
+                      aria-label="Previous vehicle"
+                    >
+                      <Icons.ChevronLeft />
+                    </button>
+                    <button
+                      onClick={() => handleCarSwitch((activeCarIndex + 1) % filteredCars.length)}
+                      className="absolute right-3.5 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-[#071228]/85 hover:bg-[#154c8a] border border-white/20 text-white flex items-center justify-center transition-all shadow-xl hover:scale-110 cursor-pointer"
+                      aria-label="Next vehicle"
+                    >
+                      <Icons.ChevronRight />
+                    </button>
+                  </div>
+                </div>
+
+                {/* Right: Spec Blueprint */}
+                <div className="lg:col-span-5 flex flex-col justify-between">
+                  <div>
+                    <span className="font-subheading text-[11px] uppercase tracking-[2px] font-bold text-[#38bdf8] block mb-1">
+                      Custom Studio Preservation Blueprint
+                    </span>
+                    <h3 className="font-heading font-bold text-2xl sm:text-3xl text-white mb-2">
+                      {currentCar.name}
+                    </h3>
+                    <p className="text-sm text-[#bae6fd] font-semibold mb-6 flex items-center gap-2">
+                      <Icons.Shield />
+                      <span>{currentCar.recommendedProgram}</span>
+                    </p>
+
+                    <div className="grid grid-cols-3 gap-2.5 p-3.5 rounded-xl bg-[#03050a]/80 border border-white/10 mb-6">
+                      <div>
+                        <span className="text-[10px] uppercase font-subheading text-gray-400 tracking-wider block">Duration</span>
+                        <span className="text-xs font-semibold text-white mt-0.5 block">{currentCar.cureTime}</span>
+                      </div>
+                      <div>
+                        <span className="text-[10px] uppercase font-subheading text-gray-400 tracking-wider block">Warranty</span>
+                        <span className="text-xs font-semibold text-[#38bdf8] mt-0.5 block">{currentCar.warranty}</span>
+                      </div>
+                      <div>
+                        <span className="text-[10px] uppercase font-subheading text-gray-400 tracking-wider block">Estimated</span>
+                        <span className="text-xs font-semibold text-[#a7f3d0] mt-0.5 block">{currentCar.priceRange}</span>
+                      </div>
+                    </div>
+
+                    <div className="flex flex-col gap-2.5 mb-8">
+                      {currentCar.specHighlights.map((spec, i) => (
+                        <div key={i} className="flex items-start gap-2.5 text-xs text-gray-300 font-light">
+                          <Icons.Check />
+                          <span>{spec}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col sm:flex-row gap-3 pt-2">
+                    <button
+                      onClick={() => onOpenBooking(`${currentCar.recommendedProgram} (${currentCar.name})`)}
+                      className="flex-1 bg-gradient-to-r from-[#38bdf8] via-[#154c8a] to-[#0c1f42] hover:from-[#7dd3fc] text-white font-subheading font-bold text-xs uppercase tracking-wider py-4 rounded-xl flex items-center justify-center gap-2 shadow-lg hover:shadow-[0_0_20px_rgba(0,180,216,0.4)] transition-all cursor-pointer"
+                    >
+                      <Icons.Calendar />
+                      <span>Book This Spec</span>
+                    </button>
+
+                    <a
+                      href={`https://wa.me/${businessInfo.contact.whatsappRaw}?text=${encodeURIComponent(waCarMessage)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 bg-[#25D366] hover:bg-[#20bd5a] text-white font-subheading font-bold text-xs uppercase tracking-wider py-4 rounded-xl flex items-center justify-center gap-2 shadow-lg hover:shadow-[0_4px_20px_rgba(37,211,102,0.4)] transition-all"
+                    >
+                      <Icons.MessageSquare />
+                      <span>WhatsApp Quote</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    // ==========================================
+    // 8. THE 6-STAGE CLEANROOM PROCESS
+    // ==========================================
+    function CleanroomProcess() {
+      const [activeStep, setActiveStep] = useState(0);
+
+      const steps = [
+        {
+          num: "01",
+          title: "22-Point Decontamination Bath",
+          desc: "pH-neutral snow foam immersion followed by chemical iron fallout removal, tar dissolving, and ultra-fine clay bar exfoliation.",
+          techSpec: "Grit-Guard 2-Bucket System & Deionized Reverse Osmosis Water",
+          time: "3 - 4 Hours"
+        },
+        {
+          num: "02",
+          title: "Digital Micron Paint Depth Mapping",
+          desc: "Ultrasound thickness measurements taken across all steel, aluminum, and composite panels to verify clear-coat safety.",
+          techSpec: "Precision Digital Ultrasound Gauge (Accuracy to ±0.1 µm)",
+          time: "1 Hour"
+        },
+        {
+          num: "03",
+          title: "Multi-Stage Optical Paint Leveling",
+          desc: "Jeweled micro-abrasive compounding eliminating 85% to 95% of wash swirls, buffer trails, and acid etching under 5000K lights.",
+          techSpec: "German Dual-Action Random Orbital Polishers & Microfiber Discs",
+          time: "1 - 2 Days"
+        },
+        {
+          num: "04",
+          title: "Cleanroom Installation (PPF / 10H Graphene)",
+          desc: "Conducted inside our climate-controlled, positive-pressure cleanroom bay. Eliminates dust particles for microscopic bonding.",
+          techSpec: "ISO Cleanroom Bay with Micro-Air HEPA Filtration & Zero Turbulence",
+          time: "1 - 3 Days"
+        },
+        {
+          num: "05",
+          title: "Infrared Thermal Heat Curing",
+          desc: "Shortwave infrared baking lamps accelerate molecular cross-linking between ceramic/graphene SiO2 matrix and clear coat.",
+          techSpec: "Shortwave IR Lamps at 65°C Controlled Surface Thermal Cycle",
+          time: "12 Hours"
+        },
+        {
+          num: "06",
+          title: "10-Year Warranty & Studio Handover",
+          desc: "Comprehensive quality control audit, digital warranty certificate registration with chassis number tracking.",
+          techSpec: "Official QR-Coded Studio Warranty Certificate & Hydrophobic Audit",
+          time: "Final Handover"
+        }
+      ];
+
+      return (
+        <section id="process" className="py-24 sm:py-32 bg-[#060a14] relative overflow-hidden border-t border-b border-[#102d60]/50">
+          <div className="max-w-7xl mx-auto px-5 sm:px-6 relative z-10">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <div className="inline-flex items-center gap-2 mb-3">
+                <span className="w-6 h-[2px] bg-[#38bdf8]" />
+                <span className="font-subheading text-xs uppercase tracking-[3px] font-bold text-[#38bdf8]">
+                  Cleanroom Protocol
+                </span>
+                <span className="w-6 h-[2px] bg-[#38bdf8]" />
+              </div>
+              <h2 className="font-heading text-3xl sm:text-5xl font-bold text-white mb-4">
+                The 6-Stage Master Studio Process
+              </h2>
+              <div className="w-20 h-[3px] bg-gradient-to-r from-[#38bdf8] to-[#154c8a] mx-auto mb-6" />
+              <p className="text-gray-300 text-sm sm:text-base font-light">
+                Every vehicle at WELLPRO undergoes an uncompromising protocol within our dust-free cleanroom bays.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-10">
+              {steps.map((st, i) => (
+                <button
+                  key={i}
+                  onClick={() => setActiveStep(i)}
+                  className={`p-4 rounded-2xl border text-left transition-all duration-300 cursor-pointer ${
+                    activeStep === i
+                      ? 'bg-gradient-to-b from-[#102d60] to-[#071228] border-[#38bdf8] shadow-[0_0_20px_rgba(0,180,216,0.35)] scale-105'
+                      : 'bg-[#03050a]/80 border-white/10 hover:border-white/20'
+                  }`}
+                >
+                  <span className={`font-mono text-xs font-bold block mb-1 ${activeStep === i ? 'text-[#38bdf8]' : 'text-gray-500'}`}>
+                    {st.num}
+                  </span>
+                  <h4 className="font-heading font-bold text-xs text-white leading-tight">
+                    {st.title.split(' ')[0]} {st.title.split(' ')[1] || ''}
+                  </h4>
+                </button>
+              ))}
+            </div>
+
+            <div className="rounded-3xl bg-gradient-to-r from-[#030814] via-[#071228] to-[#0a1020] border border-[#00b4d8]/40 p-8 sm:p-12 shadow-2xl">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div className="lg:col-span-8">
+                  <span className="inline-block px-3.5 py-1 rounded-full bg-[#38bdf8]/15 border border-[#38bdf8]/40 text-[#bae6fd] text-xs font-mono font-bold mb-4">
+                    STAGE {steps[activeStep].num} OF 06
+                  </span>
+                  <h3 className="font-heading font-black text-2xl sm:text-4xl text-white mb-4">
+                    {steps[activeStep].title}
+                  </h3>
+                  <p className="text-gray-300 text-sm sm:text-base font-light leading-relaxed mb-6">
+                    {steps[activeStep].desc}
+                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-white/10">
+                    <div className="p-3.5 rounded-xl bg-[#03050a]/70 border border-white/10">
+                      <span className="text-[10px] uppercase font-subheading text-gray-400 block mb-0.5">Technology & Equipment</span>
+                      <span className="text-xs font-semibold text-[#38bdf8]">{steps[activeStep].techSpec}</span>
+                    </div>
+                    <div className="p-3.5 rounded-xl bg-[#03050a]/70 border border-white/10">
+                      <span className="text-[10px] uppercase font-subheading text-gray-400 block mb-0.5">Studio Curing Time</span>
+                      <span className="text-xs font-semibold text-white">{steps[activeStep].time}</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="lg:col-span-4 flex items-center justify-center">
+                  <div className="w-36 h-36 sm:w-44 sm:h-44 rounded-full bg-[#071228] border-2 border-[#38bdf8] shadow-[0_0_40px_rgba(0,180,216,0.4)] flex flex-col items-center justify-center text-center p-4">
+                    <span className="text-4xl sm:text-5xl font-heading font-black text-white">{steps[activeStep].num}</span>
+                    <span className="text-[10px] font-subheading uppercase tracking-widest text-[#38bdf8] font-bold mt-1">Certified Bay</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    // ==========================================
+    // 9. RETAIL PRODUCTS & WORKSHOP TRADE STORE
+    // ==========================================
+    function ProductsAndSupplies() {
+      const [activeTab, setActiveTab] = useState('retail');
+
+      const retailProducts = [
+        {
+          name: "WELLPRO Ultra Snow Foam (pH-Neutral)",
+          size: "1000ml Concentrate",
+          price: "₹899",
+          desc: "High-lubricity snow foam that encapsulates grit and dirt without stripping ceramic coating or PPF.",
+          tag: "Maintenance Essential",
+          image: "https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=600&q=80"
+        },
+        {
+          name: "10H Graphene Quick Detailer & Booster",
+          size: "500ml Spray",
+          price: "₹1,299",
+          desc: "Infused with reduced graphene oxide to rejuvenate hydrophobic roll-off and intense mirror gloss.",
+          tag: "Top-Up Spray",
+          image: "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=600&q=80"
+        },
+        {
+          name: "500 GSM Edgeless Plush Microfiber Pack (3x)",
+          size: "40x40 cm Edgeless",
+          price: "₹649",
+          desc: "Laser-cut 70/30 blend microfiber towels guaranteed never to introduce micro-scratches or swirls.",
+          tag: "Zero-Scratch Fabric",
+          image: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=600&q=80"
+        },
+        {
+          name: "Interior Satin Anti-Bacterial Cleaner & Feed",
+          size: "500ml Trigger Spray",
+          price: "₹799",
+          desc: "pH-neutral delicate cleaner for leatherette, Nappa leather, and soft-touch dash without greasy shine.",
+          tag: "OEM Matte Cabin",
+          image: "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=600&q=80"
+        }
+      ];
+
+      const tradeMaterials = [
+        {
+          name: "German Dual-Action Foam Polishing Pads",
+          size: "5-inch & 6-inch Discs",
+          price: "Bulk Trade Rates",
+          desc: "Heavy-cut blue, medium-polish yellow, and ultra-finish black open-cell reticulated German foam.",
+          tag: "Workshop Consumables",
+          image: "https://images.unsplash.com/photo-1507136566006-cfc505b114fc?auto=format&fit=crop&w=600&q=80"
+        },
+        {
+          name: "Precision Micro-Abrasive Compounding Paste",
+          size: "1000g Studio Bottle",
+          price: "Wholesale & Retail",
+          desc: "Diminishing micro-abrasive compounding paste engineered for rapid swirl removal with zero filler oils.",
+          tag: "Body Shop Grade",
+          image: "https://images.unsplash.com/photo-1601362840469-51e4d8d58785?auto=format&fit=crop&w=600&q=80"
+        },
+        {
+          name: "Automotive Precision Heat-Resistant Masking Tape",
+          size: "Pack of 10 Rolls (18mm)",
+          price: "Trade Supply",
+          desc: "Leaves zero gummy residue on rubber trims, plastics, or badges during high-speed machine compounding.",
+          tag: "Masking Supplies",
+          image: "https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=600&q=80"
+        },
+        {
+          name: "Rotary & DA Polisher Flexible Backing Plates",
+          size: "M14 & 5/16 Threads",
+          price: "Trade Equipment",
+          desc: "Urethane molded backing plates dissipating heat and providing contour flexibility on curved panels.",
+          tag: "Detailing Hardware",
+          image: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=600&q=80"
+        }
+      ];
+
+      const currentList = activeTab === 'retail' ? retailProducts : tradeMaterials;
+
+      return (
+        <section id="store" className="py-24 sm:py-32 bg-[#03050a] relative overflow-hidden">
+          <div className="max-w-7xl mx-auto px-5 sm:px-6 relative z-10">
+            <div className="text-center max-w-3xl mx-auto mb-14">
+              <div className="inline-flex items-center gap-2 mb-3">
+                <span className="w-6 h-[2px] bg-[#38bdf8]" />
+                <span className="font-subheading text-xs uppercase tracking-[3px] font-bold text-[#38bdf8]">
+                  Studio Store & Trade Supply
+                </span>
+                <span className="w-6 h-[2px] bg-[#38bdf8]" />
+              </div>
+              <h2 className="font-heading text-3xl sm:text-5xl font-bold text-white mb-4">
+                Retail Car Care Products & Detailing Materials
+              </h2>
+              <div className="w-20 h-[3px] bg-gradient-to-r from-[#38bdf8] to-[#154c8a] mx-auto mb-6" />
+              <p className="text-gray-300 text-sm sm:text-base font-light">
+                Professional car care formulas for car enthusiasts and direct wholesale trade supplies for local detailing workshops.
+              </p>
+            </div>
+
+            <div className="flex items-center justify-center gap-3 mb-12">
+              <button
+                onClick={() => setActiveTab('retail')}
+                className={`font-subheading text-xs uppercase tracking-wider font-bold px-6 py-3 rounded-full transition-all cursor-pointer ${
+                  activeTab === 'retail'
+                    ? 'bg-gradient-to-r from-[#38bdf8] to-[#154c8a] text-white shadow-[0_0_20px_rgba(0,180,216,0.4)]'
+                    : 'bg-[#071228] border border-white/10 text-gray-400 hover:text-white'
+                }`}
+              >
+                Retail Products (Car Enthusiasts)
+              </button>
+              <button
+                onClick={() => setActiveTab('trade')}
+                className={`font-subheading text-xs uppercase tracking-wider font-bold px-6 py-3 rounded-full transition-all cursor-pointer ${
+                  activeTab === 'trade'
+                    ? 'bg-gradient-to-r from-[#38bdf8] to-[#154c8a] text-white shadow-[0_0_20px_rgba(0,180,216,0.4)]'
+                    : 'bg-[#071228] border border-white/10 text-gray-400 hover:text-white'
+                }`}
+              >
+                Sale Local Materials (Workshops & Trade)
+              </button>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {currentList.map((item, idx) => {
+                const waOrderMsg = `Hello WELLPRO! I would like to order "${item.name}" (${item.size}). Price: ${item.price}. Please share availability and dispatch options.`;
+                const waOrderUrl = `https://wa.me/${businessInfo.contact.whatsappRaw}?text=${encodeURIComponent(waOrderMsg)}`;
+
+                return (
+                  <div
+                    key={idx}
+                    className="rounded-2xl bg-[#0a1020] border border-[#102d60]/60 p-5 flex flex-col justify-between hover:border-[#38bdf8]/60 transition-all hover:-translate-y-1 shadow-lg"
+                  >
+                    <div>
+                      <div className="h-44 rounded-xl overflow-hidden mb-4 bg-black relative">
+                        <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
+                        <span className="absolute top-2.5 right-2.5 bg-[#03050a]/85 border border-[#38bdf8]/50 text-[#bae6fd] text-[9px] uppercase font-bold px-2.5 py-0.5 rounded-full">
+                          {item.tag}
+                        </span>
+                      </div>
+                      <span className="text-[10px] uppercase font-mono text-[#38bdf8] block mb-1">{item.size}</span>
+                      <h4 className="font-heading font-bold text-base text-white mb-2 leading-snug">{item.name}</h4>
+                      <p className="text-xs text-gray-400 font-light leading-relaxed mb-4">{item.desc}</p>
+                    </div>
+
+                    <div className="pt-3 border-t border-white/10 flex items-center justify-between">
+                      <span className="font-heading font-black text-base text-[#38bdf8]">{item.price}</span>
+                      <a
+                        href={waOrderUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-[#25D366] hover:bg-[#20bd5a] text-white text-[11px] font-subheading uppercase font-bold shadow-sm transition-all"
+                      >
+                        <Icons.MessageSquare />
+                        <span>Inquire</span>
+                      </a>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    // ==========================================
+    // 10. INTERACTIVE ESTIMATOR FOR INDIAN CARS
+    // ==========================================
+    function Estimator({ onOpenBooking }) {
+      const [selectedVehicle, setSelectedVehicle] = useState('mid-suv');
+      const [selectedPackage, setSelectedPackage] = useState('graphene-10h');
+
+      const vehicleOptions = [
+        {
+          key: 'hatch-compact',
+          label: 'Hatchback & Compact (Maruti Swift, i20, Fronx, Punch)',
+          examples: 'Maruti Swift, Baleno, Hyundai i20, Fronx, Altroz, Punch, Brezza',
+          priceMultiplier: 1.0
+        },
+        {
+          key: 'mid-suv',
+          label: 'Mid SUV & Sedan (Hyundai Creta, Grand Vitara, Thar, Verna)',
+          examples: 'Hyundai Creta, Maruti Grand Vitara, Thar Roxx, Verna, XUV700, City, Scorpio-N',
+          priceMultiplier: 1.25
+        },
+        {
+          key: 'full-suv',
+          label: 'Full SUV & Flagship (Fortuner, Safari, Hycross, Defender)',
+          examples: 'Toyota Fortuner, Tata Safari, Innova Hycross, Land Rover Defender, Mercedes, BMW',
+          priceMultiplier: 1.55
+        },
+      ];
+
+      const packageOptions = [
+        {
+          key: 'graphene-10h',
+          name: '10H Graphene Coating',
+          basePrice: 19999,
+          scope: 'Full Exterior Paintwork, Trims, Headlights & Wheels',
+          warranty: '5 - 7 Years Warranty',
+          turnaround: '2 - 3 Days Studio Bay',
+        },
+        {
+          key: 'ceramic-9h',
+          name: '9H Ceramic Coating',
+          basePrice: 14999,
+          scope: 'Multi-Stage Paint Correction + 2 Layers 9H Quartz',
+          warranty: '3 - 5 Years Warranty',
+          turnaround: '2 Days Studio Bay',
+        },
+        {
+          key: 'ppf-full',
+          name: 'Full Body TPU Self-Healing PPF',
+          basePrice: 65000,
+          scope: '100% Painted Panels + Bumpers + Headlights & Mirrors',
+          warranty: '10-Year Comprehensive Warranty',
+          turnaround: '4 - 5 Days Studio Bay',
+        },
+        {
+          key: 'interior-sanitization',
+          name: 'Interior Sanitization & Deep Spa',
+          basePrice: 5999,
+          scope: 'Cabin Steam Sterilization + AC Flush + Ozone Treatment',
+          warranty: 'Hospital-Grade Hygiene Guarantee',
+          turnaround: 'Same Day (4 - 6 Hours)',
+        },
+        {
+          key: 'engine-rodent',
+          name: 'Engine Beautification + Rodent Repellent',
+          basePrice: 3999,
+          scope: 'Engine Bay Steam Degrease + Wire Harness Bitter Coating',
+          warranty: '6-Month Protective Shield',
+          turnaround: 'Same Day (2 - 3 Hours)',
+        }
+      ];
+
+      const currentVehicleObj = vehicleOptions.find(v => v.key === selectedVehicle) || vehicleOptions[1];
+      const currentPackageObj = packageOptions.find(p => p.key === selectedPackage) || packageOptions[0];
+
+      const estimatedPrice = Math.round(currentPackageObj.basePrice * currentVehicleObj.priceMultiplier);
+      const formattedPrice = `₹${estimatedPrice.toLocaleString('en-IN')}`;
+
+      const waEstimateMessage = `*Vehicle Protection Configuration - WELLPRO*\n\n` +
+        `• *Vehicle Segment:* ${currentVehicleObj.label}\n` +
+        `• *Selected Package:* ${currentPackageObj.name}\n` +
+        `• *Estimated Investment:* ${formattedPrice} approx.\n` +
+        `• *Protection Scope:* ${currentPackageObj.scope}\n` +
+        `• *Warranty:* ${currentPackageObj.warranty}\n` +
+        `• *Turnaround:* ${currentPackageObj.turnaround}\n\n` +
+        `Please share studio slot availability and confirm this booking.`;
+
+      const waEstimateUrl = `https://wa.me/${businessInfo.contact.whatsappRaw}?text=${encodeURIComponent(waEstimateMessage)}`;
+
+      return (
+        <section id="estimator" className="py-24 sm:py-32 bg-gradient-to-b from-[#03050a] via-[#071228] to-[#03050a] relative overflow-hidden">
+          <div className="max-w-7xl mx-auto px-5 sm:px-6 relative z-10">
+            <div className="text-center max-w-3xl mx-auto mb-14">
+              <div className="inline-flex items-center gap-2 mb-3">
+                <span className="w-6 h-[2px] bg-[#38bdf8]" />
+                <span className="font-subheading text-xs uppercase tracking-[3px] font-bold text-[#38bdf8]">
+                  Interactive Configurator
+                </span>
+                <span className="w-6 h-[2px] bg-[#38bdf8]" />
+              </div>
+
+              <h2 className="font-heading text-3xl sm:text-5xl font-bold text-white mb-4">
+                Indian Vehicle Package Estimator
+              </h2>
+
+              <div className="w-20 h-[3px] bg-gradient-to-r from-[#38bdf8] to-[#154c8a] mx-auto mb-6" />
+
+              <p className="text-gray-300 text-sm sm:text-base font-light">
+                Select your vehicle class (Maruti, Hyundai, Mahindra, Tata, Toyota) and desired armor level for an instant investment estimate.
+              </p>
+            </div>
+
+            <div className="rounded-3xl bg-gradient-to-b from-[#0a1020] to-[#030814] border border-[#102d60]/60 p-6 sm:p-10 shadow-2xl">
+              <div className="mb-10">
+                <span className="font-subheading text-xs uppercase tracking-[2px] font-bold text-[#38bdf8] block mb-4">
+                  Step 1: Choose Your Indian Vehicle Category
+                </span>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  {vehicleOptions.map((veh) => (
+                    <button
+                      key={veh.key}
+                      onClick={() => setSelectedVehicle(veh.key)}
+                      className={`p-5 rounded-2xl border text-left transition-all duration-300 cursor-pointer ${
+                        selectedVehicle === veh.key
+                          ? 'bg-gradient-to-b from-[#102d60] to-[#071228] border-[#38bdf8] shadow-[0_0_20px_rgba(0,180,216,0.35)] scale-[1.02]'
+                          : 'bg-[#060a14]/80 border-white/10 hover:border-white/20'
+                      }`}
+                    >
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="font-heading font-bold text-base text-white">{veh.label.split('(')[0]}</span>
+                        <Icons.Car />
+                      </div>
+                      <p className="text-xs text-gray-400 font-light leading-relaxed">{veh.examples}</p>
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mb-10">
+                <span className="font-subheading text-xs uppercase tracking-[2px] font-bold text-[#38bdf8] block mb-4">
+                  Step 2: Choose Armor & Detailing Service
+                </span>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {packageOptions.map((pkg) => (
+                    <button
+                      key={pkg.key}
+                      onClick={() => setSelectedPackage(pkg.key)}
+                      className={`p-5 rounded-2xl border text-left transition-all duration-300 cursor-pointer flex flex-col justify-between ${
+                        selectedPackage === pkg.key
+                          ? 'bg-gradient-to-b from-[#102d60] to-[#071228] border-[#38bdf8] shadow-[0_0_20px_rgba(0,180,216,0.35)] scale-[1.02]'
+                          : 'bg-[#060a14]/80 border-white/10 hover:border-white/20'
+                      }`}
+                    >
+                      <div>
+                        <div className="flex items-center justify-between mb-2">
+                          <span className="font-heading font-bold text-base text-white">{pkg.name}</span>
+                          {selectedPackage === pkg.key && <Icons.Check />}
+                        </div>
+                        <p className="text-xs text-gray-300 font-light mb-3">{pkg.scope}</p>
+                      </div>
+                      <div className="pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-[#38bdf8]">
+                        <span>{pkg.warranty}</span>
+                        <span className="text-gray-400">{pkg.turnaround}</span>
+                      </div>
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <div className="p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-[#030814] via-[#071228] to-[#0c1f42] border border-[#00b4d8]/40 flex flex-col lg:flex-row items-center justify-between gap-6 shadow-xl">
+                <div>
+                  <span className="font-subheading text-[11px] uppercase tracking-[2px] font-bold text-[#38bdf8] block mb-1">
+                    Estimated Studio Investment (Inclusive of Surface Prep & Tax)
+                  </span>
+                  <div className="flex items-baseline gap-3">
+                    <span className="font-heading font-black text-3xl sm:text-5xl text-white">{formattedPrice}</span>
+                    <span className="text-xs text-gray-400 font-light">*Indicative baseline quote</span>
+                  </div>
+                  <p className="text-xs text-[#bae6fd] mt-1">
+                    Configured for: <strong>{currentVehicleObj.label.split('(')[0]}</strong> with <strong>{currentPackageObj.name}</strong>
+                  </p>
+                </div>
+
+                <div className="flex flex-col sm:flex-row items-center gap-3 w-full lg:w-auto">
+                  <button
+                    onClick={() => onOpenBooking(`${currentPackageObj.name} for ${currentVehicleObj.label}`)}
+                    className="w-full sm:w-auto bg-gradient-to-r from-[#38bdf8] via-[#154c8a] to-[#0c1f42] hover:from-[#7dd3fc] text-white font-subheading font-bold text-xs uppercase tracking-wider px-6 py-4 rounded-xl flex items-center justify-center gap-2 shadow-lg hover:shadow-[0_0_20px_rgba(0,180,216,0.4)] transition-all cursor-pointer"
+                  >
+                    <Icons.Calendar />
+                    <span>Reserve Studio Bay</span>
+                  </button>
+
+                  <a
+                    href={waEstimateUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-auto bg-[#25D366] hover:bg-[#20bd5a] text-white font-subheading font-bold text-xs uppercase tracking-wider px-6 py-4 rounded-xl flex items-center justify-center gap-2 shadow-lg hover:shadow-[0_4px_20px_rgba(37,211,102,0.4)] transition-all"
+                  >
+                    <Icons.MessageSquare />
+                    <span>Confirm on WhatsApp</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    // ==========================================
+    // 11. BEFORE & AFTER PAINT SLIDER
+    // ==========================================
+    function BeforeAfter() {
+      const [sliderPos, setSliderPos] = useState(50);
+      const [isDragging, setIsDragging] = useState(false);
+      const containerRef = useRef(null);
+
+      const handleMove = useCallback((clientX) => {
+        if (!containerRef.current) return;
+        const rect = containerRef.current.getBoundingClientRect();
+        const x = clientX - rect.left;
+        const percentage = Math.max(5, Math.min(95, (x / rect.width) * 100));
+        setSliderPos(percentage);
+      }, []);
+
+      const handleTouchMove = (e) => {
+        if (e.touches[0]) handleMove(e.touches[0].clientX);
+      };
+
+      const handleMouseMove = (e) => {
+        if (isDragging) handleMove(e.clientX);
+      };
+
+      return (
+        <section className="py-24 sm:py-32 bg-[#03050a] relative overflow-hidden">
+          <div className="max-w-7xl mx-auto px-5 sm:px-6 relative z-10">
+            <div className="text-center max-w-3xl mx-auto mb-14">
+              <div className="inline-flex items-center gap-2 mb-3">
+                <span className="w-5 h-[2px] bg-[#38bdf8]" />
+                <span className="font-subheading text-xs uppercase tracking-[3px] font-bold text-[#38bdf8]">
+                  Transformation Proof
+                </span>
+                <span className="w-5 h-[2px] bg-[#38bdf8]" />
+              </div>
+
+              <h2 className="font-heading text-3xl sm:text-5xl font-bold text-white mb-4">
+                Interactive Paint Restoration Slider
+              </h2>
+
+              <div className="w-16 h-[3px] bg-gradient-to-r from-[#38bdf8] to-[#154c8a] mx-auto mb-6" />
+
+              <p className="text-gray-300 text-sm sm:text-base font-light">
+                Drag the divider to witness the dramatic before and after clarity achieved on Indian car finishes.
+              </p>
+            </div>
+
+            <div
+              ref={containerRef}
+              onMouseDown={() => setIsDragging(true)}
+              onMouseUp={() => setIsDragging(false)}
+              onMouseLeave={() => setIsDragging(false)}
+              onMouseMove={handleMouseMove}
+              onTouchMove={handleTouchMove}
+              className="relative h-[320px] sm:h-[480px] md:h-[560px] rounded-3xl overflow-hidden border border-[#102d60] shadow-2xl select-none cursor-ew-resize"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=85"
+                alt="Before Restoration"
+                className="absolute inset-0 w-full h-full object-cover filter contrast-[1.1] brightness-[0.7]"
+              />
+
+              <div className="absolute top-6 left-6 bg-[#03050a]/85 backdrop-blur-md border border-white/20 rounded-full px-4 py-1.5 text-xs font-subheading font-bold uppercase tracking-wider text-gray-300">
+                Before: Wash Swirls & Oxidation
+              </div>
+
+              <div
+                className="absolute inset-0 overflow-hidden"
+                style={{ width: `${sliderPos}%` }}
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=1600&q=85"
+                  alt="After WELLPRO Restoration"
+                  className="absolute inset-0 w-[1280px] max-w-none h-full object-cover filter brightness-[1.08] contrast-[1.25]"
+                />
+                <div className="absolute top-6 left-6 bg-[#071228]/90 backdrop-blur-md border border-[#38bdf8] rounded-full px-4 py-1.5 text-xs font-subheading font-bold uppercase tracking-wider text-[#38bdf8] shadow-lg">
+                  After: WELLPRO 10H Armor
+                </div>
+              </div>
+
+              <div
+                className="absolute inset-y-0 w-1 bg-gradient-to-b from-[#38bdf8] via-white to-[#00b4d8] shadow-[0_0_15px_#38bdf8]"
+                style={{ left: `${sliderPos}%` }}
+              >
+                <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-[#071228] border-2 border-[#38bdf8] shadow-[0_0_20px_rgba(0,180,216,0.6)] flex items-center justify-center text-[#38bdf8]">
+                  <Icons.ChevronsLeftRight />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    // ==========================================
+    // 12. WHY CHOOSE WELLPRO
+    // ==========================================
+    function WhyChooseUs() {
+      const reasons = [
+        { title: "Dust-Free Cleanroom Bays", desc: "Equipped with positive pressure air filtration ensuring zero airborne debris during PPF & ceramic bonding." },
+        { title: "Aerospace Formulations", desc: "Authentic 10H reduced graphene oxide and German-engineered self-healing TPU films." },
+        { title: "High-CRI Detailing Lights", desc: "Every square inch inspected under 5000K daylight-balanced multi-angle inspection arrays." },
+        { title: "Written Studio Warranty", desc: "Direct manufacturer backed warranties covering up to 10 years with scheduled bi-annual top-ups." },
+      ];
+
+      return (
+        <section id="why-us" className="py-24 sm:py-32 bg-[#071228]/50 relative">
+          <div className="max-w-7xl mx-auto px-5 sm:px-6">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <div className="inline-flex items-center gap-2 mb-3">
+                <span className="w-5 h-[2px] bg-[#38bdf8]" />
+                <span className="font-subheading text-xs uppercase tracking-[3px] font-bold text-[#38bdf8]">
+                  The Studio Difference
+                </span>
+                <span className="w-5 h-[2px] bg-[#38bdf8]" />
+              </div>
+              <h2 className="font-heading text-3xl sm:text-5xl font-bold text-white mb-4">
+                Why Discerning Car Owners Choose WELLPRO
+              </h2>
+              <div className="w-16 h-[3px] bg-gradient-to-r from-[#38bdf8] to-[#154c8a] mx-auto mb-6" />
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {reasons.map((r, i) => (
+                <div key={i} className="p-7 rounded-2xl bg-[#03050a] border border-[#102d60]/50 hover:border-[#38bdf8]/50 transition-all">
+                  <div className="w-10 h-10 rounded-xl bg-[#071228] border border-[#00b4d8]/30 flex items-center justify-center text-[#38bdf8] mb-5">
+                    <Icons.Shield />
+                  </div>
+                  <h3 className="font-heading font-bold text-lg text-white mb-2">{r.title}</h3>
+                  <p className="text-xs text-gray-400 font-light leading-relaxed">{r.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    // ==========================================
+    // 13. GALLERY & DELIVERIES
+    // ==========================================
+    function Gallery() {
+      const items = [
+        { title: "Hyundai Creta (Titan Grey)", tag: "10H Graphene Coating", image: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80" },
+        { title: "Maruti Grand Vitara (Nexa Blue)", tag: "9H Ceramic Armor", image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=800&q=80" },
+        { title: "Toyota Fortuner Legender", tag: "Full TPU PPF Wrap", image: "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80" },
+        { title: "Mahindra Thar Roxx 4x4", tag: "Rugged Offroad Armor", image: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80" },
+        { title: "Tata Safari #DARK Edition", tag: "3-Stage Correction & Ceramic", image: "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=800&q=80" },
+        { title: "Maruti Swift (Fire Red)", tag: "Paint Correction & Mirror Gloss", image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80" },
+      ];
+
+      return (
+        <section id="gallery" className="py-24 sm:py-32 bg-[#03050a] relative">
+          <div className="max-w-7xl mx-auto px-5 sm:px-6">
+            <div className="text-center max-w-3xl mx-auto mb-14">
+              <div className="inline-flex items-center gap-2 mb-3">
+                <span className="w-5 h-[2px] bg-[#38bdf8]" />
+                <span className="font-subheading text-xs uppercase tracking-[3px] font-bold text-[#38bdf8]">
+                  Transformation Gallery
+                </span>
+                <span className="w-5 h-[2px] bg-[#38bdf8]" />
+              </div>
+              <h2 className="font-heading text-3xl sm:text-5xl font-bold text-white mb-4">
+                Recent Master Studio Deliveries
+              </h2>
+              <div className="w-16 h-[3px] bg-gradient-to-r from-[#38bdf8] to-[#154c8a] mx-auto mb-6" />
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {items.map((item, idx) => (
+                <div key={idx} className="group relative rounded-2xl overflow-hidden border border-[#102d60]/40 bg-[#071228] shadow-lg">
+                  <div className="h-64 overflow-hidden">
+                    <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108" />
+                  </div>
+                  <div className="p-5 bg-gradient-to-t from-[#03050a] to-[#071228]">
+                    <span className="text-[10px] uppercase font-subheading font-bold tracking-wider text-[#38bdf8] block mb-1">{item.tag}</span>
+                    <h3 className="font-heading font-bold text-lg text-white">{item.title}</h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    // ==========================================
+    // 14. CLIENT TESTIMONIALS
+    // ==========================================
+    function Testimonials() {
+      const reviews = [
+        { name: "Rahul Menon", car: "Toyota Fortuner Legender (Full TPU PPF)", quote: "The finish on my Fortuner Legender is flawless. Zero blade marks, wrapped edges, and the self-healing TPU has already saved my hood from highway gravel. Best detailing studio in the state." },
+        { name: "Siddharth Nair", car: "Tata Safari #DARK (3-Stage Paint Correction)", quote: "Maintaining a black car in India is tough, but WELLPRO completely removed every single swirl and applied a deep 9H ceramic glass finish. The reflections are staggering." },
+        { name: "Dr. Arun Kumar", car: "Mahindra Thar 4x4 (Offroad Armor + Rodent Defense)", quote: "Got the underbody anti-rust, rodent repellent, and Graphene coating done. The team’s attention to detail and customer care is unmatched. True professionals." },
+      ];
+
+      return (
+        <section id="testimonials" className="py-24 sm:py-32 bg-[#071228]/40 relative">
+          <div className="max-w-7xl mx-auto px-5 sm:px-6">
+            <div className="text-center max-w-3xl mx-auto mb-14">
+              <div className="inline-flex items-center gap-2 mb-3">
+                <span className="w-5 h-[2px] bg-[#38bdf8]" />
+                <span className="font-subheading text-xs uppercase tracking-[3px] font-bold text-[#38bdf8]">
+                  Client Feedback
+                </span>
+                <span className="w-5 h-[2px] bg-[#38bdf8]" />
+              </div>
+              <h2 className="font-heading text-3xl sm:text-5xl font-bold text-white mb-4">
+                What Indian Car Enthusiasts Say
+              </h2>
+              <div className="w-16 h-[3px] bg-gradient-to-r from-[#38bdf8] to-[#154c8a] mx-auto mb-6" />
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {reviews.map((rev, i) => (
+                <div key={i} className="p-7 rounded-2xl bg-[#03050a] border border-[#102d60]/50 flex flex-col justify-between">
+                  <div>
+                    <div className="flex items-center gap-1 mb-4 text-[#38bdf8]">
+                      {[...Array(5)].map((_, si) => <Icons.Star key={si} />)}
+                    </div>
+                    <p className="text-xs text-gray-300 font-light leading-relaxed mb-6 italic">
+                      "{rev.quote}"
+                    </p>
+                  </div>
+                  <div className="pt-4 border-t border-white/5">
+                    <span className="font-heading font-bold text-sm text-white block">{rev.name}</span>
+                    <span className="text-[11px] text-[#38bdf8]">{rev.car}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    // ==========================================
+    // 15. CONTACT & BOOKING
+    // ==========================================
+    function Contact({ onShowToast }) {
+      const [formData, setFormData] = useState({ name: '', phone: '', vehicle: '', service: '10H Graphene Coating', message: '' });
+
+      const handleSubmit = (e) => {
+        e.preventDefault();
+        onShowToast('Inquiry submitted! Studio master will contact you shortly.');
+        setFormData({ name: '', phone: '', vehicle: '', service: '10H Graphene Coating', message: '' });
+      };
+
+      return (
+        <section id="contact" className="py-24 sm:py-32 bg-[#03050a] relative">
+          <div className="max-w-7xl mx-auto px-5 sm:px-6">
+            <div className="text-center max-w-3xl mx-auto mb-14">
+              <div className="inline-flex items-center gap-2 mb-3">
+                <span className="w-5 h-[2px] bg-[#38bdf8]" />
+                <span className="font-subheading text-xs uppercase tracking-[3px] font-bold text-[#38bdf8]">
+                  Get In Touch
+                </span>
+                <span className="w-5 h-[2px] bg-[#38bdf8]" />
+              </div>
+              <h2 className="font-heading text-3xl sm:text-5xl font-bold text-white mb-4">
+                Visit Our Studio or Book a Bay
+              </h2>
+              <div className="w-16 h-[3px] bg-gradient-to-r from-[#38bdf8] to-[#154c8a] mx-auto mb-6" />
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+              <div className="lg:col-span-7 p-7 sm:p-10 rounded-3xl bg-[#0a1020] border border-[#102d60]/60 shadow-2xl">
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="text-xs font-semibold text-gray-300 block mb-1.5">Your Full Name</label>
+                      <input
+                        type="text"
+                        required
+                        value={formData.name}
+                        onChange={(e) => setFormData({...formData, name: e.target.value})}
+                        placeholder="e.g. Vikram Sharma"
+                        className="w-full bg-[#03050a] border border-white/10 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-[#38bdf8]"
+                      />
+                    </div>
+                    <div>
+                      <label className="text-xs font-semibold text-gray-300 block mb-1.5">Phone / WhatsApp Number</label>
+                      <input
+                        type="tel"
+                        required
+                        value={formData.phone}
+                        onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                        placeholder="+91 98765 43210"
+                        className="w-full bg-[#03050a] border border-white/10 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-[#38bdf8]"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="text-xs font-semibold text-gray-300 block mb-1.5">Vehicle Make & Model</label>
+                      <input
+                        type="text"
+                        required
+                        value={formData.vehicle}
+                        onChange={(e) => setFormData({...formData, vehicle: e.target.value})}
+                        placeholder="e.g. Hyundai Creta / Grand Vitara"
+                        className="w-full bg-[#03050a] border border-white/10 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-[#38bdf8]"
+                      />
+                    </div>
+                    <div>
+                      <label className="text-xs font-semibold text-gray-300 block mb-1.5">Service Required</label>
+                      <select
+                        value={formData.service}
+                        onChange={(e) => setFormData({...formData, service: e.target.value})}
+                        className="w-full bg-[#03050a] border border-white/10 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-[#38bdf8]"
+                      >
+                        <option>10H Graphene Coating</option>
+                        <option>9H Ceramic Coating</option>
+                        <option>Paint Protection Film (PPF)</option>
+                        <option>Interior Sanitization & Deep Spa</option>
+                        <option>Engine Beautification</option>
+                        <option>Rodent Repellent Treatment</option>
+                        <option>Multi-Stage Paint Correction</option>
+                        <option>Retail Car Care Products</option>
+                        <option>Sale Car Care Local Materials</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="text-xs font-semibold text-gray-300 block mb-1.5">Special Notes / Queries</label>
+                    <textarea
+                      rows="3"
+                      value={formData.message}
+                      onChange={(e) => setFormData({...formData, message: e.target.value})}
+                      placeholder="Specify existing scratches, delivery timelines, or questions..."
+                      className="w-full bg-[#03050a] border border-white/10 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-[#38bdf8]"
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="w-full bg-gradient-to-r from-[#38bdf8] via-[#154c8a] to-[#0c1f42] hover:from-[#7dd3fc] text-white font-subheading font-bold text-xs uppercase tracking-wider py-4 rounded-xl shadow-lg transition-all cursor-pointer"
+                  >
+                    Submit Booking Request
+                  </button>
+                </form>
+              </div>
+
+              <div className="lg:col-span-5 flex flex-col justify-between p-7 sm:p-10 rounded-3xl bg-[#0a1020] border border-[#102d60]/60">
+                <div>
+                  <h3 className="font-heading font-bold text-xl text-white mb-4">Studio Headquarters</h3>
+                  <p className="text-xs text-gray-300 mb-6 leading-relaxed">
+                    {businessInfo.contact.address.full}
+                  </p>
+                  <div className="space-y-3 text-xs text-gray-300 mb-6">
+                    <p><strong>Phone:</strong> {businessInfo.contact.phone}</p>
+                    <p><strong>WhatsApp:</strong> {businessInfo.contact.whatsapp}</p>
+                    <p><strong>Email:</strong> {businessInfo.contact.email}</p>
+                    <p><strong>Hours:</strong> {businessInfo.contact.workingHours.weekday}</p>
+                  </div>
+                </div>
+
+                <div className="rounded-2xl overflow-hidden border border-white/10 h-44 bg-black">
+                  <iframe
+                    title="Studio Location"
+                    src={businessInfo.contact.googleMapsEmbed}
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    // ==========================================
+    // 16. FOOTER
+    // ==========================================
+    function Footer() {
+      const currentYear = new Date().getFullYear();
+
+      return (
+        <footer className="bg-[#03050a] border-t border-[#102d60]/60 pt-16 pb-12 text-gray-400">
+          <div className="max-w-7xl mx-auto px-5 sm:px-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/5">
+              <div className="lg:col-span-5">
+                <div className="flex items-center gap-3.5 mb-4">
+                  <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-[#38bdf8] flex-shrink-0 bg-white">
+                    <img src="./assets/images/logo.jpg" alt="WELLPRO Logo" className="w-full h-full object-cover" />
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="font-heading font-black text-2xl tracking-[2px] text-white leading-none">
+                      WELL<span className="text-[#38bdf8]">PRO</span>
+                    </span>
+                    <span className="text-[10px] uppercase tracking-[2px] text-[#bae6fd] font-bold mt-1">
+                      We Protect • We Care
+                    </span>
+                  </div>
+                </div>
+
+                <p className="text-xs text-gray-400 font-light leading-relaxed mb-6 max-w-sm">
+                  An elite automotive protection studio engineering optical perfection, self-healing PPF wraps, 10H graphene armor, and specialized vehicle care for Indian cars.
+                </p>
+              </div>
+
+              <div className="lg:col-span-2">
+                <h4 className="font-subheading text-xs uppercase tracking-[2px] font-bold text-white mb-4">Quick Links</h4>
+                <ul className="space-y-2 text-xs">
+                  <li><a href="#home" className="hover:text-[#38bdf8] transition-colors">Home</a></li>
+                  <li><a href="#services" className="hover:text-[#38bdf8] transition-colors">Services</a></li>
+                  <li><a href="#car-stage" className="hover:text-[#38bdf8] transition-colors">Indian Cars</a></li>
+                  <li><a href="#process" className="hover:text-[#38bdf8] transition-colors">Studio Process</a></li>
+                  <li><a href="#store" className="hover:text-[#38bdf8] transition-colors">Store & Supplies</a></li>
+                  <li><a href="#estimator" className="hover:text-[#38bdf8] transition-colors">Estimator</a></li>
+                  <li><a href="#gallery" className="hover:text-[#38bdf8] transition-colors">Our Work</a></li>
+                </ul>
+              </div>
+
+              <div className="lg:col-span-2">
+                <h4 className="font-subheading text-xs uppercase tracking-[2px] font-bold text-white mb-4">Logo Pillars</h4>
+                <ul className="space-y-2 text-xs text-gray-300">
+                  <li>🛡️ PROTECT</li>
+                  <li>✨ DETAIL</li>
+                  <li>🔧 MAINTAIN</li>
+                  <li>🎨 REPAIR</li>
+                </ul>
+              </div>
+
+              <div className="lg:col-span-3 text-xs leading-relaxed">
+                <h4 className="font-subheading text-xs uppercase tracking-[2px] font-bold text-white mb-4">Studio Bay</h4>
+                <p className="text-gray-300 mb-2">{businessInfo.contact.address.full}</p>
+                <p className="text-gray-300 mb-1">Phone: {businessInfo.contact.phone}</p>
+                <p className="text-gray-300">Mon - Sat: 9:00 AM - 7:30 PM</p>
+              </div>
+            </div>
+
+            <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
+              <p>© {currentYear} WELLPRO. All Rights Reserved.</p>
+              <div className="flex items-center gap-6">
+                <span>We Protect • We Care</span>
+              </div>
+            </div>
+          </div>
+        </footer>
+      );
+    }
+
+    // ==========================================
+    // 17. BOOKING MODAL
+    // ==========================================
+    function BookingModal({ isOpen, onClose, preselectedService, onShowToast }) {
+      const [formData, setFormData] = useState({ name: '', phone: '', vehicle: '', service: preselectedService || '10H Graphene Coating', date: '' });
+
+      useEffect(() => {
+        if (preselectedService) {
+          setFormData(prev => ({ ...prev, service: preselectedService }));
+        }
+      }, [preselectedService]);
+
+      if (!isOpen) return null;
+
+      const handleSubmit = (e) => {
+        e.preventDefault();
+        onShowToast('Booking request received! Studio master will contact you to confirm the bay slot.');
+        onClose();
+      };
+
+      return (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md" onClick={onClose}>
+          <div className="relative w-full max-w-lg rounded-3xl bg-[#0a1020] border border-[#00b4d8]/40 p-6 sm:p-8 shadow-2xl" onClick={e => e.stopPropagation()}>
+            <button onClick={onClose} className="absolute top-5 right-5 text-gray-400 hover:text-white">
+              <Icons.X />
+            </button>
+
+            <span className="font-subheading text-[10px] uppercase tracking-[2px] font-bold text-[#38bdf8] block mb-1">
+              Private Studio Bay Reservation
+            </span>
+            <h3 className="font-heading font-bold text-2xl text-white mb-4">
+              Book Your Service Bay
+            </h3>
+
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div>
+                <label className="text-xs font-semibold text-gray-300 block mb-1">Your Full Name</label>
+                <input
+                  type="text"
+                  required
+                  value={formData.name}
+                  onChange={e => setFormData({...formData, name: e.target.value})}
+                  placeholder="e.g. Vikram Sharma"
+                  className="w-full bg-[#03050a] border border-white/10 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-[#38bdf8]"
+                />
+              </div>
+
+              <div>
+                <label className="text-xs font-semibold text-gray-300 block mb-1">Contact Phone</label>
+                <input
+                  type="tel"
+                  required
+                  value={formData.phone}
+                  onChange={e => setFormData({...formData, phone: e.target.value})}
+                  placeholder="+91 98765 43210"
+                  className="w-full bg-[#03050a] border border-white/10 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-[#38bdf8]"
+                />
+              </div>
+
+              <div className="grid grid-cols-2 gap-3">
+                <div>
+                  <label className="text-xs font-semibold text-gray-300 block mb-1">Indian Vehicle</label>
+                  <input
+                    type="text"
+                    required
+                    value={formData.vehicle}
+                    onChange={e => setFormData({...formData, vehicle: e.target.value})}
+                    placeholder="e.g. Hyundai Creta / Grand Vitara"
+                    className="w-full bg-[#03050a] border border-white/10 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-[#38bdf8]"
+                  />
+                </div>
+                <div>
+                  <label className="text-xs font-semibold text-gray-300 block mb-1">Preferred Date</label>
+                  <input
+                    type="date"
+                    required
+                    value={formData.date}
+                    onChange={e => setFormData({...formData, date: e.target.value})}
+                    className="w-full bg-[#03050a] border border-white/10 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-[#38bdf8]"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="text-xs font-semibold text-gray-300 block mb-1">Selected Program</label>
+                <input
+                  type="text"
+                  value={formData.service}
+                  onChange={e => setFormData({...formData, service: e.target.value})}
+                  className="w-full bg-[#03050a] border border-[#38bdf8]/40 rounded-xl px-4 py-3 text-xs text-white font-medium focus:outline-none"
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="w-full bg-gradient-to-r from-[#38bdf8] via-[#154c8a] to-[#0c1f42] text-white font-subheading font-bold text-xs uppercase tracking-wider py-4 rounded-xl shadow-lg mt-2 cursor-pointer"
+              >
+                Confirm Private Reservation
+              </button>
+            </form>
+          </div>
+        </div>
+      );
+    }
+
+    // ==========================================
+    // 18. MASTER APP COMPONENT
+    // ==========================================
+    function App() {
+      const [bookingModalOpen, setBookingModalOpen] = useState(false);
+      const [preselectedService, setPreselectedService] = useState('');
+      const [toastMsg, setToastMsg] = useState('');
+      const [toastVisible, setToastVisible] = useState(false);
+
+      const handleOpenBooking = (serviceName = '') => {
+        setPreselectedService(serviceName);
+        setBookingModalOpen(true);
+      };
+
+      const handleShowToast = (msg) => {
+        setToastMsg(msg);
+        setToastVisible(true);
+        setTimeout(() => setToastVisible(false), 4500);
+      };
+
+      const waUrl = `https://wa.me/${businessInfo.contact.whatsappRaw}?text=${encodeURIComponent(
+        'Hello WELLPRO, I would like to inquire about studio services for my car.'
+      )}`;
+
+      return (
+        <div className="relative min-h-screen bg-[#03050a] text-white font-sans selection:bg-[#00b4d8] selection:text-[#03050a]">
+          <StudioLiveTicker />
+          <Navbar onOpenBooking={handleOpenBooking} />
+          
+          <main>
+            <Hero onOpenBooking={handleOpenBooking} />
+            <Pillars onOpenBooking={handleOpenBooking} />
+            <Services onOpenBooking={handleOpenBooking} />
+            <CarShowcaseTransition onOpenBooking={handleOpenBooking} />
+            <CleanroomProcess />
+            <Estimator onOpenBooking={handleOpenBooking} />
+            <BeforeAfter />
+            <ProductsAndSupplies onOpenBooking={handleOpenBooking} />
+            <WhyChooseUs />
+            <Gallery />
+            <Testimonials />
+            <Contact onShowToast={handleShowToast} />
+          </main>
+
+          <Footer />
+
+          <BookingModal
+            isOpen={bookingModalOpen}
+            onClose={() => setBookingModalOpen(false)}
+            preselectedService={preselectedService}
+            onShowToast={handleShowToast}
+          />
+
+          {toastVisible && (
+            <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 bg-[#071228] border border-[#00b4d8] rounded-xl px-6 py-3.5 shadow-2xl flex items-center gap-3">
+              <Icons.Check />
+              <span className="text-xs sm:text-sm text-white font-medium">{toastMsg}</span>
+            </div>
+          )}
+
+          {/* Floating WhatsApp */}
+          <div className="fixed bottom-6 right-6 z-40 hidden sm:flex items-center gap-3">
+            <div className="bg-[#071228]/90 backdrop-blur-md border border-[#00b4d8]/40 rounded-lg px-3 py-1.5 text-xs text-white shadow-xl pointer-events-none">
+              Chat with Studio Master
+            </div>
+            <a
+              href={waUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="pulse-ring relative w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-[0_4px_25px_rgba(37,211,102,0.5)] hover:scale-110 transition-transform"
+              aria-label="Direct WhatsApp Chat"
+            >
+              <Icons.MessageSquare />
+            </a>
+          </div>
+
+          {/* Mobile Bottom Dock */}
+          <div className="fixed bottom-0 left-0 w-full z-40 grid grid-cols-3 gap-2 p-2 bg-[#03050a]/95 backdrop-blur-md border-t border-[#102d60]/60 sm:hidden">
+            <a href={`tel:${businessInfo.contact.phoneRaw}`} className="flex items-center justify-center gap-1.5 py-3 rounded-lg bg-[#071228] border border-white/10 text-xs font-semibold text-white uppercase">
+              <Icons.Phone />
+              <span>Call</span>
+            </a>
+            <a href={waUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-1.5 py-3 rounded-lg bg-[#25D366] text-xs font-bold text-white uppercase">
+              <Icons.MessageSquare />
+              <span>WhatsApp</span>
+            </a>
+            <button onClick={() => handleOpenBooking()} className="flex items-center justify-center gap-1.5 py-3 rounded-lg bg-gradient-to-r from-[#38bdf8] to-[#154c8a] text-xs font-bold text-white uppercase cursor-pointer">
+              <Icons.Calendar />
+              <span>Book</span>
+            </button>
+          </div>
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>
