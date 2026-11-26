@@ -1,15 +1,9 @@
 import React, { useState } from 'react';
-import StudioLiveTicker from './components/StudioLiveTicker';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Pillars from './components/Pillars';
 import Services from './components/Services';
-import CarShowcaseTransition from './components/CarShowcaseTransition';
-import CleanroomProcess from './components/CleanroomProcess';
-import Estimator from './components/Estimator';
 import BeforeAfter from './components/BeforeAfter';
-import ProductsAndSupplies from './components/ProductsAndSupplies';
-import WhyChooseUs from './components/WhyChooseUs';
 import Gallery from './components/Gallery';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
@@ -44,49 +38,18 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#03050a] text-white font-sans selection:bg-[#00b4d8] selection:text-[#03050a] pb-16 sm:pb-0">
-      
-      {/* 1. Live Studio Bay Status Banner */}
-      <StudioLiveTicker />
 
-      {/* 2. Sticky Brand Navbar */}
+      {/* Sticky Brand Navbar */}
       <Navbar onOpenBooking={handleOpenBooking} />
 
-      {/* 3. Main Master Sections */}
+      {/* Main Master Sections */}
       <main>
-        {/* Hero Section with 3D Car Particle Mesh & Wind Tunnel */}
         <Hero onOpenBooking={handleOpenBooking} />
-
-        {/* 4 Pillars Section Matching Official Logo Emblems */}
         <Pillars onOpenBooking={handleOpenBooking} />
-
-        {/* Master Detailing Services Suite Featuring Hyundai, Maruti, Tata & Mahindra */}
         <Services onOpenBooking={handleOpenBooking} />
-
-        {/* Indian Vehicle Transformation Showcase Stage */}
-        <CarShowcaseTransition onOpenBooking={handleOpenBooking} />
-
-        {/* The 6-Stage Studio Cleanroom Process */}
-        <CleanroomProcess />
-
-        {/* Interactive Before & After Paint Slider */}
         <BeforeAfter />
-
-        {/* Indian Vehicle Package & Cost Estimator */}
-        <Estimator onOpenBooking={handleOpenBooking} />
-
-        {/* Retail Detailing Products & Workshop Trade Supplies */}
-        <ProductsAndSupplies onOpenBooking={handleOpenBooking} />
-
-        {/* Why Choose WELLPRO / Cleanroom Standards */}
-        <WhyChooseUs />
-
-        {/* Indian Cars Transformation Gallery */}
         <Gallery />
-
-        {/* Verified Indian Car Owner Testimonials */}
         <Testimonials />
-
-        {/* Contact, Booking Form & Google Maps */}
         <Contact onShowToast={handleShowToast} />
       </main>
 

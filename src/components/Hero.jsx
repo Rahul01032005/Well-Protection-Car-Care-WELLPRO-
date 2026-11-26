@@ -83,7 +83,7 @@ export default function Hero({ onOpenBooking }) {
 
           {/* Description */}
           <p className="text-gray-300 text-sm sm:text-base md:text-lg font-light leading-relaxed mb-8 sm:mb-10 max-w-2xl drop-shadow-md">
-            Welcome to <strong className="text-white font-semibold">WELLPRO</strong>. We engineer optical perfection and impenetrable surface armor for Indian roads. Specializing in 10H Graphene Coating, 9H Ceramic Shield, Self-Healing PPF, Interior Sanitization, Engine Beautification, and Rodent Defense for <strong>Hyundai, Maruti Suzuki, Mahindra, Tata & Toyota</strong>.
+            Welcome to <strong className="text-white font-semibold">WELLPRO</strong>. An exclusive automotive protection studio engineering optical perfection and impenetrable surface armor — specializing in 10H Graphene Coating, 9H Ceramic Shield, Self-Healing PPF, Interior Sanitization, Engine Beautification, and Rodent Defense.
           </p>
 
           {/* Action CTAs */}
@@ -93,14 +93,14 @@ export default function Hero({ onOpenBooking }) {
               className="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#38bdf8] via-[#154c8a] to-[#0c1f42] hover:from-[#7dd3fc] text-white font-subheading font-bold text-xs sm:text-sm uppercase tracking-[1.5px] px-8 py-4 rounded-xl shadow-xl hover:shadow-[0_0_30px_rgba(0,180,216,0.5)] hover:-translate-y-0.5 transition-all cursor-pointer"
             >
               <Calendar size={16} />
-              <span>Book Bay Consultation</span>
+              <span>Book Now</span>
             </button>
 
             <a
-              href="#car-stage"
+              href="#services"
               className="inline-flex items-center justify-center gap-3 bg-white/5 hover:bg-white/10 text-white font-subheading font-semibold text-xs sm:text-sm uppercase tracking-[1.5px] px-7 py-4 rounded-xl border border-white/20 hover:border-[#38bdf8]/60 backdrop-blur-md hover:-translate-y-0.5 transition-all"
             >
-              <span>Explore Indian Cars</span>
+              <span>Explore Services</span>
               <ArrowRight size={16} className="text-[#38bdf8]" />
             </a>
 
@@ -117,40 +117,40 @@ export default function Hero({ onOpenBooking }) {
         </div>
 
         {/* Live Metrics Bar */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 p-5 sm:p-7 rounded-2xl bg-[#071228]/85 backdrop-blur-xl border border-[#00b4d8]/30 shadow-2xl relative overflow-hidden pointer-events-auto">
-          <div className="flex flex-col">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-y-4 sm:gap-y-0 p-5 sm:p-7 rounded-2xl bg-[#071228]/85 backdrop-blur-xl border border-[#00b4d8]/30 shadow-2xl relative overflow-hidden pointer-events-auto">
+          <div className="flex flex-col pr-4 pb-3 sm:pb-0 border-r border-b lg:border-b-0 border-white/10">
             <span className="font-heading font-black text-2xl sm:text-4xl text-white">
               {counts.cars}+
             </span>
             <span className="font-subheading text-[10px] sm:text-xs uppercase tracking-wider text-gray-300 mt-1">
-              Indian Vehicles Protected
+              Vehicles Protected
             </span>
           </div>
 
-          <div className="flex flex-col border-l border-white/10 pl-4 sm:pl-6">
+          <div className="flex flex-col pl-4 sm:px-6 pb-3 sm:pb-0 border-b lg:border-b-0 lg:border-r border-white/10">
             <span className="font-heading font-black text-2xl sm:text-4xl text-[#38bdf8]">
               {counts.warranty}-Yr
             </span>
             <span className="font-subheading text-[10px] sm:text-xs uppercase tracking-wider text-gray-300 mt-1">
-              Written Studio Warranty
+              Studio Warranty
             </span>
           </div>
 
-          <div className="flex flex-col border-l border-white/10 pl-4 sm:pl-6">
+          <div className="flex flex-col pr-4 pt-2 lg:pt-0 lg:px-6 border-r border-white/10">
             <span className="font-heading font-black text-2xl sm:text-4xl text-white">
               {counts.cleanroom}%
             </span>
             <span className="font-subheading text-[10px] sm:text-xs uppercase tracking-wider text-gray-300 mt-1">
-              Cleanroom Dust-Free Bays
+              Dust-Free Bays
             </span>
           </div>
 
-          <div className="flex flex-col border-l border-white/10 pl-4 sm:pl-6">
+          <div className="flex flex-col pl-4 sm:pl-6 pt-2 lg:pt-0">
             <span className="font-heading font-black text-2xl sm:text-4xl text-[#38bdf8]">
               {counts.score}%
             </span>
             <span className="font-subheading text-[10px] sm:text-xs uppercase tracking-wider text-gray-300 mt-1">
-              5-Star Client Rating
+              Client Satisfaction
             </span>
           </div>
         </div>

@@ -16,12 +16,9 @@ export default function Navbar({ onOpenBooking }) {
 
   const navLinks = [
     { name: 'Home', href: '#home' },
+    { name: 'About', href: '#pillars' },
     { name: 'Services', href: '#services' },
-    { name: 'Indian Cars', href: '#car-stage' },
-    { name: '4 Pillars', href: '#pillars' },
-    { name: 'Estimator', href: '#estimator' },
-    { name: 'Why Us', href: '#why-us' },
-    { name: 'Our Work', href: '#gallery' },
+    { name: 'Work', href: '#gallery' },
     { name: 'Reviews', href: '#testimonials' },
     { name: 'Contact', href: '#contact' },
   ];

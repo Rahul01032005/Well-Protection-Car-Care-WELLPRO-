@@ -194,164 +194,20 @@
     };
 
     // ==========================================
-    // Indian Cars Fleet Data
-    // ==========================================
-    const indianCars = [
-      {
-        id: "hyundai-creta",
-        name: "Hyundai Creta (Titan Grey / Abyss Black)",
-        brand: "Hyundai",
-        category: "King of Indian Compact Luxury",
-        image: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1600&q=85",
-        recommendedProgram: "10H Graphene Coating + Engine Beautification + Glass Armor",
-        cureTime: "2 Days Studio Bay",
-        warranty: "5-Year Studio Warranty",
-        priceRange: "₹22,000 - ₹42,000",
-        specHighlights: [
-          "10H Graphene reduced heat absorption preventing Indian monsoon hard water etching",
-          "Full front bumper, piano black parametric grille & LED headlamp protective shield",
-          "Engine bay steam beautification with satin anti-static rubber hose dressing",
-          "Interior sanitization on panoramic sunroof rails & ventilated leatherette seats"
-        ]
-      },
-      {
-        id: "maruti-grand-vitara",
-        name: "Maruti Suzuki Grand Vitara / Brezza",
-        brand: "Maruti Suzuki",
-        category: "Flagship Hybrid SUV",
-        image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=1600&q=85",
-        recommendedProgram: "9H Ceramic Armor + Interior Deep Sanitization + Rodent Repellent",
-        cureTime: "2 Days Studio Bay",
-        warranty: "5-Year Comprehensive",
-        priceRange: "₹18,000 - ₹38,000",
-        specHighlights: [
-          "Dual-layer 9H quartz ceramic nano-matrix for deep Nexa Blue candy reflections",
-          "Engine bay rodent repellent anti-chew bitter coating on wire harness & hybrid cables",
-          "140°C thermal steam sanitization killing 99.9% of bacteria and allergens",
-          "Alloy wheel 850°C ceramic barrier preventing corrosive brake dust adhesion"
-        ]
-      },
-      {
-        id: "maruti-swift",
-        name: "Maruti Suzuki Swift / Fronx Turbo",
-        brand: "Maruti Suzuki",
-        category: "Sporty Performance Hot Hatch",
-        image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=85",
-        recommendedProgram: "Showroom Mirror Paint Correction + 9H Ceramic Shield",
-        cureTime: "1 - 2 Days Studio Bay",
-        warranty: "3-Year Gloss Warranty",
-        priceRange: "₹14,999 - ₹28,000",
-        specHighlights: [
-          "2-stage machine compounding removing wash swirls from thin factory clear coat",
-          "Ultra-slick hydrophobic contact angle (115°) for easy pressure-washer maintenance",
-          "Complete engine bay steam wash and degreasing with non-greasy dressing",
-          "Headlight UV protective sealant preventing lens yellowing or fading"
-        ]
-      },
-      {
-        id: "hyundai-verna",
-        name: "Hyundai Verna (Turbo Starry Night)",
-        brand: "Hyundai",
-        category: "Fastback Executive Luxury Sedan",
-        image: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=1600&q=85",
-        recommendedProgram: "Full Front Track Pack PPF + 10H Graphene Body Shield",
-        cureTime: "3 Days Studio Bay",
-        warranty: "7-Year Warranty",
-        priceRange: "₹35,000 - ₹65,000",
-        specHighlights: [
-          "200-micron self-healing TPU on long bonnet, horizon light bar & front bumper",
-          "10H Graphene coating over fastback rear deck & black geometric sides",
-          "Ultrasonic rodent repellent treatment protecting turbocharger sensors",
-          "Cabin antibacterial ozone fogging and leather steering wheel conditioning"
-        ]
-      },
-      {
-        id: "thar-roxx",
-        name: "Mahindra Thar / Thar Roxx 4x4",
-        brand: "Mahindra",
-        category: "Iconic Indian 4x4 Offroader",
-        image: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1600&q=85",
-        recommendedProgram: "Offroad Rugged TPU PPF + Underbody Anti-Rust + Rodent Defense",
-        cureTime: "3 Days Studio Bay",
-        warranty: "7-Year Comprehensive",
-        priceRange: "₹45,000 - ₹85,000",
-        specHighlights: [
-          "High-impact 200-micron TPU armor on wide fender flares, hood & rocker panels",
-          "Full undercarriage anti-corrosion bitumous rubber coating & silencer shield",
-          "Engine bay steam beautification with heavy-duty rodent repellent spray",
-          "10H Graphene mud & slush repellent body coating for easy trail cleanup"
-        ]
-      },
-      {
-        id: "fortuner-legender",
-        name: "Toyota Fortuner Legender",
-        brand: "Toyota",
-        category: "Flagship Luxury SUV",
-        image: "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=1600&q=85",
-        recommendedProgram: "Full Body Self-Healing TPU PPF + 10H Graphene Topcoat",
-        cureTime: "4 Days Studio Bay",
-        warranty: "10-Year Comprehensive",
-        priceRange: "₹75,000 - ₹1,40,000",
-        specHighlights: [
-          "Full exterior 200-micron self-healing TPU PPF wrap with tucked seamless edges",
-          "10H Graphene heat-reducing topcoat engineered for harsh Indian highway heat",
-          "Alloy wheel 850°C ceramic barrier & hydrophobic monsoon windshield repellent",
-          "Executive leather enrichment, cabin steam sterilization & ozone sanitization"
-        ]
-      },
-      {
-        id: "safari-dark",
-        name: "Tata Safari / Harrier #DARK Edition",
-        brand: "Tata",
-        category: "Flagship Black Edition SUV",
-        image: "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=1600&q=85",
-        recommendedProgram: "Oberon Black 3-Stage Paint Correction + 9H Ceramic Matrix",
-        cureTime: "2 Days Studio Bay",
-        warranty: "5-Year Surface Protection",
-        priceRange: "₹28,000 - ₹55,000",
-        specHighlights: [
-          "95% swirl & hologram elimination on delicate Oberon Black clear coat",
-          "Dual-layer 9H quartz liquid glass producing mirror wet candy reflections",
-          "Engine beautification with anti-static satin rubber & plastic dressing",
-          "High-temperature 140°C dry-vapor interior sanitization & leather feeding"
-        ]
-      },
-      {
-        id: "xuv700",
-        name: "Mahindra XUV700 AdrenoX",
-        brand: "Mahindra",
-        category: "High-Tech Luxury SUV",
-        image: "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1600&q=85",
-        recommendedProgram: "Nano-Ceramic Shield + Interior Sanitization + Rodent Repellent",
-        cureTime: "2 Days Studio Bay",
-        warranty: "5-Year Protection",
-        priceRange: "₹24,000 - ₹48,000",
-        specHighlights: [
-          "Deep gloss 9H ceramic infusion over exterior panels and piano black trim",
-          "Comprehensive interior steam sanitization on panoramic skyroof & 7 seats",
-          "Dual-barrier engine bay rodent repellent treatment on wire harnesses and hoses",
-          "Hydrophobic rain repellent shield on all glass panels for monsoon clarity"
-        ]
-      }
-    ];
-
-    // ==========================================
-    // Services Data (Including Screenshot Services)
+    // Services Data
     // ==========================================
     const servicesData = [
       {
         id: "graphene",
         title: "10H Graphene Coating",
-        featuredCar: "Hyundai Creta / Verna & Alcazar",
         badge: "10H Thermal Armor",
         category: "coating",
         image: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80",
-        description: "Reduced Graphene Oxide (RGO) nano-matrix formulated for Indian climate. Exceptional heat dissipation prevents hard water spots and bird droppings from burning into soft clear coats, delivering unmatched liquid depth on Hyundai Creta and executive cars.",
+        description: "Reduced Graphene Oxide (RGO) nano-matrix delivering superior heat dissipation, preventing water spotting and delivering deep liquid gloss.",
         features: [
-          "Thermal dispersion preventing water etching under harsh sun",
-          "Extreme slickness repelling highway dust, grime & mud",
-          "Superhydrophobic 118° contact angle for effortless wash maintenance",
-          "Official 5 to 7 Years Warranty with scheduled bi-annual studio top-ups"
+          "Thermal dispersion preventing water etching",
+          "Superhydrophobic 118° contact angle",
+          "5 to 7 Years Written Studio Warranty"
         ],
         warranty: "5 - 7 Years",
         duration: "2 - 3 Days",
@@ -360,16 +216,14 @@
       {
         id: "ceramic",
         title: "9H Ceramic Coating",
-        featuredCar: "Maruti Suzuki Grand Vitara & Brezza",
-        badge: "Liquid Quartz Crystal",
+        badge: "Liquid Quartz Glass",
         category: "coating",
         image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=800&q=80",
-        description: "Permanent molecular SiO2 quartz crystallizing barrier that bonds chemically to factory paint. Produces mesmerizing 3D candy reflections and scratch reduction on Nexa Blue Grand Vitara, Brezza, and Maruti Swift paints.",
+        description: "Permanent molecular SiO2 quartz barrier bonding chemically to factory clear coat for 3D candy reflections and chemical immunity.",
         features: [
-          "Deep 3D wet candy gloss on metallic and pearl paint finishes",
-          "Chemical immunity against acid rain, tree sap and road tar",
-          "High scratch resistance against routine microfiber washing marring",
-          "Multi-layer base coat + ultra-slick hydrophobic crystallizing top-coat"
+          "Deep 3D wet gloss on metallic & pearl paints",
+          "UV, acid rain & road tar chemical immunity",
+          "Multi-layer crystallizing hydrophobic top-coat"
         ],
         warranty: "3 - 5 Years",
         duration: "2 Days",
@@ -377,129 +231,115 @@
       },
       {
         id: "ppf",
-        title: "Self-Healing Paint Protection Film (PPF)",
-        featuredCar: "Toyota Fortuner Legender & Thar Roxx",
-        badge: "Ultimate Physical Armor",
-        category: "ppf",
+        title: "Paint Protection Film (PPF)",
+        badge: "Self-Healing TPU",
+        category: "coating",
         image: "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80",
-        description: "Aerospace-grade 200-micron high-tensile Thermoplastic Polyurethane (TPU) film engineered to protect exterior panels against flying highway gravel, stone chips, scratches, and bumper scrapes without altering original color depth.",
+        description: "Aerospace-grade 200-micron self-healing Thermoplastic Polyurethane film shielding paintwork against stone chips, scratches, and scrapes.",
         features: [
-          "Instant micro-scratch self-healing under natural sunlight or warm water",
-          "Hydrophobic top-coat & anti-yellowing optical UV barrier",
-          "Available in Ultra-High Gloss or Stealth Satin Matte wrap finish",
-          "Computer-aided precision pre-cut templates with tucked wrapped edges"
+          "Instant heat-activated micro-scratch healing",
+          "Available in High Gloss or Stealth Matte",
+          "Precision pre-cut edges with seamless tuck"
         ],
         warranty: "Up to 10 Years",
         duration: "3 - 5 Days",
         startingPrice: "From ₹45,000"
       },
       {
-        id: "interior-sanitization",
-        title: "Interior Sanitization & Deep Spa",
-        featuredCar: "Hyundai Creta / Tucson & Toyota Innova Hycross",
-        badge: "Hospital-Grade Hygiene",
-        category: "interior",
-        image: "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=800&q=80",
-        description: "Therapeutic cabin deep cleaning and sterilization for family cars. Utilizes 140°C dry-vapor thermal steam extraction to sanitize ventilated leather seats, AC duct disinfection, and OEM non-greasy matte leather feeding.",
+        id: "paint-correction",
+        title: "Multi-Stage Paint Correction",
+        badge: "Mirror Depth Revival",
+        category: "care",
+        image: "https://images.unsplash.com/photo-1601362840469-51e4d8d58785?auto=format&fit=crop&w=800&q=80",
+        description: "Precision machine compounding and jewel-finishing to permanently remove up to 95% of wash swirls, oxidation, and holograms.",
         features: [
-          "140°C dry-vapor thermal steam killing 99.9% of bacteria & allergens",
-          "Ozone biological gas generator eliminating lingering food, smoke & pet odors",
-          "pH-neutral delicate leather cleaning and UV anti-aging conditioning",
-          "Fabric nano-shield creating a hydrophobic spill-guard against liquid staining"
+          "5000K high-CRI inspection across all panels",
+          "Zero filler oils — permanent defect removal",
+          "Essential prep prior to Coating or PPF"
         ],
-        warranty: "Factory-Fresh Matte OEM Touch",
+        warranty: "Permanent Leveling",
+        duration: "1 - 2 Days",
+        startingPrice: "From ₹9,999"
+      },
+      {
+        id: "interior-sanitization",
+        title: "Interior Sanitization & Spa",
+        badge: "Hospital-Grade Hygiene",
+        category: "care",
+        image: "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=800&q=80",
+        description: "140°C dry-vapor thermal steam extraction, AC duct disinfection, ozone odor elimination, and pH-neutral matte leather conditioning.",
+        features: [
+          "140°C thermal steam killing 99.9% bacteria",
+          "Ozone treatment removing stubborn odors",
+          "Non-greasy OEM satin leather protection"
+        ],
+        warranty: "OEM Matte Finish",
         duration: "4 - 6 Hours",
         startingPrice: "From ₹4,999"
       },
       {
         id: "engine-beautification",
-        title: "Engine Beautification & Dressing",
-        featuredCar: "Maruti Suzuki Swift, Baleno & Fronx Turbo",
-        badge: "Showroom Precision Bay",
-        category: "engine",
+        title: "Engine Beautification",
+        badge: "Showroom Bay Care",
+        category: "care",
         image: "https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=800&q=80",
-        description: "Safe, moisture-isolated vapor steam degreasing of the engine bay. Intricate hand-brush cleaning of all engine plastics, manifolds, and rubber hoses, followed by heat-resistant satin anti-static dressing.",
+        description: "Moisture-isolated vapor steam degreasing of the engine compartment followed by heat-resistant, anti-static satin dressing.",
         features: [
-          "Moisture-sensitive electronics, ECM units, and alternators safely masked",
-          "Biodegradable citrus degreaser removing baked-on engine grime & oil fallout",
-          "Heat-resistant satin plastic, conduit and hose anti-aging dressing",
-          "Anti-static formulation repels dust accumulation for easy routine maintenance"
+          "Sensitive electronics & ECM safely masked",
+          "Biodegradable citrus oil & grime removal",
+          "Heat-resistant anti-static satin dressing"
         ],
-        warranty: "Long-Lasting Non-Greasy Satin Luster",
+        warranty: "Anti-Static Luster",
         duration: "2 - 3 Hours",
         startingPrice: "From ₹2,499"
       },
       {
         id: "rodent-repellent",
         title: "Rodent Repellent Treatment",
-        featuredCar: "All Maruti Suzuki, Hyundai & Mahindra Engine Bays",
-        badge: "Wire Harness Protection",
-        category: "specialized",
+        badge: "Wire Harness Defense",
+        category: "care",
         image: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80",
-        description: "Essential preventative protection against rodent infestation, wire gnawing, and firewall nesting. Combines an intensive engine bay sanitation with a non-toxic, bitter chemical repellent spray bonded directly to wire harnesses and rubber conduits.",
+        description: "Preventative engine bay sanitation combined with a non-toxic, bitter chemical barrier bonded directly to wire harnesses and hoses.",
         features: [
-          "Engine compartment thoroughly decontaminated of food and rodent scent markers",
-          "Non-toxic, highly bitter botanical & chemical barrier spray coating",
-          "Coatings bonded to wire harnesses, rubber hoses, sensors & firewall damping",
-          "Guards against expensive electrical harness replacement & breakdown hazards"
+          "Neutralizes rodent scent markers completely",
+          "Bitter barrier bonded to wiring & conduits",
+          "Prevents costly electrical harness damage"
         ],
-        warranty: "6-Month Protective Shield",
+        warranty: "6-Month Shield",
         duration: "2 Hours",
         startingPrice: "From ₹2,499"
       },
       {
-        id: "paint-correction",
-        title: "Multi-Stage Paint Correction",
-        featuredCar: "Tata Safari #DARK & Black Hyundai Creta",
-        badge: "Mirror Depth Revival",
-        category: "correction",
-        image: "https://images.unsplash.com/photo-1601362840469-51e4d8d58785?auto=format&fit=crop&w=800&q=80",
-        description: "Precision machine compounding and jewel-finishing with micro-abrasives to permanently remove 85% to 95% of wash swirls, buffer trails, acid etching, and oxidation, revealing true showroom depth without unnecessary clear coat reduction.",
-        features: [
-          "Permanent defect elimination without unnecessary clear coat loss",
-          "Continuous inspection using 5000K high-CRI detailing lights",
-          "Essential foundation prior to Graphene, Ceramic or PPF installation",
-          "100% hologram-free optical mirror depth refinement"
-        ],
-        warranty: "Permanent Defect Removal",
-        duration: "1 - 2 Days",
-        startingPrice: "From ₹9,999"
-      },
-      {
         id: "retail-products",
         title: "Retail Car Care Products",
-        featuredCar: "WELLPRO DIY Studio Formulations",
-        badge: "Professional Detailing Store",
-        category: "retail",
+        badge: "Studio Store",
+        category: "products",
         image: "https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=800&q=80",
-        description: "Take home the exact professional formulations used by WELLPRO master detailers. High-concentration pH-neutral snow foams, SiO2 ceramic booster sprays, tire satin dressings, and 500 GSM edgeless microfiber drying towels.",
+        description: "Professional studio-tested pH-neutral snow foams, SiO2 ceramic booster sprays, tire dressings, and 500 GSM edgeless microfibers.",
         features: [
-          "Concentrated pH-neutral snow foams & contact wash shampoos",
-          "Graphene & SiO2 quick detailers for effortless maintenance washes",
-          "500 GSM edgeless ultra-soft microfiber drying & buffing towels",
-          "Available for walk-in purchase directly at studio or doorstep courier"
+          "pH-neutral snow foams & wash shampoos",
+          "Graphene & SiO2 quick detailer sprays",
+          "500 GSM edgeless plush microfiber towels"
         ],
-        warranty: "100% Studio-Tested Formulas",
-        duration: "Instant Walk-In / Dispatch",
+        warranty: "Studio Formulated",
+        duration: "In-Stock",
         startingPrice: "From ₹499"
       },
       {
         id: "sale-materials",
         title: "Sale Car Care Local Materials",
-        featuredCar: "Trade Supplies for Workshops & Enthusiasts",
-        badge: "Studio & Trade Supply",
-        category: "wholesale",
+        badge: "Trade Supply",
+        category: "products",
         image: "https://images.unsplash.com/photo-1507136566006-cfc505b114fc?auto=format&fit=crop&w=800&q=80",
-        description: "Direct trade distribution of specialized detailing materials for professional studios, local garages, and passionate hobbyists across Kerala and India. Bulk compounds, German foam pads, rotary backplates, and applicators.",
+        description: "Direct distribution of detailing materials for workshops and enthusiasts: bulk compounds, German foam pads, backing plates, and brushes.",
         features: [
-          "Heavy-cut, medium-polish & ultra-finish compounding pastes",
-          "German foam pads, microfiber cutting discs & wool pads",
-          "Rotary & dual-action backing plates, masking tapes, and detailing brushes",
-          "Wholesale and retail bulk pricing with fast local dispatch"
+          "Heavy-cut & ultra-finish compounding pastes",
+          "German foam, wool & microfiber cutting pads",
+          "Wholesale & retail bulk studio pricing"
         ],
-        warranty: "Professional Trade Grade",
-        duration: "In-Stock / Immediate Dispatch",
-        startingPrice: "Trade Inquiries Welcome"
+        warranty: "Trade Grade",
+        duration: "Immediate Dispatch",
+        startingPrice: "Trade Rates"
       }
     ];
 
@@ -531,51 +371,6 @@
       Zap: () => <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>,
       Palette: () => <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.563-2.512 5.563-5.563C22 6.47 17.53 2 12 2z"/></svg>
     };
-
-    // ==========================================
-    // 0. LIVE STUDIO TELEMETRY TICKER
-    // ==========================================
-    function StudioLiveTicker() {
-      const bayStatus = [
-        { bay: "Bay 1", car: "Hyundai Creta", service: "10H Graphene Thermal Curing", status: "Active Curing" },
-        { bay: "Bay 2", car: "Maruti Grand Vitara", service: "Interior Steam Sanitization & Ozone", status: "In Progress" },
-        { bay: "Bay 3", car: "Mahindra Thar Roxx", service: "Self-Healing TPU PPF Edge Tuck", status: "Wrapping" },
-        { bay: "Bay 4", car: "Tata Safari #DARK", service: "3-Stage Optical Swirl Correction", status: "Polishing" },
-        { bay: "Bay 5", car: "Toyota Fortuner Legender", service: "Full Body PPF + Rodent Defense", status: "Inspection" },
-      ];
-
-      return (
-        <div className="bg-[#071228] border-b border-[#102d60]/80 py-2.5 overflow-hidden relative z-40">
-          <div className="max-w-7xl mx-auto px-4 flex items-center justify-between gap-4">
-            <div className="flex items-center gap-2 flex-shrink-0">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#10b981] animate-ping" />
-              <span className="text-[11px] font-subheading uppercase font-bold tracking-wider text-[#38bdf8] flex items-center gap-1.5">
-                <Icons.Activity />
-                <span>Live Studio Telemetry</span>
-              </span>
-            </div>
-
-            <div className="overflow-x-auto no-scrollbar flex items-center gap-6 text-xs text-gray-300">
-              {bayStatus.map((b, idx) => (
-                <div key={idx} className="flex items-center gap-2 flex-shrink-0 bg-[#03050a]/60 px-3 py-1 rounded-full border border-white/5">
-                  <span className="font-mono text-[#38bdf8] font-bold text-[10px]">{b.bay}:</span>
-                  <span className="font-semibold text-white">{b.car}</span>
-                  <span className="text-gray-400">({b.service})</span>
-                  <span className="text-[10px] uppercase font-bold px-1.5 py-0.5 rounded bg-[#102d60] text-[#bae6fd]">
-                    {b.status}
-                  </span>
-                </div>
-              ))}
-            </div>
-
-            <div className="hidden xl:flex items-center gap-2 text-xs text-gray-400 flex-shrink-0">
-              <Icons.Shield />
-              <span>Cleanroom Bays Active</span>
-            </div>
-          </div>
-        </div>
-      );
-    }
 
     // ==========================================
     // 1. THREE.JS 3D AERODYNAMIC CAR STUDIO & TURNTABLE
@@ -1124,11 +919,12 @@
           <div
             ref={containerRef}
             className="w-full h-full cursor-grab active:cursor-grabbing"
+            style={{ touchAction: 'pan-y' }}
             title="Click and drag to rotate the 3D vehicle 360°"
           />
 
-          {/* Interactive 3D Studio HUD Controls (Top-Right) */}
-          <div className="hud-control absolute top-4 sm:top-6 right-4 sm:right-8 z-30 flex flex-col items-end gap-2.5 pointer-events-auto max-w-[280px] sm:max-w-none">
+          {/* Interactive 3D Studio HUD Controls (Desktop Top-Right) */}
+          <div className="hud-control absolute top-6 right-8 z-30 hidden lg:flex flex-col items-end gap-2.5 pointer-events-auto">
             {/* Mode Switcher Tabs */}
             <div className="flex items-center gap-1 p-1 sm:p-1.5 rounded-2xl bg-[#071228]/85 backdrop-blur-md border border-[#38bdf8]/40 shadow-2xl">
               <button
@@ -1335,12 +1131,9 @@
 
       const navLinks = [
         { name: 'Home', href: '#home' },
+        { name: 'About', href: '#pillars' },
         { name: 'Services', href: '#services' },
-        { name: 'Indian Cars', href: '#car-stage' },
-        { name: 'Process', href: '#process' },
-        { name: 'Store', href: '#store' },
-        { name: 'Estimator', href: '#estimator' },
-        { name: 'Our Work', href: '#gallery' },
+        { name: 'Work', href: '#gallery' },
         { name: 'Reviews', href: '#testimonials' },
         { name: 'Contact', href: '#contact' },
       ];
@@ -1530,7 +1323,7 @@
               </h1>
 
               <p className="text-gray-300 text-sm sm:text-base md:text-lg font-light leading-relaxed mb-8 sm:mb-10 max-w-2xl drop-shadow-md">
-                Welcome to <strong className="text-white font-semibold">WELLPRO</strong>. We engineer optical perfection and impenetrable surface armor for Indian roads. Specializing in 10H Graphene Coating, 9H Ceramic Shield, Self-Healing PPF, Interior Sanitization, Engine Beautification, and Rodent Defense for <strong>Hyundai, Maruti Suzuki, Mahindra, Tata & Toyota</strong>.
+                Welcome to <strong className="text-white font-semibold">WELLPRO</strong>. An exclusive automotive protection studio engineering optical perfection and impenetrable surface armor — specializing in 10H Graphene Coating, 9H Ceramic Shield, Self-Healing PPF, Interior Sanitization, Engine Beautification, and Rodent Defense.
               </p>
 
               <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3.5 sm:gap-4 mb-12 sm:mb-16">
@@ -1539,14 +1332,14 @@
                   className="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#38bdf8] via-[#154c8a] to-[#0c1f42] hover:from-[#7dd3fc] text-white font-subheading font-bold text-xs sm:text-sm uppercase tracking-[1.5px] px-8 py-4 rounded-xl shadow-xl hover:shadow-[0_0_30px_rgba(0,180,216,0.5)] hover:-translate-y-0.5 transition-all cursor-pointer"
                 >
                   <Icons.Calendar />
-                  <span>Book Bay Consultation</span>
+                  <span>Book Now</span>
                 </button>
 
                 <a
-                  href="#car-stage"
+                  href="#services"
                   className="inline-flex items-center justify-center gap-3 bg-white/5 hover:bg-white/10 text-white font-subheading font-semibold text-xs sm:text-sm uppercase tracking-[1.5px] px-7 py-4 rounded-xl border border-white/20 hover:border-[#38bdf8]/60 backdrop-blur-md hover:-translate-y-0.5 transition-all"
                 >
-                  <span>Explore Indian Cars</span>
+                  <span>Explore Services</span>
                   <Icons.ArrowRight />
                 </a>
 
@@ -1562,22 +1355,22 @@
               </div>
             </div>
 
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 p-5 sm:p-7 rounded-2xl bg-[#071228]/85 backdrop-blur-xl border border-[#00b4d8]/30 shadow-2xl relative overflow-hidden">
-              <div className="flex flex-col">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-y-4 sm:gap-y-0 p-5 sm:p-7 rounded-2xl bg-[#071228]/85 backdrop-blur-xl border border-[#00b4d8]/30 shadow-2xl relative overflow-hidden">
+              <div className="flex flex-col pr-4 pb-3 sm:pb-0 border-r border-b lg:border-b-0 border-white/10">
                 <span className="font-heading font-black text-2xl sm:text-4xl text-white">{counts.cars}+</span>
-                <span className="font-subheading text-[10px] sm:text-xs uppercase tracking-wider text-gray-300 mt-1">Indian Vehicles Protected</span>
+                <span className="font-subheading text-[10px] sm:text-xs uppercase tracking-wider text-gray-300 mt-1">Vehicles Protected</span>
               </div>
-              <div className="flex flex-col border-l border-white/10 pl-4 sm:pl-6">
+              <div className="flex flex-col pl-4 sm:px-6 pb-3 sm:pb-0 border-b lg:border-b-0 lg:border-r border-white/10">
                 <span className="font-heading font-black text-2xl sm:text-4xl text-[#38bdf8]">{counts.warranty}-Yr</span>
-                <span className="font-subheading text-[10px] sm:text-xs uppercase tracking-wider text-gray-300 mt-1">Written Studio Warranty</span>
+                <span className="font-subheading text-[10px] sm:text-xs uppercase tracking-wider text-gray-300 mt-1">Studio Warranty</span>
               </div>
-              <div className="flex flex-col border-l border-white/10 pl-4 sm:pl-6">
+              <div className="flex flex-col pr-4 pt-2 lg:pt-0 lg:px-6 border-r border-white/10">
                 <span className="font-heading font-black text-2xl sm:text-4xl text-white">{counts.cleanroom}%</span>
-                <span className="font-subheading text-[10px] sm:text-xs uppercase tracking-wider text-gray-300 mt-1">Cleanroom Dust-Free Bays</span>
+                <span className="font-subheading text-[10px] sm:text-xs uppercase tracking-wider text-gray-300 mt-1">Dust-Free Bays</span>
               </div>
-              <div className="flex flex-col border-l border-white/10 pl-4 sm:pl-6">
+              <div className="flex flex-col pl-4 sm:pl-6 pt-2 lg:pt-0">
                 <span className="font-heading font-black text-2xl sm:text-4xl text-[#38bdf8]">{counts.score}%</span>
-                <span className="font-subheading text-[10px] sm:text-xs uppercase tracking-wider text-gray-300 mt-1">5-Star Client Rating</span>
+                <span className="font-subheading text-[10px] sm:text-xs uppercase tracking-wider text-gray-300 mt-1">Client Satisfaction</span>
               </div>
             </div>
           </div>
@@ -1665,21 +1458,16 @@
     }
 
     // ==========================================
-    // 6. COMPREHENSIVE SERVICES (Hyundai, Maruti, Tata, Mahindra)
+    // 6. SERVICES SUITE
     // ==========================================
     function Services({ onOpenBooking }) {
       const [activeCategory, setActiveCategory] = useState('all');
 
       const categories = [
         { key: 'all', label: 'All Services' },
-        { key: 'coating', label: '10H Graphene & Ceramic' },
-        { key: 'ppf', label: 'Paint Protection Film (PPF)' },
-        { key: 'interior', label: 'Interior Sanitization' },
-        { key: 'engine', label: 'Engine Beautification' },
-        { key: 'specialized', label: 'Rodent Repellent' },
-        { key: 'correction', label: 'Paint Correction' },
-        { key: 'retail', label: 'Retail Products' },
-        { key: 'wholesale', label: 'Trade Materials' },
+        { key: 'coating', label: 'Coatings & PPF' },
+        { key: 'care', label: 'Detailing & Care' },
+        { key: 'products', label: 'Products & Trade' },
       ];
 
       const filtered = activeCategory === 'all'
@@ -1687,37 +1475,37 @@
         : servicesData.filter(s => s.category === activeCategory);
 
       return (
-        <section id="services" className="py-24 sm:py-32 bg-[#03050a] relative overflow-hidden">
+        <section id="services" className="py-20 sm:py-28 bg-[#03050a] relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-5 sm:px-6 relative z-10">
-            <div className="text-center max-w-3xl mx-auto mb-14">
+            <div className="text-center max-w-3xl mx-auto mb-12">
               <div className="inline-flex items-center gap-2 mb-3">
                 <span className="w-6 h-[2px] bg-[#38bdf8]" />
                 <span className="font-subheading text-xs uppercase tracking-[3px] font-bold text-[#38bdf8]">
-                  Verified Studio Services
+                  Our Services
                 </span>
                 <span className="w-6 h-[2px] bg-[#38bdf8]" />
               </div>
 
               <h2 className="font-heading text-3xl sm:text-5xl font-bold text-white mb-4">
-                Master Vehicle Care & Protection Suite
+                Precision Care & Protection Suite
               </h2>
 
               <div className="w-20 h-[3px] bg-gradient-to-r from-[#38bdf8] to-[#154c8a] mx-auto mb-6" />
 
               <p className="text-gray-300 text-sm sm:text-base font-light">
-                Tailored for popular Indian vehicles including <strong>Hyundai Creta, Maruti Suzuki Grand Vitara, Mahindra Thar, and Tata Safari</strong>.
+                Comprehensive protection, restoration, and studio-grade car care formulations engineered for uncompromising quality.
               </p>
             </div>
 
             {/* Category Filter Tabs */}
-            <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12 sm:mb-16">
+            <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12">
               {categories.map((cat) => (
                 <button
                   key={cat.key}
                   onClick={() => setActiveCategory(cat.key)}
                   className={`font-subheading text-[11px] sm:text-xs uppercase tracking-wider font-semibold px-4 sm:px-5 py-2.5 rounded-full transition-all duration-300 cursor-pointer ${
                     activeCategory === cat.key
-                      ? 'bg-gradient-to-r from-[#38bdf8] via-[#154c8a] to-[#0c1f42] text-white shadow-[0_0_20px_rgba(0,180,216,0.4)] scale-105 border border-[#38bdf8]/60'
+                      ? 'bg-gradient-to-r from-[#38bdf8] via-[#154c8a] to-[#0c1f42] text-white shadow-[0_0_20px_rgba(0,180,216,0.4)] border border-[#38bdf8]/60'
                       : 'bg-[#060a14]/90 border border-white/10 text-gray-400 hover:text-white'
                   }`}
                 >
@@ -1730,31 +1518,26 @@
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {filtered.map((service) => {
                 const waServiceUrl = `https://wa.me/${businessInfo.contact.whatsappRaw}?text=${encodeURIComponent(
-                  `Hello Well Protection Car Care (WELLPRO)! I would like to inquire about "${service.title}" (${service.featuredCar}). Please share pricing and bay availability.`
+                  `Hello WELLPRO! I would like to inquire about "${service.title}". Please share pricing and bay availability.`
                 )}`;
 
                 return (
                   <div
                     key={service.id}
-                    className="group relative rounded-2xl bg-gradient-to-b from-[#0a1020] to-[#030814] border border-[#102d60]/50 hover:border-[#38bdf8]/60 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_15px_40px_rgba(0,180,216,0.25)] flex flex-col justify-between overflow-hidden"
+                    className="group relative rounded-2xl bg-gradient-to-b from-[#0a1020] to-[#030814] border border-[#102d60]/50 hover:border-[#38bdf8]/60 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_15px_40px_rgba(0,180,216,0.2)] flex flex-col justify-between overflow-hidden h-full"
                   >
                     <div>
-                      <div className="relative h-56 sm:h-60 w-full overflow-hidden bg-black">
+                      <div className="relative h-52 sm:h-56 w-full overflow-hidden bg-black">
                         <img
                           src={service.image}
                           alt={service.title}
-                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108 filter brightness-90 group-hover:brightness-100"
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter brightness-90 group-hover:brightness-100"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-[#0a1020] via-transparent to-transparent" />
                         
                         <span className="absolute top-4 right-4 bg-[#03050a]/85 backdrop-blur-md border border-[#38bdf8]/60 text-[#bae6fd] text-[10px] font-subheading font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-lg">
                           {service.badge}
                         </span>
-
-                        <div className="absolute bottom-3 left-4 right-4 bg-[#071228]/85 backdrop-blur-md border border-white/10 rounded-lg px-3 py-1.5 flex items-center justify-between text-[11px] text-[#bae6fd]">
-                          <span className="font-semibold truncate">🚗 {service.featuredCar}</span>
-                          <span className="text-[#38bdf8] font-bold flex-shrink-0 ml-2">{service.startingPrice}</span>
-                        </div>
                       </div>
 
                       <div className="p-6">
@@ -1762,18 +1545,18 @@
                           <span className="font-subheading text-[11px] text-[#38bdf8] font-bold uppercase tracking-wider">
                             {service.warranty}
                           </span>
-                          <span className="text-[11px] text-gray-300">⏱️ {service.duration}</span>
+                          <span className="text-[11px] font-semibold text-white">{service.startingPrice}</span>
                         </div>
 
-                        <h3 className="font-heading font-bold text-xl sm:text-2xl text-white group-hover:text-[#bae6fd] transition-colors mb-3">
+                        <h3 className="font-heading font-bold text-xl text-white group-hover:text-[#bae6fd] transition-colors mb-2.5">
                           {service.title}
                         </h3>
 
-                        <p className="text-gray-300 text-xs sm:text-sm font-light leading-relaxed mb-6">
+                        <p className="text-gray-300 text-xs sm:text-sm font-light leading-relaxed mb-5">
                           {service.description}
                         </p>
 
-                        <ul className="space-y-2.5 mb-6">
+                        <ul className="space-y-2 mb-4">
                           {service.features.map((feature, idx) => (
                             <li key={idx} className="flex items-start gap-2.5 text-xs text-gray-300 font-light">
                               <Icons.Check />
@@ -1784,9 +1567,9 @@
                       </div>
                     </div>
 
-                    <div className="p-6 pt-0 flex items-center gap-3">
+                    <div className="p-6 pt-0 mt-auto flex items-center gap-3">
                       <button
-                        onClick={() => onOpenBooking(`${service.title} (${service.featuredCar})`)}
+                        onClick={() => onOpenBooking(service.title)}
                         className="flex-1 bg-gradient-to-r from-[#38bdf8] via-[#154c8a] to-[#0c1f42] hover:from-[#7dd3fc] text-white font-subheading font-bold text-xs uppercase tracking-wider py-3.5 rounded-xl flex items-center justify-center gap-2 shadow-md hover:shadow-[0_0_15px_rgba(0,180,216,0.3)] transition-all cursor-pointer"
                       >
                         <Icons.Calendar />
@@ -1812,706 +1595,6 @@
       );
     }
 
-    // ==========================================
-    // 7. INDIAN VEHICLE TRANSFORMATION STAGE
-    // ==========================================
-    function CarShowcaseTransition({ onOpenBooking }) {
-      const [activeCarIndex, setActiveCarIndex] = useState(0);
-      const [isAnimating, setIsAnimating] = useState(false);
-      const [selectedBrand, setSelectedBrand] = useState('All');
-
-      const brands = ['All', 'Hyundai', 'Maruti Suzuki', 'Mahindra', 'Tata', 'Toyota'];
-
-      const filteredCars = selectedBrand === 'All'
-        ? indianCars
-        : indianCars.filter(c => c.brand === selectedBrand);
-
-      const currentCar = filteredCars[activeCarIndex] || filteredCars[0] || indianCars[0];
-
-      const handleCarSwitch = (index) => {
-        if (index === activeCarIndex || isAnimating) return;
-        setIsAnimating(true);
-        setActiveCarIndex(index);
-        setTimeout(() => setIsAnimating(false), 550);
-      };
-
-      const handleBrandChange = (brand) => {
-        setSelectedBrand(brand);
-        setActiveCarIndex(0);
-      };
-
-      const waCarMessage = `Hello Well Protection Car Care (WELLPRO)! I am interested in the ${currentCar.name} (${currentCar.category}). Recommended Program: ${currentCar.recommendedProgram}. Estimated: ${currentCar.priceRange}. Please share bay availability and consultation slot.`;
-
-      return (
-        <section id="car-stage" className="py-24 sm:py-32 bg-gradient-to-b from-[#03050a] via-[#071228] to-[#03050a] relative overflow-hidden">
-          <div className="max-w-7xl mx-auto px-5 sm:px-6 relative z-10">
-            <div className="text-center max-w-3xl mx-auto mb-12">
-              <div className="inline-flex items-center gap-2 mb-3">
-                <span className="w-6 h-[2px] bg-[#38bdf8]" />
-                <span className="font-subheading text-xs uppercase tracking-[3px] font-bold text-[#38bdf8]">
-                  Indian Vehicle Transformation Stage
-                </span>
-                <span className="w-6 h-[2px] bg-[#38bdf8]" />
-              </div>
-
-              <h2 className="font-heading text-3xl sm:text-5xl font-bold text-white mb-4">
-                Hyundai, Maruti & Indian Fleet Presets
-              </h2>
-
-              <div className="w-20 h-[3px] bg-gradient-to-r from-[#38bdf8] to-[#154c8a] mx-auto mb-6" />
-
-              <p className="text-gray-300 text-sm sm:text-base font-light">
-                Tailored for Indian driving terrains, high heat, monsoons, and highway stone chips. Select a vehicle to inspect its custom protection package and smooth laser scan transition.
-              </p>
-            </div>
-
-            {/* Brand Filter Pills */}
-            <div className="flex items-center justify-center gap-2 flex-wrap mb-6">
-              {brands.map((brand) => (
-                <button
-                  key={brand}
-                  onClick={() => handleBrandChange(brand)}
-                  className={`font-subheading text-[11px] sm:text-xs uppercase tracking-wider font-semibold px-4 py-1.5 rounded-full transition-all cursor-pointer ${
-                    selectedBrand === brand
-                      ? 'bg-[#38bdf8] text-[#03050a] font-bold shadow-[0_0_15px_rgba(56,189,248,0.5)]'
-                      : 'bg-[#071228] border border-white/10 text-gray-400 hover:text-white'
-                  }`}
-                >
-                  {brand}
-                </button>
-              ))}
-            </div>
-
-            {/* Vehicle Tabs */}
-            <div className="flex items-center justify-center gap-2 sm:gap-3 flex-wrap mb-10">
-              {filteredCars.map((car, idx) => (
-                <button
-                  key={car.id}
-                  onClick={() => handleCarSwitch(idx)}
-                  className={`font-subheading text-[11px] sm:text-xs uppercase tracking-wider font-semibold px-4 sm:px-5 py-2.5 rounded-full transition-all duration-300 cursor-pointer ${
-                    activeCarIndex === idx
-                      ? 'bg-gradient-to-r from-[#38bdf8] via-[#154c8a] to-[#0c1f42] text-white shadow-[0_0_20px_rgba(0,180,216,0.4)] scale-105 border border-[#38bdf8]/60'
-                      : 'bg-[#060a14]/80 border border-white/10 text-gray-400 hover:text-white'
-                  }`}
-                >
-                  {car.name}
-                </button>
-              ))}
-            </div>
-
-            {/* Stage Box */}
-            <div className="relative rounded-3xl bg-gradient-to-b from-[#0a1020] to-[#030814] border border-[#102d60]/60 shadow-[0_20px_60px_rgba(0,0,0,0.8)] overflow-hidden p-6 sm:p-10">
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-                
-                {/* Left: Image with Scan Sweep */}
-                <div className="lg:col-span-7 relative">
-                  <div className="relative h-[300px] sm:h-[440px] rounded-2xl overflow-hidden border border-white/10 bg-[#03050a] shadow-2xl">
-                    <img
-                      key={currentCar.id}
-                      src={currentCar.image}
-                      alt={currentCar.name}
-                      className={`w-full h-full object-cover transition-all duration-700 ${
-                        isAnimating ? 'opacity-0 scale-95 blur-sm' : 'opacity-100 scale-100 blur-0'
-                      }`}
-                    />
-
-                    <div
-                      key={`scan-${currentCar.id}`}
-                      className="absolute inset-y-0 w-28 bg-gradient-to-r from-transparent via-[#38bdf8]/45 to-transparent pointer-events-none transform -skew-x-12 animate-[carScan_1.8s_ease-out_forwards]"
-                    />
-
-                    <div className="absolute top-4 left-4 bg-[#03050a]/85 backdrop-blur-md border border-[#38bdf8]/60 rounded-full px-3.5 py-1.5 flex items-center gap-2">
-                      <span className="w-2 h-2 rounded-full bg-[#38bdf8] animate-ping" />
-                      <span className="font-subheading text-[10px] sm:text-xs uppercase tracking-wider font-bold text-[#bae6fd]">
-                        {currentCar.category}
-                      </span>
-                    </div>
-
-                    <button
-                      onClick={() => handleCarSwitch((activeCarIndex - 1 + filteredCars.length) % filteredCars.length)}
-                      className="absolute left-3.5 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-[#071228]/85 hover:bg-[#154c8a] border border-white/20 text-white flex items-center justify-center transition-all shadow-xl hover:scale-110 cursor-pointer"
-                      aria-label="Previous vehicle"
-                    >
-                      <Icons.ChevronLeft />
-                    </button>
-                    <button
-                      onClick={() => handleCarSwitch((activeCarIndex + 1) % filteredCars.length)}
-                      className="absolute right-3.5 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-[#071228]/85 hover:bg-[#154c8a] border border-white/20 text-white flex items-center justify-center transition-all shadow-xl hover:scale-110 cursor-pointer"
-                      aria-label="Next vehicle"
-                    >
-                      <Icons.ChevronRight />
-                    </button>
-                  </div>
-                </div>
-
-                {/* Right: Spec Blueprint */}
-                <div className="lg:col-span-5 flex flex-col justify-between">
-                  <div>
-                    <span className="font-subheading text-[11px] uppercase tracking-[2px] font-bold text-[#38bdf8] block mb-1">
-                      Custom Studio Preservation Blueprint
-                    </span>
-                    <h3 className="font-heading font-bold text-2xl sm:text-3xl text-white mb-2">
-                      {currentCar.name}
-                    </h3>
-                    <p className="text-sm text-[#bae6fd] font-semibold mb-6 flex items-center gap-2">
-                      <Icons.Shield />
-                      <span>{currentCar.recommendedProgram}</span>
-                    </p>
-
-                    <div className="grid grid-cols-3 gap-2.5 p-3.5 rounded-xl bg-[#03050a]/80 border border-white/10 mb-6">
-                      <div>
-                        <span className="text-[10px] uppercase font-subheading text-gray-400 tracking-wider block">Duration</span>
-                        <span className="text-xs font-semibold text-white mt-0.5 block">{currentCar.cureTime}</span>
-                      </div>
-                      <div>
-                        <span className="text-[10px] uppercase font-subheading text-gray-400 tracking-wider block">Warranty</span>
-                        <span className="text-xs font-semibold text-[#38bdf8] mt-0.5 block">{currentCar.warranty}</span>
-                      </div>
-                      <div>
-                        <span className="text-[10px] uppercase font-subheading text-gray-400 tracking-wider block">Estimated</span>
-                        <span className="text-xs font-semibold text-[#a7f3d0] mt-0.5 block">{currentCar.priceRange}</span>
-                      </div>
-                    </div>
-
-                    <div className="flex flex-col gap-2.5 mb-8">
-                      {currentCar.specHighlights.map((spec, i) => (
-                        <div key={i} className="flex items-start gap-2.5 text-xs text-gray-300 font-light">
-                          <Icons.Check />
-                          <span>{spec}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="flex flex-col sm:flex-row gap-3 pt-2">
-                    <button
-                      onClick={() => onOpenBooking(`${currentCar.recommendedProgram} (${currentCar.name})`)}
-                      className="flex-1 bg-gradient-to-r from-[#38bdf8] via-[#154c8a] to-[#0c1f42] hover:from-[#7dd3fc] text-white font-subheading font-bold text-xs uppercase tracking-wider py-4 rounded-xl flex items-center justify-center gap-2 shadow-lg hover:shadow-[0_0_20px_rgba(0,180,216,0.4)] transition-all cursor-pointer"
-                    >
-                      <Icons.Calendar />
-                      <span>Book This Spec</span>
-                    </button>
-
-                    <a
-                      href={`https://wa.me/${businessInfo.contact.whatsappRaw}?text=${encodeURIComponent(waCarMessage)}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 bg-[#25D366] hover:bg-[#20bd5a] text-white font-subheading font-bold text-xs uppercase tracking-wider py-4 rounded-xl flex items-center justify-center gap-2 shadow-lg hover:shadow-[0_4px_20px_rgba(37,211,102,0.4)] transition-all"
-                    >
-                      <Icons.MessageSquare />
-                      <span>WhatsApp Quote</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      );
-    }
-
-    // ==========================================
-    // 8. THE 6-STAGE CLEANROOM PROCESS
-    // ==========================================
-    function CleanroomProcess() {
-      const [activeStep, setActiveStep] = useState(0);
-
-      const steps = [
-        {
-          num: "01",
-          title: "22-Point Decontamination Bath",
-          desc: "pH-neutral snow foam immersion followed by chemical iron fallout removal, tar dissolving, and ultra-fine clay bar exfoliation.",
-          techSpec: "Grit-Guard 2-Bucket System & Deionized Reverse Osmosis Water",
-          time: "3 - 4 Hours"
-        },
-        {
-          num: "02",
-          title: "Digital Micron Paint Depth Mapping",
-          desc: "Ultrasound thickness measurements taken across all steel, aluminum, and composite panels to verify clear-coat safety.",
-          techSpec: "Precision Digital Ultrasound Gauge (Accuracy to ±0.1 µm)",
-          time: "1 Hour"
-        },
-        {
-          num: "03",
-          title: "Multi-Stage Optical Paint Leveling",
-          desc: "Jeweled micro-abrasive compounding eliminating 85% to 95% of wash swirls, buffer trails, and acid etching under 5000K lights.",
-          techSpec: "German Dual-Action Random Orbital Polishers & Microfiber Discs",
-          time: "1 - 2 Days"
-        },
-        {
-          num: "04",
-          title: "Cleanroom Installation (PPF / 10H Graphene)",
-          desc: "Conducted inside our climate-controlled, positive-pressure cleanroom bay. Eliminates dust particles for microscopic bonding.",
-          techSpec: "ISO Cleanroom Bay with Micro-Air HEPA Filtration & Zero Turbulence",
-          time: "1 - 3 Days"
-        },
-        {
-          num: "05",
-          title: "Infrared Thermal Heat Curing",
-          desc: "Shortwave infrared baking lamps accelerate molecular cross-linking between ceramic/graphene SiO2 matrix and clear coat.",
-          techSpec: "Shortwave IR Lamps at 65°C Controlled Surface Thermal Cycle",
-          time: "12 Hours"
-        },
-        {
-          num: "06",
-          title: "10-Year Warranty & Studio Handover",
-          desc: "Comprehensive quality control audit, digital warranty certificate registration with chassis number tracking.",
-          techSpec: "Official QR-Coded Studio Warranty Certificate & Hydrophobic Audit",
-          time: "Final Handover"
-        }
-      ];
-
-      return (
-        <section id="process" className="py-24 sm:py-32 bg-[#060a14] relative overflow-hidden border-t border-b border-[#102d60]/50">
-          <div className="max-w-7xl mx-auto px-5 sm:px-6 relative z-10">
-            <div className="text-center max-w-3xl mx-auto mb-16">
-              <div className="inline-flex items-center gap-2 mb-3">
-                <span className="w-6 h-[2px] bg-[#38bdf8]" />
-                <span className="font-subheading text-xs uppercase tracking-[3px] font-bold text-[#38bdf8]">
-                  Cleanroom Protocol
-                </span>
-                <span className="w-6 h-[2px] bg-[#38bdf8]" />
-              </div>
-              <h2 className="font-heading text-3xl sm:text-5xl font-bold text-white mb-4">
-                The 6-Stage Master Studio Process
-              </h2>
-              <div className="w-20 h-[3px] bg-gradient-to-r from-[#38bdf8] to-[#154c8a] mx-auto mb-6" />
-              <p className="text-gray-300 text-sm sm:text-base font-light">
-                Every vehicle at WELLPRO undergoes an uncompromising protocol within our dust-free cleanroom bays.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-10">
-              {steps.map((st, i) => (
-                <button
-                  key={i}
-                  onClick={() => setActiveStep(i)}
-                  className={`p-4 rounded-2xl border text-left transition-all duration-300 cursor-pointer ${
-                    activeStep === i
-                      ? 'bg-gradient-to-b from-[#102d60] to-[#071228] border-[#38bdf8] shadow-[0_0_20px_rgba(0,180,216,0.35)] scale-105'
-                      : 'bg-[#03050a]/80 border-white/10 hover:border-white/20'
-                  }`}
-                >
-                  <span className={`font-mono text-xs font-bold block mb-1 ${activeStep === i ? 'text-[#38bdf8]' : 'text-gray-500'}`}>
-                    {st.num}
-                  </span>
-                  <h4 className="font-heading font-bold text-xs text-white leading-tight">
-                    {st.title.split(' ')[0]} {st.title.split(' ')[1] || ''}
-                  </h4>
-                </button>
-              ))}
-            </div>
-
-            <div className="rounded-3xl bg-gradient-to-r from-[#030814] via-[#071228] to-[#0a1020] border border-[#00b4d8]/40 p-8 sm:p-12 shadow-2xl">
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                <div className="lg:col-span-8">
-                  <span className="inline-block px-3.5 py-1 rounded-full bg-[#38bdf8]/15 border border-[#38bdf8]/40 text-[#bae6fd] text-xs font-mono font-bold mb-4">
-                    STAGE {steps[activeStep].num} OF 06
-                  </span>
-                  <h3 className="font-heading font-black text-2xl sm:text-4xl text-white mb-4">
-                    {steps[activeStep].title}
-                  </h3>
-                  <p className="text-gray-300 text-sm sm:text-base font-light leading-relaxed mb-6">
-                    {steps[activeStep].desc}
-                  </p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-white/10">
-                    <div className="p-3.5 rounded-xl bg-[#03050a]/70 border border-white/10">
-                      <span className="text-[10px] uppercase font-subheading text-gray-400 block mb-0.5">Technology & Equipment</span>
-                      <span className="text-xs font-semibold text-[#38bdf8]">{steps[activeStep].techSpec}</span>
-                    </div>
-                    <div className="p-3.5 rounded-xl bg-[#03050a]/70 border border-white/10">
-                      <span className="text-[10px] uppercase font-subheading text-gray-400 block mb-0.5">Studio Curing Time</span>
-                      <span className="text-xs font-semibold text-white">{steps[activeStep].time}</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="lg:col-span-4 flex items-center justify-center">
-                  <div className="w-36 h-36 sm:w-44 sm:h-44 rounded-full bg-[#071228] border-2 border-[#38bdf8] shadow-[0_0_40px_rgba(0,180,216,0.4)] flex flex-col items-center justify-center text-center p-4">
-                    <span className="text-4xl sm:text-5xl font-heading font-black text-white">{steps[activeStep].num}</span>
-                    <span className="text-[10px] font-subheading uppercase tracking-widest text-[#38bdf8] font-bold mt-1">Certified Bay</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      );
-    }
-
-    // ==========================================
-    // 9. RETAIL PRODUCTS & WORKSHOP TRADE STORE
-    // ==========================================
-    function ProductsAndSupplies() {
-      const [activeTab, setActiveTab] = useState('retail');
-
-      const retailProducts = [
-        {
-          name: "WELLPRO Ultra Snow Foam (pH-Neutral)",
-          size: "1000ml Concentrate",
-          price: "₹899",
-          desc: "High-lubricity snow foam that encapsulates grit and dirt without stripping ceramic coating or PPF.",
-          tag: "Maintenance Essential",
-          image: "https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=600&q=80"
-        },
-        {
-          name: "10H Graphene Quick Detailer & Booster",
-          size: "500ml Spray",
-          price: "₹1,299",
-          desc: "Infused with reduced graphene oxide to rejuvenate hydrophobic roll-off and intense mirror gloss.",
-          tag: "Top-Up Spray",
-          image: "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=600&q=80"
-        },
-        {
-          name: "500 GSM Edgeless Plush Microfiber Pack (3x)",
-          size: "40x40 cm Edgeless",
-          price: "₹649",
-          desc: "Laser-cut 70/30 blend microfiber towels guaranteed never to introduce micro-scratches or swirls.",
-          tag: "Zero-Scratch Fabric",
-          image: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=600&q=80"
-        },
-        {
-          name: "Interior Satin Anti-Bacterial Cleaner & Feed",
-          size: "500ml Trigger Spray",
-          price: "₹799",
-          desc: "pH-neutral delicate cleaner for leatherette, Nappa leather, and soft-touch dash without greasy shine.",
-          tag: "OEM Matte Cabin",
-          image: "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=600&q=80"
-        }
-      ];
-
-      const tradeMaterials = [
-        {
-          name: "German Dual-Action Foam Polishing Pads",
-          size: "5-inch & 6-inch Discs",
-          price: "Bulk Trade Rates",
-          desc: "Heavy-cut blue, medium-polish yellow, and ultra-finish black open-cell reticulated German foam.",
-          tag: "Workshop Consumables",
-          image: "https://images.unsplash.com/photo-1507136566006-cfc505b114fc?auto=format&fit=crop&w=600&q=80"
-        },
-        {
-          name: "Precision Micro-Abrasive Compounding Paste",
-          size: "1000g Studio Bottle",
-          price: "Wholesale & Retail",
-          desc: "Diminishing micro-abrasive compounding paste engineered for rapid swirl removal with zero filler oils.",
-          tag: "Body Shop Grade",
-          image: "https://images.unsplash.com/photo-1601362840469-51e4d8d58785?auto=format&fit=crop&w=600&q=80"
-        },
-        {
-          name: "Automotive Precision Heat-Resistant Masking Tape",
-          size: "Pack of 10 Rolls (18mm)",
-          price: "Trade Supply",
-          desc: "Leaves zero gummy residue on rubber trims, plastics, or badges during high-speed machine compounding.",
-          tag: "Masking Supplies",
-          image: "https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=600&q=80"
-        },
-        {
-          name: "Rotary & DA Polisher Flexible Backing Plates",
-          size: "M14 & 5/16 Threads",
-          price: "Trade Equipment",
-          desc: "Urethane molded backing plates dissipating heat and providing contour flexibility on curved panels.",
-          tag: "Detailing Hardware",
-          image: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=600&q=80"
-        }
-      ];
-
-      const currentList = activeTab === 'retail' ? retailProducts : tradeMaterials;
-
-      return (
-        <section id="store" className="py-24 sm:py-32 bg-[#03050a] relative overflow-hidden">
-          <div className="max-w-7xl mx-auto px-5 sm:px-6 relative z-10">
-            <div className="text-center max-w-3xl mx-auto mb-14">
-              <div className="inline-flex items-center gap-2 mb-3">
-                <span className="w-6 h-[2px] bg-[#38bdf8]" />
-                <span className="font-subheading text-xs uppercase tracking-[3px] font-bold text-[#38bdf8]">
-                  Studio Store & Trade Supply
-                </span>
-                <span className="w-6 h-[2px] bg-[#38bdf8]" />
-              </div>
-              <h2 className="font-heading text-3xl sm:text-5xl font-bold text-white mb-4">
-                Retail Car Care Products & Detailing Materials
-              </h2>
-              <div className="w-20 h-[3px] bg-gradient-to-r from-[#38bdf8] to-[#154c8a] mx-auto mb-6" />
-              <p className="text-gray-300 text-sm sm:text-base font-light">
-                Professional car care formulas for car enthusiasts and direct wholesale trade supplies for local detailing workshops.
-              </p>
-            </div>
-
-            <div className="flex items-center justify-center gap-3 mb-12">
-              <button
-                onClick={() => setActiveTab('retail')}
-                className={`font-subheading text-xs uppercase tracking-wider font-bold px-6 py-3 rounded-full transition-all cursor-pointer ${
-                  activeTab === 'retail'
-                    ? 'bg-gradient-to-r from-[#38bdf8] to-[#154c8a] text-white shadow-[0_0_20px_rgba(0,180,216,0.4)]'
-                    : 'bg-[#071228] border border-white/10 text-gray-400 hover:text-white'
-                }`}
-              >
-                Retail Products (Car Enthusiasts)
-              </button>
-              <button
-                onClick={() => setActiveTab('trade')}
-                className={`font-subheading text-xs uppercase tracking-wider font-bold px-6 py-3 rounded-full transition-all cursor-pointer ${
-                  activeTab === 'trade'
-                    ? 'bg-gradient-to-r from-[#38bdf8] to-[#154c8a] text-white shadow-[0_0_20px_rgba(0,180,216,0.4)]'
-                    : 'bg-[#071228] border border-white/10 text-gray-400 hover:text-white'
-                }`}
-              >
-                Sale Local Materials (Workshops & Trade)
-              </button>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {currentList.map((item, idx) => {
-                const waOrderMsg = `Hello WELLPRO! I would like to order "${item.name}" (${item.size}). Price: ${item.price}. Please share availability and dispatch options.`;
-                const waOrderUrl = `https://wa.me/${businessInfo.contact.whatsappRaw}?text=${encodeURIComponent(waOrderMsg)}`;
-
-                return (
-                  <div
-                    key={idx}
-                    className="rounded-2xl bg-[#0a1020] border border-[#102d60]/60 p-5 flex flex-col justify-between hover:border-[#38bdf8]/60 transition-all hover:-translate-y-1 shadow-lg"
-                  >
-                    <div>
-                      <div className="h-44 rounded-xl overflow-hidden mb-4 bg-black relative">
-                        <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
-                        <span className="absolute top-2.5 right-2.5 bg-[#03050a]/85 border border-[#38bdf8]/50 text-[#bae6fd] text-[9px] uppercase font-bold px-2.5 py-0.5 rounded-full">
-                          {item.tag}
-                        </span>
-                      </div>
-                      <span className="text-[10px] uppercase font-mono text-[#38bdf8] block mb-1">{item.size}</span>
-                      <h4 className="font-heading font-bold text-base text-white mb-2 leading-snug">{item.name}</h4>
-                      <p className="text-xs text-gray-400 font-light leading-relaxed mb-4">{item.desc}</p>
-                    </div>
-
-                    <div className="pt-3 border-t border-white/10 flex items-center justify-between">
-                      <span className="font-heading font-black text-base text-[#38bdf8]">{item.price}</span>
-                      <a
-                        href={waOrderUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-[#25D366] hover:bg-[#20bd5a] text-white text-[11px] font-subheading uppercase font-bold shadow-sm transition-all"
-                      >
-                        <Icons.MessageSquare />
-                        <span>Inquire</span>
-                      </a>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-      );
-    }
-
-    // ==========================================
-    // 10. INTERACTIVE ESTIMATOR FOR INDIAN CARS
-    // ==========================================
-    function Estimator({ onOpenBooking }) {
-      const [selectedVehicle, setSelectedVehicle] = useState('mid-suv');
-      const [selectedPackage, setSelectedPackage] = useState('graphene-10h');
-
-      const vehicleOptions = [
-        {
-          key: 'hatch-compact',
-          label: 'Hatchback & Compact (Maruti Swift, i20, Fronx, Punch)',
-          examples: 'Maruti Swift, Baleno, Hyundai i20, Fronx, Altroz, Punch, Brezza',
-          priceMultiplier: 1.0
-        },
-        {
-          key: 'mid-suv',
-          label: 'Mid SUV & Sedan (Hyundai Creta, Grand Vitara, Thar, Verna)',
-          examples: 'Hyundai Creta, Maruti Grand Vitara, Thar Roxx, Verna, XUV700, City, Scorpio-N',
-          priceMultiplier: 1.25
-        },
-        {
-          key: 'full-suv',
-          label: 'Full SUV & Flagship (Fortuner, Safari, Hycross, Defender)',
-          examples: 'Toyota Fortuner, Tata Safari, Innova Hycross, Land Rover Defender, Mercedes, BMW',
-          priceMultiplier: 1.55
-        },
-      ];
-
-      const packageOptions = [
-        {
-          key: 'graphene-10h',
-          name: '10H Graphene Coating',
-          basePrice: 19999,
-          scope: 'Full Exterior Paintwork, Trims, Headlights & Wheels',
-          warranty: '5 - 7 Years Warranty',
-          turnaround: '2 - 3 Days Studio Bay',
-        },
-        {
-          key: 'ceramic-9h',
-          name: '9H Ceramic Coating',
-          basePrice: 14999,
-          scope: 'Multi-Stage Paint Correction + 2 Layers 9H Quartz',
-          warranty: '3 - 5 Years Warranty',
-          turnaround: '2 Days Studio Bay',
-        },
-        {
-          key: 'ppf-full',
-          name: 'Full Body TPU Self-Healing PPF',
-          basePrice: 65000,
-          scope: '100% Painted Panels + Bumpers + Headlights & Mirrors',
-          warranty: '10-Year Comprehensive Warranty',
-          turnaround: '4 - 5 Days Studio Bay',
-        },
-        {
-          key: 'interior-sanitization',
-          name: 'Interior Sanitization & Deep Spa',
-          basePrice: 5999,
-          scope: 'Cabin Steam Sterilization + AC Flush + Ozone Treatment',
-          warranty: 'Hospital-Grade Hygiene Guarantee',
-          turnaround: 'Same Day (4 - 6 Hours)',
-        },
-        {
-          key: 'engine-rodent',
-          name: 'Engine Beautification + Rodent Repellent',
-          basePrice: 3999,
-          scope: 'Engine Bay Steam Degrease + Wire Harness Bitter Coating',
-          warranty: '6-Month Protective Shield',
-          turnaround: 'Same Day (2 - 3 Hours)',
-        }
-      ];
-
-      const currentVehicleObj = vehicleOptions.find(v => v.key === selectedVehicle) || vehicleOptions[1];
-      const currentPackageObj = packageOptions.find(p => p.key === selectedPackage) || packageOptions[0];
-
-      const estimatedPrice = Math.round(currentPackageObj.basePrice * currentVehicleObj.priceMultiplier);
-      const formattedPrice = `₹${estimatedPrice.toLocaleString('en-IN')}`;
-
-      const waEstimateMessage = `*Vehicle Protection Configuration - WELLPRO*\n\n` +
-        `• *Vehicle Segment:* ${currentVehicleObj.label}\n` +
-        `• *Selected Package:* ${currentPackageObj.name}\n` +
-        `• *Estimated Investment:* ${formattedPrice} approx.\n` +
-        `• *Protection Scope:* ${currentPackageObj.scope}\n` +
-        `• *Warranty:* ${currentPackageObj.warranty}\n` +
-        `• *Turnaround:* ${currentPackageObj.turnaround}\n\n` +
-        `Please share studio slot availability and confirm this booking.`;
-
-      const waEstimateUrl = `https://wa.me/${businessInfo.contact.whatsappRaw}?text=${encodeURIComponent(waEstimateMessage)}`;
-
-      return (
-        <section id="estimator" className="py-24 sm:py-32 bg-gradient-to-b from-[#03050a] via-[#071228] to-[#03050a] relative overflow-hidden">
-          <div className="max-w-7xl mx-auto px-5 sm:px-6 relative z-10">
-            <div className="text-center max-w-3xl mx-auto mb-14">
-              <div className="inline-flex items-center gap-2 mb-3">
-                <span className="w-6 h-[2px] bg-[#38bdf8]" />
-                <span className="font-subheading text-xs uppercase tracking-[3px] font-bold text-[#38bdf8]">
-                  Interactive Configurator
-                </span>
-                <span className="w-6 h-[2px] bg-[#38bdf8]" />
-              </div>
-
-              <h2 className="font-heading text-3xl sm:text-5xl font-bold text-white mb-4">
-                Indian Vehicle Package Estimator
-              </h2>
-
-              <div className="w-20 h-[3px] bg-gradient-to-r from-[#38bdf8] to-[#154c8a] mx-auto mb-6" />
-
-              <p className="text-gray-300 text-sm sm:text-base font-light">
-                Select your vehicle class (Maruti, Hyundai, Mahindra, Tata, Toyota) and desired armor level for an instant investment estimate.
-              </p>
-            </div>
-
-            <div className="rounded-3xl bg-gradient-to-b from-[#0a1020] to-[#030814] border border-[#102d60]/60 p-6 sm:p-10 shadow-2xl">
-              <div className="mb-10">
-                <span className="font-subheading text-xs uppercase tracking-[2px] font-bold text-[#38bdf8] block mb-4">
-                  Step 1: Choose Your Indian Vehicle Category
-                </span>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  {vehicleOptions.map((veh) => (
-                    <button
-                      key={veh.key}
-                      onClick={() => setSelectedVehicle(veh.key)}
-                      className={`p-5 rounded-2xl border text-left transition-all duration-300 cursor-pointer ${
-                        selectedVehicle === veh.key
-                          ? 'bg-gradient-to-b from-[#102d60] to-[#071228] border-[#38bdf8] shadow-[0_0_20px_rgba(0,180,216,0.35)] scale-[1.02]'
-                          : 'bg-[#060a14]/80 border-white/10 hover:border-white/20'
-                      }`}
-                    >
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="font-heading font-bold text-base text-white">{veh.label.split('(')[0]}</span>
-                        <Icons.Car />
-                      </div>
-                      <p className="text-xs text-gray-400 font-light leading-relaxed">{veh.examples}</p>
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              <div className="mb-10">
-                <span className="font-subheading text-xs uppercase tracking-[2px] font-bold text-[#38bdf8] block mb-4">
-                  Step 2: Choose Armor & Detailing Service
-                </span>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {packageOptions.map((pkg) => (
-                    <button
-                      key={pkg.key}
-                      onClick={() => setSelectedPackage(pkg.key)}
-                      className={`p-5 rounded-2xl border text-left transition-all duration-300 cursor-pointer flex flex-col justify-between ${
-                        selectedPackage === pkg.key
-                          ? 'bg-gradient-to-b from-[#102d60] to-[#071228] border-[#38bdf8] shadow-[0_0_20px_rgba(0,180,216,0.35)] scale-[1.02]'
-                          : 'bg-[#060a14]/80 border-white/10 hover:border-white/20'
-                      }`}
-                    >
-                      <div>
-                        <div className="flex items-center justify-between mb-2">
-                          <span className="font-heading font-bold text-base text-white">{pkg.name}</span>
-                          {selectedPackage === pkg.key && <Icons.Check />}
-                        </div>
-                        <p className="text-xs text-gray-300 font-light mb-3">{pkg.scope}</p>
-                      </div>
-                      <div className="pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-[#38bdf8]">
-                        <span>{pkg.warranty}</span>
-                        <span className="text-gray-400">{pkg.turnaround}</span>
-                      </div>
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              <div className="p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-[#030814] via-[#071228] to-[#0c1f42] border border-[#00b4d8]/40 flex flex-col lg:flex-row items-center justify-between gap-6 shadow-xl">
-                <div>
-                  <span className="font-subheading text-[11px] uppercase tracking-[2px] font-bold text-[#38bdf8] block mb-1">
-                    Estimated Studio Investment (Inclusive of Surface Prep & Tax)
-                  </span>
-                  <div className="flex items-baseline gap-3">
-                    <span className="font-heading font-black text-3xl sm:text-5xl text-white">{formattedPrice}</span>
-                    <span className="text-xs text-gray-400 font-light">*Indicative baseline quote</span>
-                  </div>
-                  <p className="text-xs text-[#bae6fd] mt-1">
-                    Configured for: <strong>{currentVehicleObj.label.split('(')[0]}</strong> with <strong>{currentPackageObj.name}</strong>
-                  </p>
-                </div>
-
-                <div className="flex flex-col sm:flex-row items-center gap-3 w-full lg:w-auto">
-                  <button
-                    onClick={() => onOpenBooking(`${currentPackageObj.name} for ${currentVehicleObj.label}`)}
-                    className="w-full sm:w-auto bg-gradient-to-r from-[#38bdf8] via-[#154c8a] to-[#0c1f42] hover:from-[#7dd3fc] text-white font-subheading font-bold text-xs uppercase tracking-wider px-6 py-4 rounded-xl flex items-center justify-center gap-2 shadow-lg hover:shadow-[0_0_20px_rgba(0,180,216,0.4)] transition-all cursor-pointer"
-                  >
-                    <Icons.Calendar />
-                    <span>Reserve Studio Bay</span>
-                  </button>
-
-                  <a
-                    href={waEstimateUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full sm:w-auto bg-[#25D366] hover:bg-[#20bd5a] text-white font-subheading font-bold text-xs uppercase tracking-wider px-6 py-4 rounded-xl flex items-center justify-center gap-2 shadow-lg hover:shadow-[0_4px_20px_rgba(37,211,102,0.4)] transition-all"
-                  >
-                    <Icons.MessageSquare />
-                    <span>Confirm on WhatsApp</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      );
-    }
-
-    // ==========================================
     // 11. BEFORE & AFTER PAINT SLIDER
     // ==========================================
     function BeforeAfter() {
@@ -2554,7 +1637,7 @@
               <div className="w-16 h-[3px] bg-gradient-to-r from-[#38bdf8] to-[#154c8a] mx-auto mb-6" />
 
               <p className="text-gray-300 text-sm sm:text-base font-light">
-                Drag the divider to witness the dramatic before and after clarity achieved on Indian car finishes.
+                Drag the divider to witness the dramatic optical clarity achieved by our multi-stage paint correction and 10H armor.
               </p>
             </div>
 
@@ -2565,28 +1648,29 @@
               onMouseLeave={() => setIsDragging(false)}
               onMouseMove={handleMouseMove}
               onTouchMove={handleTouchMove}
-              className="relative h-[320px] sm:h-[480px] md:h-[560px] rounded-3xl overflow-hidden border border-[#102d60] shadow-2xl select-none cursor-ew-resize"
+              className="relative h-[320px] sm:h-[460px] md:h-[520px] rounded-3xl overflow-hidden border border-[#102d60] shadow-2xl select-none cursor-ew-resize"
+              style={{ touchAction: 'none' }}
             >
               <img
                 src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=85"
                 alt="Before Restoration"
-                className="absolute inset-0 w-full h-full object-cover filter contrast-[1.1] brightness-[0.7]"
+                className="absolute inset-0 w-full h-full object-cover filter contrast-[1.05] brightness-[0.68] saturate-75"
               />
 
-              <div className="absolute top-6 left-6 bg-[#03050a]/85 backdrop-blur-md border border-white/20 rounded-full px-4 py-1.5 text-xs font-subheading font-bold uppercase tracking-wider text-gray-300">
-                Before: Wash Swirls & Oxidation
+              <div className="absolute top-4 sm:top-6 right-4 sm:right-6 bg-[#03050a]/85 backdrop-blur-md border border-white/20 rounded-full px-3 sm:px-4 py-1 sm:py-1.5 text-[10px] sm:text-xs font-subheading font-bold uppercase tracking-wider text-gray-300">
+                Before: Swirls & Oxidation
               </div>
 
               <div
-                className="absolute inset-0 overflow-hidden"
-                style={{ width: `${sliderPos}%` }}
+                className="absolute inset-0"
+                style={{ clipPath: `inset(0 ${100 - sliderPos}% 0 0)` }}
               >
                 <img
                   src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=1600&q=85"
                   alt="After WELLPRO Restoration"
-                  className="absolute inset-0 w-[1280px] max-w-none h-full object-cover filter brightness-[1.08] contrast-[1.25]"
+                  className="absolute inset-0 w-full h-full object-cover filter brightness-[1.08] contrast-[1.22]"
                 />
-                <div className="absolute top-6 left-6 bg-[#071228]/90 backdrop-blur-md border border-[#38bdf8] rounded-full px-4 py-1.5 text-xs font-subheading font-bold uppercase tracking-wider text-[#38bdf8] shadow-lg">
+                <div className="absolute top-4 sm:top-6 left-4 sm:left-6 bg-[#071228]/90 backdrop-blur-md border border-[#38bdf8] rounded-full px-3 sm:px-4 py-1 sm:py-1.5 text-[10px] sm:text-xs font-subheading font-bold uppercase tracking-wider text-[#38bdf8] shadow-lg">
                   After: WELLPRO 10H Armor
                 </div>
               </div>
@@ -2606,84 +1690,40 @@
     }
 
     // ==========================================
-    // 12. WHY CHOOSE WELLPRO
-    // ==========================================
-    function WhyChooseUs() {
-      const reasons = [
-        { title: "Dust-Free Cleanroom Bays", desc: "Equipped with positive pressure air filtration ensuring zero airborne debris during PPF & ceramic bonding." },
-        { title: "Aerospace Formulations", desc: "Authentic 10H reduced graphene oxide and German-engineered self-healing TPU films." },
-        { title: "High-CRI Detailing Lights", desc: "Every square inch inspected under 5000K daylight-balanced multi-angle inspection arrays." },
-        { title: "Written Studio Warranty", desc: "Direct manufacturer backed warranties covering up to 10 years with scheduled bi-annual top-ups." },
-      ];
-
-      return (
-        <section id="why-us" className="py-24 sm:py-32 bg-[#071228]/50 relative">
-          <div className="max-w-7xl mx-auto px-5 sm:px-6">
-            <div className="text-center max-w-3xl mx-auto mb-16">
-              <div className="inline-flex items-center gap-2 mb-3">
-                <span className="w-5 h-[2px] bg-[#38bdf8]" />
-                <span className="font-subheading text-xs uppercase tracking-[3px] font-bold text-[#38bdf8]">
-                  The Studio Difference
-                </span>
-                <span className="w-5 h-[2px] bg-[#38bdf8]" />
-              </div>
-              <h2 className="font-heading text-3xl sm:text-5xl font-bold text-white mb-4">
-                Why Discerning Car Owners Choose WELLPRO
-              </h2>
-              <div className="w-16 h-[3px] bg-gradient-to-r from-[#38bdf8] to-[#154c8a] mx-auto mb-6" />
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {reasons.map((r, i) => (
-                <div key={i} className="p-7 rounded-2xl bg-[#03050a] border border-[#102d60]/50 hover:border-[#38bdf8]/50 transition-all">
-                  <div className="w-10 h-10 rounded-xl bg-[#071228] border border-[#00b4d8]/30 flex items-center justify-center text-[#38bdf8] mb-5">
-                    <Icons.Shield />
-                  </div>
-                  <h3 className="font-heading font-bold text-lg text-white mb-2">{r.title}</h3>
-                  <p className="text-xs text-gray-400 font-light leading-relaxed">{r.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      );
-    }
-
-    // ==========================================
     // 13. GALLERY & DELIVERIES
     // ==========================================
     function Gallery() {
       const items = [
-        { title: "Hyundai Creta (Titan Grey)", tag: "10H Graphene Coating", image: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80" },
-        { title: "Maruti Grand Vitara (Nexa Blue)", tag: "9H Ceramic Armor", image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=800&q=80" },
-        { title: "Toyota Fortuner Legender", tag: "Full TPU PPF Wrap", image: "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80" },
-        { title: "Mahindra Thar Roxx 4x4", tag: "Rugged Offroad Armor", image: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80" },
-        { title: "Tata Safari #DARK Edition", tag: "3-Stage Correction & Ceramic", image: "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=800&q=80" },
-        { title: "Maruti Swift (Fire Red)", tag: "Paint Correction & Mirror Gloss", image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80" },
+        { title: "Porsche 911 GT3", tag: "10H Graphene & Front PPF", image: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80" },
+        { title: "Mercedes-AMG G63", tag: "Stealth Satin TPU PPF", image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=800&q=80" },
+        { title: "Range Rover Autobiography", tag: "9H Quartz Ceramic Armor", image: "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80" },
+        { title: "BMW M4 Competition", tag: "3-Stage Paint Correction", image: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80" },
+        { title: "Audi RS7 Sportback", tag: "Full Body Self-Healing PPF", image: "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=800&q=80" },
+        { title: "Lamborghini Huracán EVO", tag: "Concours Mirror Finish", image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80" },
       ];
 
       return (
-        <section id="gallery" className="py-24 sm:py-32 bg-[#03050a] relative">
+        <section id="gallery" className="py-20 sm:py-28 bg-[#03050a] relative">
           <div className="max-w-7xl mx-auto px-5 sm:px-6">
-            <div className="text-center max-w-3xl mx-auto mb-14">
+            <div className="text-center max-w-3xl mx-auto mb-12">
               <div className="inline-flex items-center gap-2 mb-3">
                 <span className="w-5 h-[2px] bg-[#38bdf8]" />
                 <span className="font-subheading text-xs uppercase tracking-[3px] font-bold text-[#38bdf8]">
-                  Transformation Gallery
+                  Our Work
                 </span>
                 <span className="w-5 h-[2px] bg-[#38bdf8]" />
               </div>
               <h2 className="font-heading text-3xl sm:text-5xl font-bold text-white mb-4">
-                Recent Master Studio Deliveries
+                Studio Showcase & Deliveries
               </h2>
               <div className="w-16 h-[3px] bg-gradient-to-r from-[#38bdf8] to-[#154c8a] mx-auto mb-6" />
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {items.map((item, idx) => (
                 <div key={idx} className="group relative rounded-2xl overflow-hidden border border-[#102d60]/40 bg-[#071228] shadow-lg">
-                  <div className="h-64 overflow-hidden">
-                    <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108" />
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   </div>
                   <div className="p-5 bg-gradient-to-t from-[#03050a] to-[#071228]">
                     <span className="text-[10px] uppercase font-subheading font-bold tracking-wider text-[#38bdf8] block mb-1">{item.tag}</span>
@@ -2702,36 +1742,36 @@
     // ==========================================
     function Testimonials() {
       const reviews = [
-        { name: "Rahul Menon", car: "Toyota Fortuner Legender (Full TPU PPF)", quote: "The finish on my Fortuner Legender is flawless. Zero blade marks, wrapped edges, and the self-healing TPU has already saved my hood from highway gravel. Best detailing studio in the state." },
-        { name: "Siddharth Nair", car: "Tata Safari #DARK (3-Stage Paint Correction)", quote: "Maintaining a black car in India is tough, but WELLPRO completely removed every single swirl and applied a deep 9H ceramic glass finish. The reflections are staggering." },
-        { name: "Dr. Arun Kumar", car: "Mahindra Thar 4x4 (Offroad Armor + Rodent Defense)", quote: "Got the underbody anti-rust, rodent repellent, and Graphene coating done. The team’s attention to detail and customer care is unmatched. True professionals." },
+        { name: "Rahul Menon", car: "Full Body Self-Healing PPF", quote: "The finish is completely flawless. Zero blade marks, seamlessly tucked edges, and the self-healing TPU has already saved my hood from highway gravel. Unmatched precision." },
+        { name: "Siddharth Nair", car: "3-Stage Paint Correction + 9H Ceramic", quote: "Maintaining a jet-black finish is notoriously difficult, but WELLPRO removed every single wash swirl and applied a deep 9H ceramic glass shield. The reflections are staggering." },
+        { name: "Dr. Arun Kumar", car: "10H Graphene + Rodent Repellent", quote: "Got the 10H Graphene coating, interior steam sanitization, and engine bay rodent defense done. The studio's cleanroom standards and attention to detail are truly world-class." },
       ];
 
       return (
-        <section id="testimonials" className="py-24 sm:py-32 bg-[#071228]/40 relative">
+        <section id="testimonials" className="py-20 sm:py-28 bg-[#071228]/40 relative">
           <div className="max-w-7xl mx-auto px-5 sm:px-6">
-            <div className="text-center max-w-3xl mx-auto mb-14">
+            <div className="text-center max-w-3xl mx-auto mb-12">
               <div className="inline-flex items-center gap-2 mb-3">
                 <span className="w-5 h-[2px] bg-[#38bdf8]" />
                 <span className="font-subheading text-xs uppercase tracking-[3px] font-bold text-[#38bdf8]">
-                  Client Feedback
+                  Client Reviews
                 </span>
                 <span className="w-5 h-[2px] bg-[#38bdf8]" />
               </div>
               <h2 className="font-heading text-3xl sm:text-5xl font-bold text-white mb-4">
-                What Indian Car Enthusiasts Say
+                Trusted by Discerning Owners
               </h2>
               <div className="w-16 h-[3px] bg-gradient-to-r from-[#38bdf8] to-[#154c8a] mx-auto mb-6" />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {reviews.map((rev, i) => (
-                <div key={i} className="p-7 rounded-2xl bg-[#03050a] border border-[#102d60]/50 flex flex-col justify-between">
+                <div key={i} className="p-7 rounded-2xl bg-[#03050a] border border-[#102d60]/50 flex flex-col justify-between h-full">
                   <div>
                     <div className="flex items-center gap-1 mb-4 text-[#38bdf8]">
                       {[...Array(5)].map((_, si) => <Icons.Star key={si} />)}
                     </div>
-                    <p className="text-xs text-gray-300 font-light leading-relaxed mb-6 italic">
+                    <p className="text-xs sm:text-sm text-gray-300 font-light leading-relaxed mb-6 italic">
                       "{rev.quote}"
                     </p>
                   </div>
@@ -2913,7 +1953,7 @@
                 </div>
 
                 <p className="text-xs text-gray-400 font-light leading-relaxed mb-6 max-w-sm">
-                  An elite automotive protection studio engineering optical perfection, self-healing PPF wraps, 10H graphene armor, and specialized vehicle care for Indian cars.
+                  An exclusive luxury automotive protection studio engineering optical perfection, self-healing PPF wraps, 10H graphene armor, and specialized vehicle care.
                 </p>
               </div>
 
@@ -2921,12 +1961,11 @@
                 <h4 className="font-subheading text-xs uppercase tracking-[2px] font-bold text-white mb-4">Quick Links</h4>
                 <ul className="space-y-2 text-xs">
                   <li><a href="#home" className="hover:text-[#38bdf8] transition-colors">Home</a></li>
+                  <li><a href="#pillars" className="hover:text-[#38bdf8] transition-colors">About Us</a></li>
                   <li><a href="#services" className="hover:text-[#38bdf8] transition-colors">Services</a></li>
-                  <li><a href="#car-stage" className="hover:text-[#38bdf8] transition-colors">Indian Cars</a></li>
-                  <li><a href="#process" className="hover:text-[#38bdf8] transition-colors">Studio Process</a></li>
-                  <li><a href="#store" className="hover:text-[#38bdf8] transition-colors">Store & Supplies</a></li>
-                  <li><a href="#estimator" className="hover:text-[#38bdf8] transition-colors">Estimator</a></li>
                   <li><a href="#gallery" className="hover:text-[#38bdf8] transition-colors">Our Work</a></li>
+                  <li><a href="#testimonials" className="hover:text-[#38bdf8] transition-colors">Reviews</a></li>
+                  <li><a href="#contact" className="hover:text-[#38bdf8] transition-colors">Contact</a></li>
                 </ul>
               </div>
 
@@ -3018,15 +2057,15 @@
                 />
               </div>
 
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
-                  <label className="text-xs font-semibold text-gray-300 block mb-1">Indian Vehicle</label>
+                  <label className="text-xs font-semibold text-gray-300 block mb-1">Vehicle Make & Model</label>
                   <input
                     type="text"
                     required
                     value={formData.vehicle}
                     onChange={e => setFormData({...formData, vehicle: e.target.value})}
-                    placeholder="e.g. Hyundai Creta / Grand Vitara"
+                    placeholder="e.g. Porsche 911 / BMW M4"
                     className="w-full bg-[#03050a] border border-white/10 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-[#38bdf8]"
                   />
                 </div>
@@ -3089,20 +2128,14 @@
       )}`;
 
       return (
-        <div className="relative min-h-screen bg-[#03050a] text-white font-sans selection:bg-[#00b4d8] selection:text-[#03050a]">
-          <StudioLiveTicker />
+        <div className="relative min-h-screen bg-[#03050a] text-white font-sans selection:bg-[#00b4d8] selection:text-[#03050a] pb-16 sm:pb-0">
           <Navbar onOpenBooking={handleOpenBooking} />
           
           <main>
             <Hero onOpenBooking={handleOpenBooking} />
             <Pillars onOpenBooking={handleOpenBooking} />
             <Services onOpenBooking={handleOpenBooking} />
-            <CarShowcaseTransition onOpenBooking={handleOpenBooking} />
-            <CleanroomProcess />
-            <Estimator onOpenBooking={handleOpenBooking} />
             <BeforeAfter />
-            <ProductsAndSupplies onOpenBooking={handleOpenBooking} />
-            <WhyChooseUs />
             <Gallery />
             <Testimonials />
             <Contact onShowToast={handleShowToast} />

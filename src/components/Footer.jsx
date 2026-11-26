@@ -81,11 +81,10 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5 text-xs">
               <li><a href="#home" className="hover:text-[#38bdf8] transition-colors">Home</a></li>
+              <li><a href="#pillars" className="hover:text-[#38bdf8] transition-colors">About Us</a></li>
               <li><a href="#services" className="hover:text-[#38bdf8] transition-colors">Services</a></li>
-              <li><a href="#car-stage" className="hover:text-[#38bdf8] transition-colors">Indian Cars</a></li>
-              <li><a href="#pillars" className="hover:text-[#38bdf8] transition-colors">4 Pillars</a></li>
-              <li><a href="#estimator" className="hover:text-[#38bdf8] transition-colors">Estimator</a></li>
               <li><a href="#gallery" className="hover:text-[#38bdf8] transition-colors">Our Work</a></li>
+              <li><a href="#testimonials" className="hover:text-[#38bdf8] transition-colors">Reviews</a></li>
               <li><a href="#contact" className="hover:text-[#38bdf8] transition-colors">Contact Us</a></li>
             </ul>
           </div>

@@ -546,11 +546,12 @@ export default function ThreeScene() {
       <div
         ref={containerRef}
         className="w-full h-full cursor-grab active:cursor-grabbing"
+        style={{ touchAction: 'pan-y' }}
         title="Click and drag to rotate the 3D vehicle 360°"
       />
 
-      {/* Interactive 3D Studio HUD Controls (Top-Right) */}
-      <div className="hud-control absolute top-4 sm:top-6 right-4 sm:right-8 z-30 flex flex-col items-end gap-2.5 pointer-events-auto max-w-[280px] sm:max-w-none">
+      {/* Interactive 3D Studio HUD Controls (Desktop Top-Right) */}
+      <div className="hud-control absolute top-6 right-8 z-30 hidden lg:flex flex-col items-end gap-2.5 pointer-events-auto">
         {/* Mode Switcher Tabs */}
         <div className="flex items-center gap-1 p-1 sm:p-1.5 rounded-2xl bg-[#071228]/85 backdrop-blur-md border border-[#38bdf8]/40 shadow-2xl">
           <button
